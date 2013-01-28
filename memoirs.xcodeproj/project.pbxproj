@@ -19,9 +19,6 @@
 		09A8ACFA16B507DF005E336D /* EventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACF516B507DF005E336D /* EventListTableModel.m */; };
 		09A8ACFB16B507DF005E336D /* EventListGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACF816B507DF005E336D /* EventListGroup.m */; };
 		09A8AD4116B5082F005E336D /* MainController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD2F16B5082F005E336D /* MainController_iPhone.m */; };
-		09A8AD4A16B50846005E336D /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD4916B50846005E336D /* Event.m */; };
-		09A8AD4D16B5084E005E336D /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD4C16B5084E005E336D /* Value.m */; };
-		09A8AD5016B50875005E336D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD4E16B50875005E336D /* Model.xcdatamodeld */; };
 		09A8AD5A16B509F6005E336D /* ValueEditorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD5516B509F6005E336D /* ValueEditorController_iPhone.m */; };
 		09A8AD5B16B509F6005E336D /* ValueEditorController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD5616B509F6005E336D /* ValueEditorController_iPhone.xib */; };
 		09A8AD5C16B509F6005E336D /* ValueListController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD5816B509F6005E336D /* ValueListController_iPhone.m */; };
@@ -37,6 +34,9 @@
 		09A8AD7A16B50A38005E336D /* SettingsController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */; };
 		09A8AD7B16B50A38005E336D /* SettingsController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */; };
 		09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD9116B5765D005E336D /* EventListTableView.m */; };
+		09A8ADAE16B703A0005E336D /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADA916B703A0005E336D /* Event.m */; };
+		09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */; };
+		09A8ADB016B703A0005E336D /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAD16B703A0005E336D /* Value.m */; };
 		09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2916B30C2E003FFD91 /* UIKit.framework */; };
 		09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2B16B30C2E003FFD91 /* Foundation.framework */; };
 		09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */; };
@@ -103,11 +103,6 @@
 		09A8ACF816B507DF005E336D /* EventListGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListGroup.m; sourceTree = "<group>"; };
 		09A8AD2E16B5082F005E336D /* MainController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController_iPhone.h; sourceTree = "<group>"; };
 		09A8AD2F16B5082F005E336D /* MainController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController_iPhone.m; sourceTree = "<group>"; };
-		09A8AD4816B50846005E336D /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		09A8AD4916B50846005E336D /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
-		09A8AD4B16B5084E005E336D /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
-		09A8AD4C16B5084E005E336D /* Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Value.m; sourceTree = "<group>"; };
-		09A8AD4F16B50875005E336D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		09A8AD5416B509F6005E336D /* ValueEditorController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueEditorController_iPhone.h; sourceTree = "<group>"; };
 		09A8AD5516B509F6005E336D /* ValueEditorController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueEditorController_iPhone.m; sourceTree = "<group>"; };
 		09A8AD5616B509F6005E336D /* ValueEditorController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueEditorController_iPhone.xib; sourceTree = "<group>"; };
@@ -131,6 +126,11 @@
 		09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController_iPhone.xib; sourceTree = "<group>"; };
 		09A8AD9016B5765D005E336D /* EventListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableView.h; sourceTree = "<group>"; };
 		09A8AD9116B5765D005E336D /* EventListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListTableView.m; sourceTree = "<group>"; };
+		09A8ADA816B703A0005E336D /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		09A8ADA916B703A0005E336D /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		09A8ADAB16B703A0005E336D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		09A8ADAC16B703A0005E336D /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
+		09A8ADAD16B703A0005E336D /* Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Value.m; sourceTree = "<group>"; };
 		09B23D2516B30C2E003FFD91 /* memoirs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoirs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B23D2916B30C2E003FFD91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09B23D2B16B30C2E003FFD91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -257,6 +257,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		09A8ADA716B702F9005E336D /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				09B23D4F16B315E5003FFD91 /* Models */,
+			);
+			path = DAL;
+			sourceTree = "<group>";
+		};
 		09B23D1A16B30C2E003FFD91 = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +303,7 @@
 				09B23DB216B339E2003FFD91 /* Logic */,
 				09B23D5416B3207D003FFD91 /* iPad */,
 				09B23D5316B32067003FFD91 /* iPhone */,
-				09B23D4F16B315E5003FFD91 /* Models */,
+				09A8ADA716B702F9005E336D /* DAL */,
 				09A8ACCE16B43B62005E336D /* Helpers */,
 				09B23D3816B30C2E003FFD91 /* AppDelegate.h */,
 				09B23D3916B30C2E003FFD91 /* AppDelegate.m */,
@@ -321,11 +329,11 @@
 		09B23D4F16B315E5003FFD91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				09A8AD4E16B50875005E336D /* Model.xcdatamodeld */,
-				09A8AD4816B50846005E336D /* Event.h */,
-				09A8AD4916B50846005E336D /* Event.m */,
-				09A8AD4B16B5084E005E336D /* Value.h */,
-				09A8AD4C16B5084E005E336D /* Value.m */,
+				09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */,
+				09A8ADA816B703A0005E336D /* Event.h */,
+				09A8ADA916B703A0005E336D /* Event.m */,
+				09A8ADAC16B703A0005E336D /* Value.h */,
+				09A8ADAD16B703A0005E336D /* Value.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,9 +503,6 @@
 				09A8ACFA16B507DF005E336D /* EventListTableModel.m in Sources */,
 				09A8ACFB16B507DF005E336D /* EventListGroup.m in Sources */,
 				09A8AD4116B5082F005E336D /* MainController_iPhone.m in Sources */,
-				09A8AD4A16B50846005E336D /* Event.m in Sources */,
-				09A8AD4D16B5084E005E336D /* Value.m in Sources */,
-				09A8AD5016B50875005E336D /* Model.xcdatamodeld in Sources */,
 				09A8AD5A16B509F6005E336D /* ValueEditorController_iPhone.m in Sources */,
 				09A8AD5C16B509F6005E336D /* ValueListController_iPhone.m in Sources */,
 				09A8AD6A16B50A04005E336D /* EventEditorController_iPhone.m in Sources */,
@@ -506,6 +511,9 @@
 				09A8AD7016B50A04005E336D /* EventListMenuController_iPhone.m in Sources */,
 				09A8AD7A16B50A38005E336D /* SettingsController_iPhone.m in Sources */,
 				09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */,
+				09A8ADAE16B703A0005E336D /* Event.m in Sources */,
+				09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */,
+				09A8ADB016B703A0005E336D /* Value.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,12 +643,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		09A8AD4E16B50875005E336D /* Model.xcdatamodeld */ = {
+		09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				09A8AD4F16B50875005E336D /* Model.xcdatamodel */,
+				09A8ADAB16B703A0005E336D /* Model.xcdatamodel */,
 			);
-			currentVersion = 09A8AD4F16B50875005E336D /* Model.xcdatamodel */;
+			currentVersion = 09A8ADAB16B703A0005E336D /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

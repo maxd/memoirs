@@ -1,0 +1,9 @@
+[submodule "vendor/RNSwipeViewController"]
+	path = vendor/RNSwipeViewController
+	url = git://github.com/rnystrom/RNSwipeViewController.git
+[submodule "vendor/TPKeyboardAvoiding"]
+	path = vendor/TPKeyboardAvoiding
+	url = git://github.com/michaeltyson/TPKeyboardAvoiding.git
+[submodule "vendor/MTDates"]
+	path = vendor/MTDates
+	url = git://github.com/mysterioustrousers/MTDates.git

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="mainPerMonth" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mainPerWeek" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mainPerYear" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="values" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Value" inverseName="events" inverseEntity="Value" syncable="YES"/>
+    </entity>
+    <entity name="Value" representedClassName="Value" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="values" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="160" positionY="189" width="128" height="135"/>
+        <element name="Value" positionX="358" positionY="243" width="128" height="75"/>
+    </elements>
+</model>

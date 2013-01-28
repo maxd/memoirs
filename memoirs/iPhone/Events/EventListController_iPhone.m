@@ -76,7 +76,10 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     EventListGroup *eventListGroup = [_eventListTableModelDecorator eventGroupBySection:section];
 
-    return [NSString stringWithFormat:@"%@ - %@", [eventListGroup.startDate stringFromDateWithFormat:@"d MMM yyyy"], [eventListGroup.endDate stringFromDateWithFormat:@"d MMM yyyy"]];
+    NSString *startDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.startDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+    NSString *endDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.endDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+    
+    return [NSString stringWithFormat:@"%@ - %@", startDateFormatted, endDateFormatted];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

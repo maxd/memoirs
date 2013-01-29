@@ -39,6 +39,7 @@
 		09A8ADB016B703A0005E336D /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAD16B703A0005E336D /* Value.m */; };
 		09A8ADB316B706D8005E336D /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADB216B706D8005E336D /* AppModel.m */; };
 		09A8ADCC16B84CC0005E336D /* libUnderscore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8ADC716B84CB0005E336D /* libUnderscore.a */; };
+		09A8ADE816B85C63005E336D /* EventListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADE716B85C63005E336D /* EventListItem.m */; };
 		09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2916B30C2E003FFD91 /* UIKit.framework */; };
 		09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2B16B30C2E003FFD91 /* Foundation.framework */; };
 		09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */; };
@@ -157,6 +158,8 @@
 		09A8ADB116B706D8005E336D /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		09A8ADB216B706D8005E336D /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Underscore.xcodeproj; path = vendor/underscore/Underscore.xcodeproj; sourceTree = "<group>"; };
+		09A8ADE616B85C63005E336D /* EventListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListItem.h; sourceTree = "<group>"; };
+		09A8ADE716B85C63005E336D /* EventListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListItem.m; sourceTree = "<group>"; };
 		09B23D2516B30C2E003FFD91 /* memoirs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoirs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B23D2916B30C2E003FFD91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09B23D2B16B30C2E003FFD91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -424,6 +427,8 @@
 				09A8ACF616B507DF005E336D /* EventListTableModel.h */,
 				09A8ACF716B507DF005E336D /* EventListGroup.h */,
 				09A8ACF816B507DF005E336D /* EventListGroup.m */,
+				09A8ADE616B85C63005E336D /* EventListItem.h */,
+				09A8ADE716B85C63005E336D /* EventListItem.m */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */,
 				09A8ADB016B703A0005E336D /* Value.m in Sources */,
 				09A8ADB316B706D8005E336D /* AppModel.m in Sources */,
+				09A8ADE816B85C63005E336D /* EventListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

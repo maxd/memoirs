@@ -9,8 +9,8 @@
 #import "EventListTableModelDecoratorForUITableView.h"
 #import "EventListTableModel.h"
 #import "EventListGroup.h"
-#import "Event.h"
 #import "NSDate+MTDates.h"
+#import "EventListItem.h"
 
 @implementation EventListTableModelDecoratorForUITableView {
     EventListTableModel *_eventListTableModel;
@@ -32,15 +32,15 @@
 - (NSInteger)numberOfRowsInSection:(NSInteger)section {
     EventListGroup *eventListGroup = _eventListTableModel.groups[(NSUInteger) section];
 
-    return [eventListGroup.events count];
+    return [eventListGroup.eventListItems count];
 }
 
-- (Event *)eventByIndexPath:(NSIndexPath *)indexPath {
+- (EventListItem *)eventListItemByIndexPath:(NSIndexPath *)indexPath {
     EventListGroup *eventListGroup = _eventListTableModel.groups[(NSUInteger) indexPath.section];
-    return eventListGroup.events[(NSUInteger) indexPath.row];
+    return eventListGroup.eventListItems[(NSUInteger) indexPath.row];
 }
 
-- (EventListGroup *)eventGroupBySection:(NSInteger)section {
+- (EventListGroup *)eventListGroupBySection:(NSInteger)section {
     return _eventListTableModel.groups[(NSUInteger)section];
 }
 

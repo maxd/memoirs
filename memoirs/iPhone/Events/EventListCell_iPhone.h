@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class Event;
+@class EventListItem;
 
 @interface EventListCell_iPhone : UITableViewCell
 
-@property (strong, nonatomic) Event *event;
+@property (strong, nonatomic) EventListItem *eventListItem;
 
 @end

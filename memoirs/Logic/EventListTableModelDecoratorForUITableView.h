@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @class EventListTableModel;
-@class Event;
 @class EventListGroup;
+@class EventListItem;
 
 @interface EventListTableModelDecoratorForUITableView : NSObject
 
@@ -20,9 +20,9 @@
 
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 
-- (Event *)eventByIndexPath:(NSIndexPath *)indexPath;
+- (EventListItem *)eventListItemByIndexPath:(NSIndexPath *)indexPath;
 
-- (EventListGroup *)eventGroupBySection:(NSInteger)section;
+- (EventListGroup *)eventListGroupBySection:(NSInteger)section;
 
 -(NSIndexPath *)currentIndexPath;
 

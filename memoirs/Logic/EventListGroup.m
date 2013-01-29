@@ -13,9 +13,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.events = [NSMutableArray new];
+        self.eventListItems = [NSMutableArray new];
     }
-
     return self;
 }
 

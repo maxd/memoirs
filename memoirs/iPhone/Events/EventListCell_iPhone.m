@@ -7,32 +7,26 @@
 //
 
 #import "EventListCell_iPhone.h"
+#import "EventListItem.h"
+#import "NSDate+MTDates.h"
 #import "Event.h"
 
 @interface EventListCell_iPhone ()
 
-@property (weak, nonatomic) IBOutlet UILabel *lblDay;
-@property (weak, nonatomic) IBOutlet UILabel *lblMonth;
+@property (weak, nonatomic) IBOutlet UILabel *lblTopDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblBottomDate;
 @property (weak, nonatomic) IBOutlet UILabel *txtText;
 
 @end
 
 @implementation EventListCell_iPhone
 
-- (void)setEvent:(Event *)event {
-    _event = event;
+- (void)setEventListItem:(EventListItem *)eventListItem {
+    _eventListItem = eventListItem;
 
-    self.txtText.text = @"test";
-    
-//    NSDateFormatter *df = [NSDateFormatter new];
-//    
-//    [df setDateFormat:@"dd"];
-//    self.lblDay.text = [NSString stringWithFormat:@"%@", [df stringFromDate:event.date]];
-//    
-//    [df setDateFormat:@"MMM"];
-//    self.lblMonth.text = [NSString stringWithFormat:@"%@", [df stringFromDate:event.date]];
-//    
-//    self.txtText.text = event.text;
+    self.lblTopDate.text = [@([eventListItem.date dayOfMonth]) stringValue];
+    self.lblBottomDate.text = [eventListItem.date stringFromDateWithFullMonth];
+    self.txtText.text = eventListItem.event ? eventListItem.event.text : @"";
 }
 
 @end

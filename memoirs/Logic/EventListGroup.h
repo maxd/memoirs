@@ -13,6 +13,6 @@
 @property (strong, nonatomic) NSDate *startDate;
 @property (strong, nonatomic) NSDate *endDate;
 
-@property (strong, nonatomic) NSMutableArray *events;
+@property (strong, nonatomic) NSMutableArray *eventListItems;
 
 @end

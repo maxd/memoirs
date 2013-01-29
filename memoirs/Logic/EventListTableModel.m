@@ -11,6 +11,7 @@
 #import "EventListGroup.h"
 #import "Event.h"
 #import "AppModel.h"
+#import "EventListItem.h"
 
 @interface EventListTableModel ()
 @end
@@ -53,7 +54,8 @@
             return [e.date isEqualToDate:date];
         });
 
-        [eventListGroup.events addObject:event ? event : [NSNull null]];
+        EventListItem *eventListItem = [[EventListItem alloc] initWithDate:date andEvent:event];
+        [eventListGroup.eventListItems addObject:eventListItem];
     }
 
     return eventListGroup;

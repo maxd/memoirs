@@ -78,13 +78,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventListCell_iPhone *cell = [EventListCell_iPhone dequeOrCreateInTable:tableView];
 
-    cell.event = [_eventListTableModelDecorator eventByIndexPath:indexPath];
+    cell.eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
     
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    EventListGroup *eventListGroup = [_eventListTableModelDecorator eventGroupBySection:section];
+    EventListGroup *eventListGroup = [_eventListTableModelDecorator eventListGroupBySection:section];
 
     NSString *startDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.startDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
     NSString *endDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.endDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];

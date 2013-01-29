@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
+		0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A016B88BA400C6269A /* grey-icon-overlay.png */; };
+		0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */; };
 		09A8ACAD16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */; };
 		09A8ACAE16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */; };
 		09A8ACBB16B42CB5005E336D /* libMTDates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8ACB816B42C2A005E336D /* libMTDates.a */; };
@@ -108,6 +110,8 @@
 /* Begin PBXFileReference section */
 		0962D87A16B887E200C6269A /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
+		0962D8A016B88BA400C6269A /* grey-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay.png"; sourceTree = "<group>"; };
+		0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay@2x.png"; sourceTree = "<group>"; };
 		09A8ACA916B3CBA5005E336D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		09A8ACAB16B3CBA5005E336D /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 			children = (
 				0962D87A16B887E200C6269A /* menu-icon.png */,
 				0962D87B16B887E200C6269A /* menu-icon@2x.png */,
+				0962D8A016B88BA400C6269A /* grey-icon-overlay.png */,
+				0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -554,6 +560,8 @@
 				09A8AD7B16B50A38005E336D /* SettingsController_iPhone.xib in Resources */,
 				0962D87C16B887E200C6269A /* menu-icon.png in Resources */,
 				0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */,
+				0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */,
+				0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

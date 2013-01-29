@@ -43,10 +43,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithTitle:@"Меню" style:UIBarButtonItemStyleDone target:self action:@selector(btMenuHandler:)];
+    UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;
 
-    UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStyleDone target:self action:@selector(btTodayHandler:)];
+    UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStylePlain target:self action:@selector(btTodayHandler:)];
     self.navigationItem.rightBarButtonItem = btToday;
 
     _eventListTableModel = [[EventListTableModel alloc] initWithAppModel:_appModel];

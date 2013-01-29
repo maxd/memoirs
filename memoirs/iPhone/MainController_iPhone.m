@@ -9,34 +9,32 @@
 #import "MainController_iPhone.h"
 #import "EventListMenuController_iPhone.h"
 #import "EventListController_iPhone.h"
+#import "AppModel.h"
 
 @interface MainController_iPhone ()
 
 @end
 
-@implementation MainController_iPhone
+@implementation MainController_iPhone {
+    AppModel *_appModel;
+}
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)initWithAppModel:(AppModel *)appModel {
+    self = [super init];
     if (self) {
-        // Custom initialization
+        _appModel = appModel;
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.centerViewController = [[UINavigationController alloc] initWithRootViewController:[[EventListController_iPhone alloc] init]];
-    self.leftViewController = [[EventListMenuController_iPhone alloc] init];
-}
+    EventListController_iPhone *eventListController = [[EventListController_iPhone alloc] initWithAppModel:_appModel];
+    EventListMenuController_iPhone *eventListMenuController = [[EventListMenuController_iPhone alloc] init];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.centerViewController = [[UINavigationController alloc] initWithRootViewController:eventListController];
+    self.leftViewController = eventListMenuController;
 }
 
 @end

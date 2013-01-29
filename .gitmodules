@@ -7,3 +7,6 @@
 [submodule "vendor/MTDates"]
 	path = vendor/MTDates
 	url = git://github.com/mysterioustrousers/MTDates.git
+[submodule "vendor/underscore"]
+	path = vendor/underscore
+	url = git://github.com/robb/Underscore.m.git

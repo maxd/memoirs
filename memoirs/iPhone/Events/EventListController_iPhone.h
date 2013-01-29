@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AppModel;
+
 @interface EventListController_iPhone : UIViewController
+
+- (id)initWithAppModel:(AppModel *)appModel;
 
 @end

@@ -50,9 +50,15 @@
     return [[NSFetchedResultsController alloc] initWithFetchRequest:req managedObjectContext:self sectionNameKeyPath:section cacheName:cache];
 }
 
-- (NSArray *)objectsForRequest:(NSFetchRequest *)req withFetchedProperty:(NSString *)property {
-    [req setPropertiesToFetch:[NSArray arrayWithObjects:property, nil]];
-    return [self executeFetchRequest:req error:nil];
+- (NSArray *)objectsForRequest:(NSFetchRequest *)req {
+    NSError *error;
+
+    NSArray* result = [self executeFetchRequest:req error:&error];
+    if (result == nil) {
+        NSLog(@"Can't execute executeFetchRequest. Error: %@", error);
+    }
+
+    return result;
 }
 
 - (NSManagedObjectContext *)localContextWithMerge:(BOOL)needsMerge {

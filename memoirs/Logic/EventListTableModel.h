@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class AppModel;
+
 @interface EventListTableModel : NSObject
 
 @property (strong, nonatomic) NSMutableArray *groups;
+
+- (id)initWithAppModel:(AppModel *)appModel;
 
 -(void)loadWeeksAroundCurrent;
 

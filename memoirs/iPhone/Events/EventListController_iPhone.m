@@ -10,11 +10,11 @@
 #import "AppDelegate.h"
 #import "EventEditorController_iPhone.h"
 #import "EventListTableModel.h"
+#import "AppModel.h"
 #import "EventListTableModelDecoratorForUITableView.h"
 #import "EventListCell_iPhone.h"
 #import "UITableViewCell+NIB.h"
 #import "EventListGroup.h"
-#import "NSDate+MTDates.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate>
 
@@ -26,8 +26,18 @@
 @end
 
 @implementation EventListController_iPhone {
+    AppModel *_appModel;
+
     EventListTableModel *_eventListTableModel;
     EventListTableModelDecoratorForUITableView *_eventListTableModelDecorator;
+}
+
+- (id)initWithAppModel:(AppModel *)appModel {
+    self = [super init];
+    if (self) {
+        _appModel = appModel;
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -39,7 +49,7 @@
     UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStyleDone target:self action:@selector(btTodayHandler:)];
     self.navigationItem.rightBarButtonItem = btToday;
 
-    _eventListTableModel = [EventListTableModel new];
+    _eventListTableModel = [[EventListTableModel alloc] initWithAppModel:_appModel];
     _eventListTableModelDecorator = [[EventListTableModelDecoratorForUITableView alloc] initWithEventListTableModel:_eventListTableModel];
 
     [self scrollToTodayAnimated:NO];

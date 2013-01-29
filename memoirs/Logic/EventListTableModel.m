@@ -10,15 +10,19 @@
 #import "NSDate+MTDates.h"
 #import "EventListGroup.h"
 #import "Event.h"
+#import "AppModel.h"
 
 @interface EventListTableModel ()
 @end
 
-@implementation EventListTableModel
+@implementation EventListTableModel {
+    AppModel *_appModel;
+}
 
-- (id)init {
+- (id)initWithAppModel:(AppModel *)appModel {
     self = [super init];
     if (self) {
+        _appModel = appModel;
         self.groups = [NSMutableArray new];
     }
 
@@ -42,12 +46,14 @@
     eventListGroup.startDate = [dateInWeek startOfCurrentWeek];
     eventListGroup.endDate = [dateInWeek endOfCurrentWeek];
 
+    NSArray *events = [_appModel eventsBetween:eventListGroup.startDate and:eventListGroup.endDate];
     for (NSDate *date = eventListGroup.startDate; [date isOnOrBefore:eventListGroup.endDate]; date = [date startOfNextDay]) {
-//        Event *event = [Event new];
-//        event.text = @"test";
-//        event.date = date;
 
-        [eventListGroup.events addObject:[NSNull null]];
+        Event *event = _.array(events).find(^BOOL(Event *e) {
+            return [e.date isEqualToDate:date];
+        });
+
+        [eventListGroup.events addObject:event ? event : [NSNull null]];
     }
 
     return eventListGroup;

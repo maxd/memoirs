@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RNSwipeViewController.h"
 
+@class AppModel;
+
 @interface MainController_iPhone : RNSwipeViewController
+
+- (id)initWithAppModel:(AppModel *)appModel;
 
 @end

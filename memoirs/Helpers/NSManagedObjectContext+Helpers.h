@@ -14,7 +14,7 @@
 - (NSFetchedResultsController *)resultsControllerForRequest:(NSFetchRequest *)req sectionNameKeyPath:(NSString *)section;
 - (NSFetchedResultsController *)resultsControllerForRequest:(NSFetchRequest *)req sectionNameKeyPath:(NSString *)section cacheName:(NSString *)cache;
  
-- (NSArray *)objectsForRequest:(NSFetchRequest *)req withFetchedProperty:(NSString *)property;
+- (NSArray *)objectsForRequest:(NSFetchRequest *)req;
 
 - (NSManagedObjectContext *)localContextWithMerge:(BOOL)needsMerge;
 

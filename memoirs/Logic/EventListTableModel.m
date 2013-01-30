@@ -32,8 +32,8 @@
 
 - (void)loadWeeksAroundCurrent {
     NSDate *currentWeek = [[NSDate date] startOfCurrentWeek];
-    NSDate *startWeek = [currentWeek startOfPreviousWeek];
-    NSDate *endWeek = [currentWeek startOfNextWeek];
+    NSDate *startWeek = [[currentWeek startOfPreviousWeek] oneWeekPrevious];
+    NSDate *endWeek = [[currentWeek startOfNextWeek] oneWeekNext];
 
     [self.groups removeAllObjects];
     for (NSDate *date = startWeek; [date isOnOrBefore:endWeek]; date = [date startOfNextWeek]) {

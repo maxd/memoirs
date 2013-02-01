@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class Event;
+@class Value;
 
 @interface AppModel : NSObject
 
--(id)initWithContext:(NSManagedObjectContext *)context;
+@property (strong, nonatomic, readonly) NSManagedObjectContext *context;
+
+- (id)initWithContext:(NSManagedObjectContext *)context;
 
 - (NSArray *)eventsBetween:(NSDate *)from and:(NSDate *)to;
+
+- (NSFetchedResultsController *)values;
 
 @end

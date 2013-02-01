@@ -38,12 +38,16 @@
 		09A8AD7A16B50A38005E336D /* SettingsController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */; };
 		09A8AD7B16B50A38005E336D /* SettingsController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */; };
 		09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD9116B5765D005E336D /* EventListTableView.m */; };
-		09A8ADAE16B703A0005E336D /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADA916B703A0005E336D /* Event.m */; };
 		09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */; };
-		09A8ADB016B703A0005E336D /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAD16B703A0005E336D /* Value.m */; };
 		09A8ADB316B706D8005E336D /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADB216B706D8005E336D /* AppModel.m */; };
 		09A8ADCC16B84CC0005E336D /* libUnderscore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8ADC716B84CB0005E336D /* libUnderscore.a */; };
 		09A8ADE816B85C63005E336D /* EventListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADE716B85C63005E336D /* EventListItem.m */; };
+		09AF2A8A16B998A7001E15BB /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8916B998A7001E15BB /* Event.m */; };
+		09AF2A8D16B998C8001E15BB /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8C16B998C8001E15BB /* Value.m */; };
+		09AF2A9016BB17A2001E15BB /* ValueListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8F16BB17A2001E15BB /* ValueListCell_iPhone.m */; };
+		09AF2A9216BB17D8001E15BB /* ValueListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2A9116BB17D8001E15BB /* ValueListCell_iPhone.xib */; };
+		09AF2AA316BC2C06001E15BB /* values.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2AA216BC2C06001E15BB /* values.lst */; };
+		09AF2AA616BC2C58001E15BB /* ValuesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2AA516BC2C58001E15BB /* ValuesLoader.m */; };
 		09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2916B30C2E003FFD91 /* UIKit.framework */; };
 		09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2B16B30C2E003FFD91 /* Foundation.framework */; };
 		09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */; };
@@ -158,16 +162,22 @@
 		09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController_iPhone.xib; sourceTree = "<group>"; };
 		09A8AD9016B5765D005E336D /* EventListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableView.h; sourceTree = "<group>"; };
 		09A8AD9116B5765D005E336D /* EventListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListTableView.m; sourceTree = "<group>"; };
-		09A8ADA816B703A0005E336D /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		09A8ADA916B703A0005E336D /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		09A8ADAB16B703A0005E336D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		09A8ADAC16B703A0005E336D /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
-		09A8ADAD16B703A0005E336D /* Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Value.m; sourceTree = "<group>"; };
 		09A8ADB116B706D8005E336D /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		09A8ADB216B706D8005E336D /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Underscore.xcodeproj; path = vendor/underscore/Underscore.xcodeproj; sourceTree = "<group>"; };
 		09A8ADE616B85C63005E336D /* EventListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListItem.h; sourceTree = "<group>"; };
 		09A8ADE716B85C63005E336D /* EventListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListItem.m; sourceTree = "<group>"; };
+		09AF2A8816B998A7001E15BB /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		09AF2A8916B998A7001E15BB /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		09AF2A8B16B998C8001E15BB /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
+		09AF2A8C16B998C8001E15BB /* Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Value.m; sourceTree = "<group>"; };
+		09AF2A8E16BB17A2001E15BB /* ValueListCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueListCell_iPhone.h; sourceTree = "<group>"; };
+		09AF2A8F16BB17A2001E15BB /* ValueListCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueListCell_iPhone.m; sourceTree = "<group>"; };
+		09AF2A9116BB17D8001E15BB /* ValueListCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueListCell_iPhone.xib; sourceTree = "<group>"; };
+		09AF2AA216BC2C06001E15BB /* values.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = values.lst; sourceTree = "<group>"; };
+		09AF2AA416BC2C58001E15BB /* ValuesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuesLoader.h; sourceTree = "<group>"; };
+		09AF2AA516BC2C58001E15BB /* ValuesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValuesLoader.m; sourceTree = "<group>"; };
 		09B23D2516B30C2E003FFD91 /* memoirs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoirs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B23D2916B30C2E003FFD91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09B23D2B16B30C2E003FFD91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -217,6 +227,7 @@
 		0962D87916B8877100C6269A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				09AF2AA216BC2C06001E15BB /* values.lst */,
 				0962D87A16B887E200C6269A /* menu-icon.png */,
 				0962D87B16B887E200C6269A /* menu-icon@2x.png */,
 				0962D8A016B88BA400C6269A /* grey-icon-overlay.png */,
@@ -286,12 +297,15 @@
 		09A8AD5216B50961005E336D /* Values */ = {
 			isa = PBXGroup;
 			children = (
-				09A8AD5416B509F6005E336D /* ValueEditorController_iPhone.h */,
-				09A8AD5516B509F6005E336D /* ValueEditorController_iPhone.m */,
-				09A8AD5616B509F6005E336D /* ValueEditorController_iPhone.xib */,
 				09A8AD5716B509F6005E336D /* ValueListController_iPhone.h */,
 				09A8AD5816B509F6005E336D /* ValueListController_iPhone.m */,
 				09A8AD5916B509F6005E336D /* ValueListController_iPhone.xib */,
+				09AF2A8E16BB17A2001E15BB /* ValueListCell_iPhone.h */,
+				09AF2A8F16BB17A2001E15BB /* ValueListCell_iPhone.m */,
+				09AF2A9116BB17D8001E15BB /* ValueListCell_iPhone.xib */,
+				09A8AD5416B509F6005E336D /* ValueEditorController_iPhone.h */,
+				09A8AD5516B509F6005E336D /* ValueEditorController_iPhone.m */,
+				09A8AD5616B509F6005E336D /* ValueEditorController_iPhone.xib */,
 			);
 			path = Values;
 			sourceTree = "<group>";
@@ -312,6 +326,8 @@
 				09B23D4F16B315E5003FFD91 /* Models */,
 				09A8ADB116B706D8005E336D /* AppModel.h */,
 				09A8ADB216B706D8005E336D /* AppModel.m */,
+				09AF2AA416BC2C58001E15BB /* ValuesLoader.h */,
+				09AF2AA516BC2C58001E15BB /* ValuesLoader.m */,
 			);
 			path = DAL;
 			sourceTree = "<group>";
@@ -392,10 +408,10 @@
 			isa = PBXGroup;
 			children = (
 				09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */,
-				09A8ADA816B703A0005E336D /* Event.h */,
-				09A8ADA916B703A0005E336D /* Event.m */,
-				09A8ADAC16B703A0005E336D /* Value.h */,
-				09A8ADAD16B703A0005E336D /* Value.m */,
+				09AF2A8816B998A7001E15BB /* Event.h */,
+				09AF2A8916B998A7001E15BB /* Event.m */,
+				09AF2A8B16B998C8001E15BB /* Value.h */,
+				09AF2A8C16B998C8001E15BB /* Value.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -562,6 +578,8 @@
 				0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */,
 				0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */,
 				0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */,
+				09AF2A9216BB17D8001E15BB /* ValueListCell_iPhone.xib in Resources */,
+				09AF2AA316BC2C06001E15BB /* values.lst in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,11 +616,13 @@
 				09A8AD7016B50A04005E336D /* EventListMenuController_iPhone.m in Sources */,
 				09A8AD7A16B50A38005E336D /* SettingsController_iPhone.m in Sources */,
 				09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */,
-				09A8ADAE16B703A0005E336D /* Event.m in Sources */,
 				09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */,
-				09A8ADB016B703A0005E336D /* Value.m in Sources */,
 				09A8ADB316B706D8005E336D /* AppModel.m in Sources */,
 				09A8ADE816B85C63005E336D /* EventListItem.m in Sources */,
+				09AF2A8A16B998A7001E15BB /* Event.m in Sources */,
+				09AF2A8D16B998C8001E15BB /* Value.m in Sources */,
+				09AF2A9016BB17A2001E15BB /* ValueListCell_iPhone.m in Sources */,
+				09AF2AA616BC2C58001E15BB /* ValuesLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

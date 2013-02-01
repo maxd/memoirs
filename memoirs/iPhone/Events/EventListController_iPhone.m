@@ -15,8 +15,12 @@
 #import "EventListCell_iPhone.h"
 #import "UITableViewCell+NIB.h"
 #import "EventListGroup.h"
+#import "EventListItem.h"
+#import "Event.h"
+#import "NSManagedObjectContext+Helpers.h"
+#import "NSManagedObject+Helpers.h"
 
-@interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate>
+@interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *ctlTableView;
 
@@ -93,8 +97,39 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    EventEditorController_iPhone *eventEditorController = [EventEditorController_iPhone new];
-    [self.navigationController pushViewController:eventEditorController animated:YES];
+    EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
+
+    EventEditorController_iPhone *eventEditorController = [[EventEditorController_iPhone alloc] initWithAppModel:_appModel];
+    eventEditorController.delegate = self;
+
+    eventEditorController.date = eventListItem.date;
+    eventEditorController.value = eventListItem.event.value;
+    eventEditorController.text = eventListItem.event.text;
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:eventEditorController];
+
+    [self presentModalViewController:navigationController animated:YES];
+}
+
+- (void)eventEditorController:(EventEditorController_iPhone *)eventEditorController didFinishedWithSaveState:(BOOL)save {
+    NSIndexPath *indexPath = [self.ctlTableView indexPathForSelectedRow];
+
+    EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
+    if (save) {
+        if (!eventListItem.event) {
+            eventListItem.event = [_appModel.context newObjectWithEntityName:[Event entityName]];
+        }
+
+        eventListItem.event.date = eventEditorController.date;
+        eventListItem.event.value = eventEditorController.value;
+        eventListItem.event.text = eventEditorController.text;
+
+        [_appModel.context save];
+
+        [self.ctlTableView reloadData];
+    }
+
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

@@ -2,20 +2,21 @@
 //  Event.m
 //  memoirs
 //
-//  Created by Maxim Dobryakov on 1/26/13.
+//  Created by Maxim Dobryakov on 1/30/13.
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
 #import "Event.h"
+#import "Value.h"
 
 
 @implementation Event
 
-@dynamic text;
 @dynamic date;
-@dynamic mainPerWeek;
 @dynamic mainPerMonth;
+@dynamic mainPerWeek;
 @dynamic mainPerYear;
-@dynamic values;
+@dynamic text;
+@dynamic value;
 
 @end

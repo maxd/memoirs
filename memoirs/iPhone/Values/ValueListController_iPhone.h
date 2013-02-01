@@ -8,6 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ValueListControllerDelegate_iPhone;
+
+@class AppModel;
+@class Value;
+
+
 @interface ValueListController_iPhone : UIViewController
+
+@property (strong, nonatomic) Value *value;
+
+@property (weak, nonatomic) id<ValueListControllerDelegate_iPhone> delegate;
+
+-(id)initWithAppModel:(AppModel *)appModel;
+
+@end
+
+
+@protocol ValueListControllerDelegate_iPhone
+
+@optional
+
+- (void)valueListControllerDidSelectedValue:(ValueListController_iPhone *)valueListController;
 
 @end

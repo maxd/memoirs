@@ -6,15 +6,13 @@
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
 #import "AppModel.h"
 #import "NSManagedObjectContext+Helpers.h"
-#import "Event.h"
 #import "NSManagedObject+Helpers.h"
+#import "Event.h"
+#import "Value.h"
 
-@implementation AppModel {
-    NSManagedObjectContext *_context;
-}
+@implementation AppModel
 
 - (id)initWithContext:(NSManagedObjectContext *)context {
     self = [super init];
@@ -33,6 +31,15 @@
     [fetchRequest setPredicate:predicate];
 
     return [_context objectsForRequest:fetchRequest];
+}
+
+- (NSFetchedResultsController *)values {
+    NSFetchRequest *fetchRequest = [Value request];
+
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+
+    return [_context resultsControllerForRequest:fetchRequest];
 }
 
 @end

@@ -14,6 +14,7 @@
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSURL+Helpers.h"
 #import "AppModel.h"
+#import "ValuesLoader.h"
 
 @implementation AppDelegate {
     AppModel *_appModel;
@@ -27,6 +28,9 @@
     _appModel = [self createAppModel];
     if (!_appModel)
         return NO;
+
+    ValuesLoader *valuesLoader = [[ValuesLoader alloc] initWithManagedContext:[_appModel context]];
+    [valuesLoader loadPredefinedValuesIfRequired];
 
     [self createWindow:_appModel];
 

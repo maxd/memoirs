@@ -97,10 +97,6 @@
     return label;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 27;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventListCell_iPhone *cell = [EventListCell_iPhone dequeOrCreateInTable:tableView];
 

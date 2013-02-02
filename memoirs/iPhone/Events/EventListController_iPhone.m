@@ -22,6 +22,7 @@
 #import "NSManagedObject+Helpers.h"
 #import "UIImage+Resize.h"
 #import "UIColor+Helpers.h"
+#import "JASidePanelController.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate>
 
@@ -67,7 +68,7 @@
 #pragma mark Button Handlers
 
 - (IBAction)btMenuHandler:(id)sender {
-    [[AppDelegate shared].mainController showLeft];
+    [[AppDelegate shared].mainController showLeftPanel:YES];
 }
 
 - (IBAction)btTodayHandler:(id)sender {

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RNSwipeViewController.h"
+#import "JASidePanelController.h"
 
 @class AppModel;
 
-@interface MainController_iPhone : RNSwipeViewController
+@interface MainController_iPhone : JASidePanelController
 
 - (id)initWithAppModel:(AppModel *)appModel;
 

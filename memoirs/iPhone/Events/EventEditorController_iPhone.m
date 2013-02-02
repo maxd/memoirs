@@ -13,7 +13,6 @@
 #import "ValueListController_iPhone.h"
 #import "AppModel.h"
 #import "UIColor+Helpers.h"
-#import "UIView+Sizes.h"
 #import "UIImage+Resize.h"
 
 @interface EventEditorController_iPhone () <UITextViewDelegate, ValueListControllerDelegate_iPhone>
@@ -45,7 +44,7 @@
 
     [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"btn"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{6, 6, 6, 6}")] forState:UIControlStateNormal];
     [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"btn_active"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{6, 6, 6, 6}")] forState:UIControlStateHighlighted];
-    [self.btSelectValue setImageEdgeInsets:UIEdgeInsetsMake(0, self.btSelectValue.width - 20, 0, 0)];
+    [self.btSelectValue setImageEdgeInsets:UIEdgeInsetsMake(0, self.btSelectValue.frame.size.width - 20, 0, 0)];
 
     UIImage *txtTextBgImage = [[UIImage imageNamed:@"edit_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     txtTextBgImage = [txtTextBgImage scaleToSize:self.txtText.frame.size];

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RNSwipeViewController.h"
+#import "MainController_iPhone.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,6 +15,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) RNSwipeViewController *mainController;
+@property (strong, nonatomic) MainController_iPhone *mainController;
 
 @end

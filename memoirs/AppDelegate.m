@@ -7,7 +7,6 @@
 //
 
 #import <CoreData/CoreData.h>
-#import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 
 #import "MainController_iPhone.h"

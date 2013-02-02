@@ -33,8 +33,9 @@
     EventListController_iPhone *eventListController = [[EventListController_iPhone alloc] initWithAppModel:_appModel];
     EventListMenuController_iPhone *eventListMenuController = [[EventListMenuController_iPhone alloc] init];
 
-    self.centerViewController = [[UINavigationController alloc] initWithRootViewController:eventListController];
-    self.leftViewController = eventListMenuController;
+    self.centerPanel = [[UINavigationController alloc] initWithRootViewController:eventListController];
+    self.leftPanel = eventListMenuController;
+    self.leftGapPercentage = 0.82;
 }
 
 @end

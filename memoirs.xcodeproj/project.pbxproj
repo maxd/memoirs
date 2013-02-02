@@ -84,6 +84,8 @@
 		09AF2B6A16BD171B001E15BB /* white-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2B6916BD171B001E15BB /* white-icon-overlay.png */; };
 		09AF2B7116BD244D001E15BB /* cellheader_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2B6F16BD244C001E15BB /* cellheader_background.png */; };
 		09AF2B7216BD244D001E15BB /* cellheader_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2B7016BD244C001E15BB /* cellheader_background@2x.png */; };
+		09AF2B7816BD2863001E15BB /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2B7516BD2863001E15BB /* JASidePanelController.m */; };
+		09AF2B7916BD2863001E15BB /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */; };
 		09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2916B30C2E003FFD91 /* UIKit.framework */; };
 		09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2B16B30C2E003FFD91 /* Foundation.framework */; };
 		09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */; };
@@ -93,11 +95,6 @@
 		09B23D3C16B30C2E003FFD91 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B23D3B16B30C2E003FFD91 /* Default.png */; };
 		09B23D3E16B30C2E003FFD91 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B23D3D16B30C2E003FFD91 /* Default@2x.png */; };
 		09B23D4016B30C2E003FFD91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B23D3F16B30C2E003FFD91 /* Default-568h@2x.png */; };
-		09B23D8F16B32693003FFD91 /* RNDirectionPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B23D8516B32693003FFD91 /* RNDirectionPanGestureRecognizer.m */; };
-		09B23D9016B32693003FFD91 /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B23D8716B32693003FFD91 /* RNSwipeViewController.m */; };
-		09B23D9116B32693003FFD91 /* UIApplication+AppDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B23D8A16B32693003FFD91 /* UIApplication+AppDimensions.m */; };
-		09B23D9216B32693003FFD91 /* UIView+Sizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B23D8C16B32693003FFD91 /* UIView+Sizes.m */; };
-		09B23D9316B32693003FFD91 /* UIViewController+RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B23D8E16B32693003FFD91 /* UIViewController+RNSwipeViewController.m */; };
 		09B23DAF16B338B3003FFD91 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DAE16B338B3003FFD91 /* CoreData.framework */; };
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -252,6 +249,10 @@
 		09AF2B6916BD171B001E15BB /* white-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-icon-overlay.png"; sourceTree = "<group>"; };
 		09AF2B6F16BD244C001E15BB /* cellheader_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellheader_background.png; sourceTree = "<group>"; };
 		09AF2B7016BD244C001E15BB /* cellheader_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellheader_background@2x.png"; sourceTree = "<group>"; };
+		09AF2B7416BD2863001E15BB /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JASidePanelController.h; path = vendor/JASidePanels/JASidePanels/Source/JASidePanelController.h; sourceTree = "<group>"; };
+		09AF2B7516BD2863001E15BB /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASidePanelController.m; path = vendor/JASidePanels/JASidePanels/Source/JASidePanelController.m; sourceTree = "<group>"; };
+		09AF2B7616BD2863001E15BB /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JASidePanel.h"; path = "vendor/JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JASidePanel.m"; path = "vendor/JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		09B23D2516B30C2E003FFD91 /* memoirs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoirs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B23D2916B30C2E003FFD91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09B23D2B16B30C2E003FFD91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -265,17 +266,6 @@
 		09B23D3B16B30C2E003FFD91 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		09B23D3D16B30C2E003FFD91 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		09B23D3F16B30C2E003FFD91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		09B23D8416B32693003FFD91 /* RNDirectionPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDirectionPanGestureRecognizer.h; sourceTree = "<group>"; };
-		09B23D8516B32693003FFD91 /* RNDirectionPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDirectionPanGestureRecognizer.m; sourceTree = "<group>"; };
-		09B23D8616B32693003FFD91 /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
-		09B23D8716B32693003FFD91 /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
-		09B23D8816B32693003FFD91 /* RNSwipeViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewControllerDelegate.h; sourceTree = "<group>"; };
-		09B23D8916B32693003FFD91 /* UIApplication+AppDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppDimensions.h"; sourceTree = "<group>"; };
-		09B23D8A16B32693003FFD91 /* UIApplication+AppDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppDimensions.m"; sourceTree = "<group>"; };
-		09B23D8B16B32693003FFD91 /* UIView+Sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sizes.h"; sourceTree = "<group>"; };
-		09B23D8C16B32693003FFD91 /* UIView+Sizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sizes.m"; sourceTree = "<group>"; };
-		09B23D8D16B32693003FFD91 /* UIViewController+RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RNSwipeViewController.h"; sourceTree = "<group>"; };
-		09B23D8E16B32693003FFD91 /* UIViewController+RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RNSwipeViewController.m"; sourceTree = "<group>"; };
 		09B23DAE16B338B3003FFD91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09B23DB016B338CC003FFD91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -453,6 +443,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		09AF2B7316BD2850001E15BB /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				09AF2B7416BD2863001E15BB /* JASidePanelController.h */,
+				09AF2B7516BD2863001E15BB /* JASidePanelController.m */,
+				09AF2B7616BD2863001E15BB /* UIViewController+JASidePanel.h */,
+				09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */,
+			);
+			name = JASidePanels;
+			sourceTree = "<group>";
+		};
 		09B23D1A16B30C2E003FFD91 = {
 			isa = PBXGroup;
 			children = (
@@ -473,8 +474,8 @@
 		09B23D2816B30C2E003FFD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09AF2B7316BD2850001E15BB /* JASidePanels */,
 				09A8ACA816B3CB96005E336D /* TPKeyboardAvoiding */,
-				09B23D8316B32693003FFD91 /* RNSwipeViewController */,
 				09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */,
 				09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */,
 				09B23D2916B30C2E003FFD91 /* UIKit.framework */,
@@ -545,25 +546,6 @@
 			children = (
 			);
 			path = iPad;
-			sourceTree = "<group>";
-		};
-		09B23D8316B32693003FFD91 /* RNSwipeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				09B23D8416B32693003FFD91 /* RNDirectionPanGestureRecognizer.h */,
-				09B23D8516B32693003FFD91 /* RNDirectionPanGestureRecognizer.m */,
-				09B23D8616B32693003FFD91 /* RNSwipeViewController.h */,
-				09B23D8716B32693003FFD91 /* RNSwipeViewController.m */,
-				09B23D8816B32693003FFD91 /* RNSwipeViewControllerDelegate.h */,
-				09B23D8916B32693003FFD91 /* UIApplication+AppDimensions.h */,
-				09B23D8A16B32693003FFD91 /* UIApplication+AppDimensions.m */,
-				09B23D8B16B32693003FFD91 /* UIView+Sizes.h */,
-				09B23D8C16B32693003FFD91 /* UIView+Sizes.m */,
-				09B23D8D16B32693003FFD91 /* UIViewController+RNSwipeViewController.h */,
-				09B23D8E16B32693003FFD91 /* UIViewController+RNSwipeViewController.m */,
-			);
-			name = RNSwipeViewController;
-			path = vendor/RNSwipeViewController/RNSwipeViewController;
 			sourceTree = "<group>";
 		};
 		09B23DB216B339E2003FFD91 /* Logic */ = {
@@ -738,11 +720,6 @@
 			files = (
 				09B23D3616B30C2E003FFD91 /* main.m in Sources */,
 				09B23D3A16B30C2E003FFD91 /* AppDelegate.m in Sources */,
-				09B23D8F16B32693003FFD91 /* RNDirectionPanGestureRecognizer.m in Sources */,
-				09B23D9016B32693003FFD91 /* RNSwipeViewController.m in Sources */,
-				09B23D9116B32693003FFD91 /* UIApplication+AppDimensions.m in Sources */,
-				09B23D9216B32693003FFD91 /* UIView+Sizes.m in Sources */,
-				09B23D9316B32693003FFD91 /* UIViewController+RNSwipeViewController.m in Sources */,
 				09A8ACAD16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				09A8ACAE16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m in Sources */,
 				09A8ACDE16B43BE6005E336D /* NSManagedObject+Helpers.m in Sources */,
@@ -771,6 +748,8 @@
 				09AF2AA616BC2C58001E15BB /* ValuesLoader.m in Sources */,
 				09AF2B0B16BC7DB4001E15BB /* UIColor+Helpers.m in Sources */,
 				09AF2B4416BCECFE001E15BB /* UIImage+Resize.m in Sources */,
+				09AF2B7816BD2863001E15BB /* JASidePanelController.m in Sources */,
+				09AF2B7916BD2863001E15BB /* UIViewController+JASidePanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

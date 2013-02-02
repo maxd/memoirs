@@ -15,4 +15,7 @@
 
 - (id)initWithAppModel:(AppModel *)appModel;
 
+-(void)showEventList;
+
+-(void)showSettings;
 @end

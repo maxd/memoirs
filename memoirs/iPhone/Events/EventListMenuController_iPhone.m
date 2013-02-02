@@ -13,6 +13,8 @@
 #import "UIBorderLabel.h"
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
+#import "SettingsController_iPhone.h"
+#import "MainController_iPhone.h"
 
 @interface EventListMenuController_iPhone () <UITableViewDataSource, UITableViewDelegate>
 
@@ -125,7 +127,7 @@
     _selectedGroup = @"menuGroupByWeek:";
     [tableView reloadData];
 
-    [[self sidePanelController] showCenterPanel:YES];
+    [(MainController_iPhone *)self.sidePanelController showEventList];
     // ???
 }
 
@@ -133,7 +135,7 @@
     _selectedGroup = @"menuGroupByMonth:";
     [tableView reloadData];
 
-    [[self sidePanelController] showCenterPanel:YES];
+    [(MainController_iPhone *)self.sidePanelController showEventList];
     // ???
 }
 
@@ -141,12 +143,12 @@
     _selectedGroup = @"menuGroupByYear:";
     [tableView reloadData];
 
-    [[self sidePanelController] showCenterPanel:YES];
+    [(MainController_iPhone *)self.sidePanelController showEventList];
     // ???
 }
 
 - (void)menuSettingsHandler:(UITableView *)tableView {
-    // ???
+    [(MainController_iPhone *)self.sidePanelController showSettings];
 }
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0903EFA716BD5B0E00547357 /* EventListMenuCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */; };
+		0903EFA916BD5B4D00547357 /* EventListMenuCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */; };
+		0903EFAC16BD5EA500547357 /* UIBorderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903EFAB16BD5EA500547357 /* UIBorderLabel.m */; };
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A016B88BA400C6269A /* grey-icon-overlay.png */; };
@@ -145,6 +148,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0903EFA516BD5B0E00547357 /* EventListMenuCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListMenuCell_iPhone.h; sourceTree = "<group>"; };
+		0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListMenuCell_iPhone.m; sourceTree = "<group>"; };
+		0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListMenuCell_iPhone.xib; sourceTree = "<group>"; };
+		0903EFAA16BD5EA500547357 /* UIBorderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBorderLabel.h; sourceTree = "<group>"; };
+		0903EFAB16BD5EA500547357 /* UIBorderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderLabel.m; sourceTree = "<group>"; };
 		0962D87A16B887E200C6269A /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		0962D8A016B88BA400C6269A /* grey-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay.png"; sourceTree = "<group>"; };
@@ -371,6 +379,8 @@
 				09AF2B0A16BC7DB4001E15BB /* UIColor+Helpers.m */,
 				09AF2B4216BCECFE001E15BB /* UIImage+Resize.h */,
 				09AF2B4316BCECFE001E15BB /* UIImage+Resize.m */,
+				0903EFAA16BD5EA500547357 /* UIBorderLabel.h */,
+				0903EFAB16BD5EA500547357 /* UIBorderLabel.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -392,6 +402,9 @@
 				09A8AD6716B50A04005E336D /* EventListMenuController_iPhone.h */,
 				09A8AD6816B50A04005E336D /* EventListMenuController_iPhone.m */,
 				09A8AD6916B50A04005E336D /* EventListMenuController_iPhone.xib */,
+				0903EFA516BD5B0E00547357 /* EventListMenuCell_iPhone.h */,
+				0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */,
+				0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -708,6 +721,7 @@
 				09AF2B6A16BD171B001E15BB /* white-icon-overlay.png in Resources */,
 				09AF2B7116BD244D001E15BB /* cellheader_background.png in Resources */,
 				09AF2B7216BD244D001E15BB /* cellheader_background@2x.png in Resources */,
+				0903EFA916BD5B4D00547357 /* EventListMenuCell_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +764,8 @@
 				09AF2B4416BCECFE001E15BB /* UIImage+Resize.m in Sources */,
 				09AF2B7816BD2863001E15BB /* JASidePanelController.m in Sources */,
 				09AF2B7916BD2863001E15BB /* UIViewController+JASidePanel.m in Sources */,
+				0903EFA716BD5B0E00547357 /* EventListMenuCell_iPhone.m in Sources */,
+				0903EFAC16BD5EA500547357 /* UIBorderLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

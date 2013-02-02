@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "EventListController_iPhone.h"
 #import "AppDelegate.h"
 #import "EventEditorController_iPhone.h"
@@ -19,6 +20,8 @@
 #import "Event.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSManagedObject+Helpers.h"
+#import "UIImage+Resize.h"
+#import "UIColor+Helpers.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate>
 
@@ -46,6 +49,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"События";
     
     UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;
@@ -79,12 +84,34 @@
     return [_eventListTableModelDecorator numberOfRowsInSection:section];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *label = [UILabel new];
+
+    label.textColor = [UIColor colorWithHex:0xFF033143];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellheader_background"]];
+    label.text = [self tableView:tableView titleForHeaderInSection:section];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:14];
+
+    return label;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 27;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventListCell_iPhone *cell = [EventListCell_iPhone dequeOrCreateInTable:tableView];
 
     cell.eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(EventListCell_iPhone *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
+
+    cell.ctlDateBackground.image = [[UIImage imageNamed:@"white-icon-overlay"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{5, 5, 5, 5}")];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

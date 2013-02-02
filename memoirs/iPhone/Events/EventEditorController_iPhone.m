@@ -6,11 +6,15 @@
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "EventEditorController_iPhone.h"
 #import "Value.h"
 #import "NSDate+MTDates.h"
 #import "ValueListController_iPhone.h"
 #import "AppModel.h"
+#import "UIColor+Helpers.h"
+#import "UIView+Sizes.h"
+#import "UIImage+Resize.h"
 
 @interface EventEditorController_iPhone () <UITextViewDelegate, ValueListControllerDelegate_iPhone>
 
@@ -37,6 +41,20 @@
 
     self.title = @"Событие дня";
 
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]]];
+
+    [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"btn"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{6, 6, 6, 6}")] forState:UIControlStateNormal];
+    [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"btn_active"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{6, 6, 6, 6}")] forState:UIControlStateHighlighted];
+    [self.btSelectValue setImageEdgeInsets:UIEdgeInsetsMake(0, self.btSelectValue.width - 20, 0, 0)];
+
+    UIImage *txtTextBgImage = [[UIImage imageNamed:@"edit_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    txtTextBgImage = [txtTextBgImage scaleToSize:self.txtText.frame.size];
+
+    self.txtText.backgroundColor = [UIColor colorWithPatternImage:txtTextBgImage];
+
+    UIBarButtonItem *btBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"header_back_btn"] style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = btBack;
+
     UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:@"Отмена" style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
     self.navigationItem.leftBarButtonItem = btCancel;
 
@@ -44,7 +62,7 @@
     self.navigationItem.rightBarButtonItem = btSave;
 
     self.lblDate.text = [self.date stringValueWithDateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterNoStyle];
-    [self.btSelectValue setTitle:self.value.title forState:UIControlStateNormal];
+    [self setSelectValueText:self.value.title];
     self.txtText.text = self.text;
 }
 
@@ -58,6 +76,8 @@
 
 - (void)valueListControllerDidSelectedValue:(ValueListController_iPhone *)valueListController {
     self.value = valueListController.value;
+
+    [self setSelectValueText:self.value.title];
 
     [self.btSelectValue setTitle:self.value.title forState:UIControlStateNormal];
 
@@ -75,5 +95,18 @@
 - (IBAction)btSaveHandler:(id)sender {
     [self.delegate eventEditorController:self didFinishedWithSaveState:YES];
 }
+
+#pragma mark Helper Methods
+
+- (void)setSelectValueText:(NSString *)text {
+    if (text.length) {
+        [self.btSelectValue setTitle:text forState:UIControlStateNormal];
+        [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF033143] forState:UIControlStateNormal];
+    } else {
+        [self.btSelectValue setTitle:@"Выберите ценность" forState:UIControlStateNormal];
+        [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF999999] forState:UIControlStateNormal];
+    }
+}
+
 
 @end

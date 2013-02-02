@@ -7,13 +7,18 @@
 //
 
 #import <CoreData/CoreData.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import "ValueListController_iPhone.h"
 #import "AppModel.h"
 #import "ValueListCell_iPhone.h"
 #import "UITableViewCell+NIB.h"
 #import "Value.h"
+#import "EventListCell_iPhone.h"
+#import "UIImage+Resize.h"
 
 @interface ValueListController_iPhone () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *ctlTableView;
 
 @end
 
@@ -37,6 +42,8 @@
 
     UIBarButtonItem *btAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(btAddHandler:)];
     self.navigationItem.rightBarButtonItem = btAdd;
+
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
 
     _valuesResultController = [_appModel values];
     [_valuesResultController performFetch:nil];
@@ -68,6 +75,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Value *value = [_valuesResultController objectAtIndexPath:indexPath];
 
@@ -76,4 +87,8 @@
     [self.delegate valueListControllerDidSelectedValue:self];
 }
 
+- (void)viewDidUnload {
+    [self setCtlTableView:nil];
+    [super viewDidUnload];
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <CoreData/CoreData.h>
+#import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 
 #import "MainController_iPhone.h"
@@ -33,6 +34,8 @@
     [valuesLoader loadPredefinedValuesIfRequired];
 
     [self createWindow:_appModel];
+
+    [self applyTheme];
 
     return YES;
 }
@@ -88,6 +91,19 @@
 
     self.window.rootViewController = self.mainController;
     [self.window makeKeyAndVisible];
+}
+
+- (void)applyTheme {
+    self.mainController.view.backgroundColor = [UIColor blackColor];
+
+    UIImage *navigationBackground = [[UIImage imageNamed:@"header_bkd_dark"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{5, 5, 0, 5}")];
+    [[UINavigationBar appearance] setBackgroundImage:navigationBackground forBarMetrics:UIBarMetricsDefault];
+
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark_tap"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark_tap"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
 }
 
 @end

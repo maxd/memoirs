@@ -38,4 +38,8 @@
     self.leftGapPercentage = 0.82;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return toInterfaceOrientation == UIInterfaceOrientationPortrait;
+}
+
 @end

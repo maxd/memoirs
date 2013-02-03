@@ -13,7 +13,6 @@
 #import "UIBorderLabel.h"
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
-#import "SettingsController_iPhone.h"
 #import "MainController_iPhone.h"
 
 @interface EventListMenuController_iPhone () <UITableViewDataSource, UITableViewDelegate>

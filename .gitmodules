@@ -10,3 +10,6 @@
 [submodule "vendor/JASidePanels"]
 	path = vendor/JASidePanels
 	url = git://github.com/gotosleep/JASidePanels.git
+[submodule "vendor/WCAlertView"]
+	path = vendor/WCAlertView
+	url = git://github.com/m1entus/WCAlertView.git

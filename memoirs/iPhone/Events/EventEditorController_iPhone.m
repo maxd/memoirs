@@ -14,6 +14,7 @@
 #import "AppModel.h"
 #import "UIColor+Helpers.h"
 #import "UIImage+Resize.h"
+#import "WCAlertView.h"
 
 @interface EventEditorController_iPhone () <UITextViewDelegate, ValueListControllerDelegate_iPhone>
 
@@ -92,7 +93,25 @@
 }
 
 - (IBAction)btSaveHandler:(id)sender {
-    [self.delegate eventEditorController:self didFinishedWithSaveState:YES];
+    if (!self.value) {
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
+                                                            message:@"Пожалуйста выберите ценность дня из списка ценностей."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        
+        [alertView show];
+    } else if (!self.text.length) {
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
+                                                            message:@"Пожалуйста опишите событие дня."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+
+        [alertView show];
+    } else {
+        [self.delegate eventEditorController:self didFinishedWithSaveState:YES];
+    }
 }
 
 #pragma mark Helper Methods

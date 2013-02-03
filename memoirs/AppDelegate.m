@@ -15,6 +15,8 @@
 #import "NSURL+Helpers.h"
 #import "AppModel.h"
 #import "ValuesLoader.h"
+#import "WCAlertView.h"
+#import "UIColor+Helpers.h"
 
 @implementation AppDelegate {
     AppModel *_appModel;
@@ -103,6 +105,21 @@
 
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark_tap"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+
+    [WCAlertView setDefaultCustomiaztonBlock:^(WCAlertView *alertView) {
+        alertView.labelTextColor = [UIColor colorWithHex:0xFF033143];
+        alertView.labelShadowColor = [UIColor whiteColor];
+
+        UIColor *topGradient = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f];
+        UIColor *middleGradient = [UIColor colorWithRed:0.93f green:0.94f blue:0.96f alpha:1.0f];
+        UIColor *bottomGradient = [UIColor colorWithRed:0.89f green:0.89f blue:0.92f alpha:1.00f];
+        alertView.gradientColors = @[topGradient,middleGradient,bottomGradient];
+
+        alertView.outerFrameColor = [UIColor colorWithRed:250.0f/255.0f green:250.0f/255.0f blue:250.0f/255.0f alpha:1.0f];
+
+        alertView.buttonTextColor = [UIColor colorWithHex:0xFF033143];
+        alertView.buttonShadowColor = [UIColor whiteColor];
+    }];
 }
 
 @end

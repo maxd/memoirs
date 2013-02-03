@@ -10,6 +10,7 @@
 		0903EFA716BD5B0E00547357 /* EventListMenuCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */; };
 		0903EFA916BD5B4D00547357 /* EventListMenuCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */; };
 		0903EFAC16BD5EA500547357 /* UIBorderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903EFAB16BD5EA500547357 /* UIBorderLabel.m */; };
+		09130E7C16BE9B85004A289C /* WCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09130E7B16BE9B85004A289C /* WCAlertView.m */; };
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A016B88BA400C6269A /* grey-icon-overlay.png */; };
@@ -153,6 +154,8 @@
 		0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListMenuCell_iPhone.xib; sourceTree = "<group>"; };
 		0903EFAA16BD5EA500547357 /* UIBorderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBorderLabel.h; sourceTree = "<group>"; };
 		0903EFAB16BD5EA500547357 /* UIBorderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderLabel.m; sourceTree = "<group>"; };
+		09130E7A16BE9B85004A289C /* WCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCAlertView.h; path = vendor/WCAlertView/WCAlertView/WCAlertView.h; sourceTree = "<group>"; };
+		09130E7B16BE9B85004A289C /* WCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCAlertView.m; path = vendor/WCAlertView/WCAlertView/WCAlertView.m; sourceTree = "<group>"; };
 		0962D87A16B887E200C6269A /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		0962D8A016B88BA400C6269A /* grey-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay.png"; sourceTree = "<group>"; };
@@ -296,6 +299,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09130E7916BE9B7B004A289C /* WCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				09130E7A16BE9B85004A289C /* WCAlertView.h */,
+				09130E7B16BE9B85004A289C /* WCAlertView.m */,
+			);
+			name = WCAlertView;
+			sourceTree = "<group>";
+		};
 		0962D87916B8877100C6269A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +499,7 @@
 		09B23D2816B30C2E003FFD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09130E7916BE9B7B004A289C /* WCAlertView */,
 				09AF2B7316BD2850001E15BB /* JASidePanels */,
 				09A8ACA816B3CB96005E336D /* TPKeyboardAvoiding */,
 				09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */,
@@ -766,6 +779,7 @@
 				09AF2B7916BD2863001E15BB /* UIViewController+JASidePanel.m in Sources */,
 				0903EFA716BD5B0E00547357 /* EventListMenuCell_iPhone.m in Sources */,
 				0903EFAC16BD5EA500547357 /* UIBorderLabel.m in Sources */,
+				09130E7C16BE9B85004A289C /* WCAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

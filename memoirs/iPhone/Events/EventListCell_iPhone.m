@@ -29,11 +29,11 @@
     self.lblBottomDate.text = [eventListItem.date stringFromDateWithFullMonth];
     self.txtText.text = eventListItem.event ? eventListItem.event.text : @"";
     
-    if ([eventListItem.event.mainPerYear boolValue]) {
+    if (eventListItem.event.isImportantDateOfYear) {
         self.lblImportantEvent.text = @"\U0001F49D";
-    } else if ([eventListItem.event.mainPerMonth boolValue]) {
+    } else if (eventListItem.event.isImportantDateOfMonth) {
         self.lblImportantEvent.text = @"\U0001F49B";
-    } else if ([eventListItem.event.mainPerWeek boolValue]) {
+    } else if (eventListItem.event.isImportantDateOfWeek) {
         self.lblImportantEvent.text = @"\U0001F49A";
     } else {
         self.lblImportantEvent.text = @"";

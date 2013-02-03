@@ -13,9 +13,9 @@
 @implementation Event
 
 @dynamic date;
-@dynamic mainPerMonth;
-@dynamic mainPerWeek;
-@dynamic mainPerYear;
+@dynamic isImportantDateOfMonth;
+@dynamic isImportantDateOfWeek;
+@dynamic isImportantDateOfYear;
 @dynamic text;
 @dynamic value;
 

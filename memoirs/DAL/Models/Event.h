@@ -13,11 +13,11 @@
 
 @interface Event : NSManagedObject
 
-@property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSNumber * mainPerMonth;
-@property (nonatomic, retain) NSNumber * mainPerWeek;
-@property (nonatomic, retain) NSNumber * mainPerYear;
-@property (nonatomic, retain) NSString * text;
+@property (nonatomic, retain) NSDate *date;
+@property (nonatomic) BOOL isImportantDateOfMonth;
+@property (nonatomic) BOOL isImportantDateOfWeek;
+@property (nonatomic) BOOL isImportantDateOfYear;
+@property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) Value *value;
 
 @end

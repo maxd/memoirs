@@ -7,32 +7,77 @@
 //
 
 #import "ValueEditorController_iPhone.h"
+#import "WCAlertView.h"
+#import "AppModel.h"
+#import "Value.h"
+#import "NSManagedObjectContext+Helpers.h"
+#import "NSManagedObject+Helpers.h"
 
 @interface ValueEditorController_iPhone ()
 
+@property (weak, nonatomic) IBOutlet UITextField *txtTitle;
+
 @end
 
-@implementation ValueEditorController_iPhone
+@implementation ValueEditorController_iPhone {
+    AppModel *_appModel;
+}
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)initWithAppModel:(AppModel *)appModel {
+    self = [super init];
     if (self) {
-        // Custom initialization
+        _appModel = appModel;
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.title = @"Ценность";
+
+    UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:@"Отмена" style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
+    self.navigationItem.leftBarButtonItem = btCancel;
+
+    UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:@"Сохранить" style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
+    self.navigationItem.rightBarButtonItem = btSave;
+
+    self.txtTitle.background = [[UIImage imageNamed:@"edit_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    self.txtTitle.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    self.txtTitle.leftViewMode = UITextFieldViewModeAlways;
+    [self.txtTitle becomeFirstResponder];
+
+    self.txtTitle.text = self.value.title;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark Action Handler
+
+- (void)btCancelHandler:(id)sender {
+    [self.delegate dismissValueEditorController:self];
+}
+
+- (void)btSaveHandler:(id)sender {
+    NSString *title = self.txtTitle.text;
+
+    if (!title.length) {
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
+                                                            message:@"Пожалуйста введите название ценности."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+
+        [alertView show];
+    } else {
+        if (!self.value) {
+            self.value = [[_appModel context] newObjectWithEntityName:[Value entityName]];
+        }
+
+        self.value.title = title;
+
+        [[_appModel context] save];
+
+        [self.delegate dismissValueEditorController:self];
+    }
 }
 
 @end

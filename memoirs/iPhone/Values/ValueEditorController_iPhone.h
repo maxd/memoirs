@@ -8,6 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ValueEditorControllerDelegate_iPhone;
+
+@class Value;
+@class AppModel;
+
+
 @interface ValueEditorController_iPhone : UIViewController
+
+@property (weak, nonatomic) id<ValueEditorControllerDelegate_iPhone> delegate;
+
+@property (strong, nonatomic) Value *value;
+
+-(id)initWithAppModel:(AppModel *)appModel;
+
+@end
+
+@protocol ValueEditorControllerDelegate_iPhone
+
+@optional
+
+- (void)dismissValueEditorController:(ValueEditorController_iPhone *)sender;
 
 @end

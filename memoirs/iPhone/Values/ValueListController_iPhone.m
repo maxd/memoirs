@@ -7,16 +7,16 @@
 //
 
 #import <CoreData/CoreData.h>
-#import <CoreGraphics/CoreGraphics.h>
 #import "ValueListController_iPhone.h"
 #import "AppModel.h"
 #import "ValueListCell_iPhone.h"
 #import "UITableViewCell+NIB.h"
 #import "Value.h"
-#import "EventListCell_iPhone.h"
-#import "UIImage+Resize.h"
+#import "ValueEditorController_iPhone.h"
+#import "NSManagedObjectContext+Helpers.h"
+#import "WCAlertView.h"
 
-@interface ValueListController_iPhone () <UITableViewDataSource, UITableViewDelegate>
+@interface ValueListController_iPhone () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, ValueEditorControllerDelegate_iPhone>
 
 @property (weak, nonatomic) IBOutlet UITableView *ctlTableView;
 
@@ -25,6 +25,10 @@
 @implementation ValueListController_iPhone {
     AppModel *_appModel;
     NSFetchedResultsController *_valuesResultController;
+
+    UIBarButtonItem *btAdd;
+    UIBarButtonItem *btEdit;
+    UIBarButtonItem *btDone;
 }
 
 - (id)initWithAppModel:(AppModel *)appModel {
@@ -40,19 +44,22 @@
 
     self.title = @"Ценности";
 
-    UIBarButtonItem *btAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(btAddHandler:)];
-    self.navigationItem.rightBarButtonItem = btAdd;
+    btAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(btAddHandler:)];
+    btEdit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(btEditHandler:)];
+    btDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btEditHandler:)];
+
+    self.navigationItem.rightBarButtonItem = btEdit;
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
 
     _valuesResultController = [_appModel values];
-    [_valuesResultController performFetch:nil];
+    _valuesResultController.delegate = self;
 }
 
-#pragma mark Control Handlers
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
-- (void)btAddHandler:(id)sender {
-
+    [_valuesResultController performFetch:nil];
 }
 
 #pragma mark UITableView Handlers
@@ -82,13 +89,88 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Value *value = [_valuesResultController objectAtIndexPath:indexPath];
 
+    if (tableView.isEditing) {
+        [self editValue:value];
+    } else {
+        [self selectValue:value];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Value *value = [_valuesResultController objectAtIndexPath:indexPath];
+
+        [self deleteValue:value];
+    }
+}
+
+#pragma mark NSFetchResultController Handlers
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.ctlTableView reloadData];
+}
+
+#pragma mark Action Handlers
+
+- (void)btAddHandler:(id)sender {
+    [self addValue];
+}
+
+- (void)btEditHandler:(id)sender {
+    BOOL isMoveToEditMode = ![self.ctlTableView isEditing];
+    if (isMoveToEditMode) {
+        self.navigationItem.rightBarButtonItem = btDone;
+        self.navigationItem.leftBarButtonItem = btAdd;
+    } else {
+        self.navigationItem.rightBarButtonItem = btEdit;
+        self.navigationItem.leftBarButtonItem = nil;
+    }
+
+    [self.ctlTableView setEditing:isMoveToEditMode animated:YES];
+}
+
+#pragma mark Operations
+
+- (void)selectValue:(Value *)value {
     self.value = value;
 
     [self.delegate valueListControllerDidSelectedValue:self];
 }
 
-- (void)viewDidUnload {
-    [self setCtlTableView:nil];
-    [super viewDidUnload];
+- (void)addValue {
+    ValueEditorController_iPhone *valueEditorController = [[ValueEditorController_iPhone alloc] initWithAppModel:_appModel];
+    valueEditorController.delegate = self;
+
+    [self.navigationController pushViewController:valueEditorController animated:YES];
 }
+
+- (void)editValue:(Value *)value {
+    ValueEditorController_iPhone *valueEditorController = [[ValueEditorController_iPhone alloc] initWithAppModel:_appModel];
+    valueEditorController.delegate = self;
+    valueEditorController.value = value;
+
+    [self.navigationController pushViewController:valueEditorController animated:YES];
+}
+
+- (void)deleteValue:(Value *)value {
+    if (value.events.count > 0) {
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
+                                                            message:@"Вы не можете удалить ценность которая уже используется в событиях."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+
+        [alertView show];
+    } else {
+        NSManagedObjectContext *context = [_appModel context];
+
+        [context deleteObject:value];
+        [context save];
+    }
+}
+
+- (void)dismissValueEditorController:(ValueEditorController_iPhone *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

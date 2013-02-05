@@ -10,7 +10,7 @@
     </entity>
     <entity name="Value" representedClassName="Value" syncable="YES">
         <attribute name="title" attributeType="String" syncable="YES"/>
-        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="value" inverseEntity="Event" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Event" inverseName="value" inverseEntity="Event" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="160" positionY="189" width="128" height="135"/>

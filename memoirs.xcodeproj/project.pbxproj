@@ -17,7 +17,6 @@
 		0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */; };
 		09A8ACAD16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */; };
 		09A8ACAE16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */; };
-		09A8ACBB16B42CB5005E336D /* libMTDates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8ACB816B42C2A005E336D /* libMTDates.a */; };
 		09A8ACDE16B43BE6005E336D /* NSManagedObject+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACD916B43BE6005E336D /* NSManagedObject+Helpers.m */; };
 		09A8ACDF16B43BE6005E336D /* NSManagedObjectContext+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACDB16B43BE6005E336D /* NSManagedObjectContext+Helpers.m */; };
 		09A8ACE016B43BE6005E336D /* NSManagedObjectModel+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACDD16B43BE6005E336D /* NSManagedObjectModel+Helpers.m */; };
@@ -44,8 +43,13 @@
 		09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD9116B5765D005E336D /* EventListTableView.m */; };
 		09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */; };
 		09A8ADB316B706D8005E336D /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADB216B706D8005E336D /* AppModel.m */; };
-		09A8ADCC16B84CC0005E336D /* libUnderscore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8ADC716B84CB0005E336D /* libUnderscore.a */; };
 		09A8ADE816B85C63005E336D /* EventListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADE716B85C63005E336D /* EventListItem.m */; };
+		09AE2E2E16C18CF1001CB595 /* Underscore.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AE2E2616C18CF1001CB595 /* Underscore.m */; };
+		09AE2E2F16C18CF1001CB595 /* Underscore+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AE2E2816C18CF1001CB595 /* Underscore+Functional.m */; };
+		09AE2E3016C18CF1001CB595 /* USArrayWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AE2E2A16C18CF1001CB595 /* USArrayWrapper.m */; };
+		09AE2E3116C18CF1001CB595 /* USDictionaryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AE2E2D16C18CF1001CB595 /* USDictionaryWrapper.m */; };
+		09AE2E3716C18D09001CB595 /* NSDate+MTDates.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AE2E3416C18D09001CB595 /* NSDate+MTDates.m */; };
+		09AE2E3816C18D09001CB595 /* NSDateComponents+MTDates.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AE2E3616C18D09001CB595 /* NSDateComponents+MTDates.m */; };
 		09AF2A8A16B998A7001E15BB /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8916B998A7001E15BB /* Event.m */; };
 		09AF2A8D16B998C8001E15BB /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8C16B998C8001E15BB /* Value.m */; };
 		09AF2A9016BB17A2001E15BB /* ValueListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8F16BB17A2001E15BB /* ValueListCell_iPhone.m */; };
@@ -103,51 +107,6 @@
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		09A8ACB716B42C2A005E336D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C2ABA6EB15D48E92000A34A1;
-			remoteInfo = MTDates;
-		};
-		09A8ACB916B42C2A005E336D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C2ABA6FC15D48E93000A34A1;
-			remoteInfo = MTDatesTests;
-		};
-		09A8ACBC16B42D2A005E336D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C2ABA6EA15D48E92000A34A1;
-			remoteInfo = MTDates;
-		};
-		09A8ADC616B84CB0005E336D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 54A3DCC5154DD4BF00387DE3;
-			remoteInfo = Underscore;
-		};
-		09A8ADC816B84CB0005E336D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 54A3DCD5154DD4BF00387DE3;
-			remoteInfo = UnderscoreTests;
-		};
-		09A8ADCA16B84CBB005E336D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 54A3DCC4154DD4BF00387DE3;
-			remoteInfo = Underscore;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0903EFA516BD5B0E00547357 /* EventListMenuCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListMenuCell_iPhone.h; sourceTree = "<group>"; };
 		0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListMenuCell_iPhone.m; sourceTree = "<group>"; };
@@ -164,7 +123,6 @@
 		09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		09A8ACAB16B3CBA5005E336D /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
 		09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
-		09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MTDates.xcodeproj; path = vendor/MTDates/MTDates.xcodeproj; sourceTree = "<group>"; };
 		09A8ACD816B43BE6005E336D /* NSManagedObject+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Helpers.h"; sourceTree = "<group>"; };
 		09A8ACD916B43BE6005E336D /* NSManagedObject+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Helpers.m"; sourceTree = "<group>"; };
 		09A8ACDA16B43BE6005E336D /* NSManagedObjectContext+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Helpers.h"; sourceTree = "<group>"; };
@@ -209,9 +167,21 @@
 		09A8ADAB16B703A0005E336D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		09A8ADB116B706D8005E336D /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		09A8ADB216B706D8005E336D /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
-		09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Underscore.xcodeproj; path = vendor/underscore/Underscore.xcodeproj; sourceTree = "<group>"; };
 		09A8ADE616B85C63005E336D /* EventListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListItem.h; sourceTree = "<group>"; };
 		09A8ADE716B85C63005E336D /* EventListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListItem.m; sourceTree = "<group>"; };
+		09AE2E2516C18CF1001CB595 /* Underscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Underscore.h; path = vendor/underscore/Underscore/Underscore.h; sourceTree = "<group>"; };
+		09AE2E2616C18CF1001CB595 /* Underscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Underscore.m; path = vendor/underscore/Underscore/Underscore.m; sourceTree = "<group>"; };
+		09AE2E2716C18CF1001CB595 /* Underscore+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Underscore+Functional.h"; path = "vendor/underscore/Underscore/Underscore+Functional.h"; sourceTree = "<group>"; };
+		09AE2E2816C18CF1001CB595 /* Underscore+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Underscore+Functional.m"; path = "vendor/underscore/Underscore/Underscore+Functional.m"; sourceTree = "<group>"; };
+		09AE2E2916C18CF1001CB595 /* USArrayWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USArrayWrapper.h; path = vendor/underscore/Underscore/USArrayWrapper.h; sourceTree = "<group>"; };
+		09AE2E2A16C18CF1001CB595 /* USArrayWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USArrayWrapper.m; path = vendor/underscore/Underscore/USArrayWrapper.m; sourceTree = "<group>"; };
+		09AE2E2B16C18CF1001CB595 /* USConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USConstants.h; path = vendor/underscore/Underscore/USConstants.h; sourceTree = "<group>"; };
+		09AE2E2C16C18CF1001CB595 /* USDictionaryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USDictionaryWrapper.h; path = vendor/underscore/Underscore/USDictionaryWrapper.h; sourceTree = "<group>"; };
+		09AE2E2D16C18CF1001CB595 /* USDictionaryWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USDictionaryWrapper.m; path = vendor/underscore/Underscore/USDictionaryWrapper.m; sourceTree = "<group>"; };
+		09AE2E3316C18D09001CB595 /* NSDate+MTDates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+MTDates.h"; path = "vendor/MTDates/MTDates/NSDate+MTDates.h"; sourceTree = "<group>"; };
+		09AE2E3416C18D09001CB595 /* NSDate+MTDates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MTDates.m"; path = "vendor/MTDates/MTDates/NSDate+MTDates.m"; sourceTree = "<group>"; };
+		09AE2E3516C18D09001CB595 /* NSDateComponents+MTDates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDateComponents+MTDates.h"; path = "vendor/MTDates/MTDates/NSDateComponents+MTDates.h"; sourceTree = "<group>"; };
+		09AE2E3616C18D09001CB595 /* NSDateComponents+MTDates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDateComponents+MTDates.m"; path = "vendor/MTDates/MTDates/NSDateComponents+MTDates.m"; sourceTree = "<group>"; };
 		09AF2A8816B998A7001E15BB /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		09AF2A8916B998A7001E15BB /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		09AF2A8B16B998C8001E15BB /* Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
@@ -286,8 +256,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A8ADCC16B84CC0005E336D /* libUnderscore.a in Frameworks */,
-				09A8ACBB16B42CB5005E336D /* libMTDates.a in Frameworks */,
 				09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */,
 				09B23DAF16B338B3003FFD91 /* CoreData.framework in Frameworks */,
 				09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */,
@@ -363,15 +331,6 @@
 				09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */,
 			);
 			name = TPKeyboardAvoiding;
-			sourceTree = "<group>";
-		};
-		09A8ACB016B42C2A005E336D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				09A8ACB816B42C2A005E336D /* libMTDates.a */,
-				09A8ACBA16B42C2A005E336D /* MTDatesTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		09A8ACCE16B43B62005E336D /* Helpers */ = {
@@ -459,13 +418,31 @@
 			path = DAL;
 			sourceTree = "<group>";
 		};
-		09A8ADBF16B84CB0005E336D /* Products */ = {
+		09AE2E2416C18CDC001CB595 /* Underscore */ = {
 			isa = PBXGroup;
 			children = (
-				09A8ADC716B84CB0005E336D /* libUnderscore.a */,
-				09A8ADC916B84CB0005E336D /* UnderscoreTests.octest */,
+				09AE2E2516C18CF1001CB595 /* Underscore.h */,
+				09AE2E2616C18CF1001CB595 /* Underscore.m */,
+				09AE2E2716C18CF1001CB595 /* Underscore+Functional.h */,
+				09AE2E2816C18CF1001CB595 /* Underscore+Functional.m */,
+				09AE2E2916C18CF1001CB595 /* USArrayWrapper.h */,
+				09AE2E2A16C18CF1001CB595 /* USArrayWrapper.m */,
+				09AE2E2B16C18CF1001CB595 /* USConstants.h */,
+				09AE2E2C16C18CF1001CB595 /* USDictionaryWrapper.h */,
+				09AE2E2D16C18CF1001CB595 /* USDictionaryWrapper.m */,
 			);
-			name = Products;
+			name = Underscore;
+			sourceTree = "<group>";
+		};
+		09AE2E3216C18CFF001CB595 /* MTDates */ = {
+			isa = PBXGroup;
+			children = (
+				09AE2E3316C18D09001CB595 /* NSDate+MTDates.h */,
+				09AE2E3416C18D09001CB595 /* NSDate+MTDates.m */,
+				09AE2E3516C18D09001CB595 /* NSDateComponents+MTDates.h */,
+				09AE2E3616C18D09001CB595 /* NSDateComponents+MTDates.m */,
+			);
+			name = MTDates;
 			sourceTree = "<group>";
 		};
 		09AF2B7316BD2850001E15BB /* JASidePanels */ = {
@@ -499,11 +476,11 @@
 		09B23D2816B30C2E003FFD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09AE2E3216C18CFF001CB595 /* MTDates */,
+				09AE2E2416C18CDC001CB595 /* Underscore */,
 				09130E7916BE9B7B004A289C /* WCAlertView */,
 				09AF2B7316BD2850001E15BB /* JASidePanels */,
 				09A8ACA816B3CB96005E336D /* TPKeyboardAvoiding */,
-				09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */,
-				09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */,
 				09B23D2916B30C2E003FFD91 /* UIKit.framework */,
 				09B23D2B16B30C2E003FFD91 /* Foundation.framework */,
 				09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */,
@@ -603,8 +580,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				09A8ADCB16B84CBB005E336D /* PBXTargetDependency */,
-				09A8ACBD16B42D2A005E336D /* PBXTargetDependency */,
 			);
 			name = memoirs;
 			productName = memoirs;
@@ -630,53 +605,12 @@
 			mainGroup = 09B23D1A16B30C2E003FFD91;
 			productRefGroup = 09B23D2616B30C2E003FFD91 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 09A8ACB016B42C2A005E336D /* Products */;
-					ProjectRef = 09A8ACAF16B42C2A005E336D /* MTDates.xcodeproj */;
-				},
-				{
-					ProductGroup = 09A8ADBF16B84CB0005E336D /* Products */;
-					ProjectRef = 09A8ADBE16B84CB0005E336D /* Underscore.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				09B23D2416B30C2E003FFD91 /* memoirs */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		09A8ACB816B42C2A005E336D /* libMTDates.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMTDates.a;
-			remoteRef = 09A8ACB716B42C2A005E336D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09A8ACBA16B42C2A005E336D /* MTDatesTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = MTDatesTests.octest;
-			remoteRef = 09A8ACB916B42C2A005E336D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09A8ADC716B84CB0005E336D /* libUnderscore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libUnderscore.a;
-			remoteRef = 09A8ADC616B84CB0005E336D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09A8ADC916B84CB0005E336D /* UnderscoreTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UnderscoreTests.octest;
-			remoteRef = 09A8ADC816B84CB0005E336D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		09B23D2316B30C2E003FFD91 /* Resources */ = {
@@ -780,23 +714,16 @@
 				0903EFA716BD5B0E00547357 /* EventListMenuCell_iPhone.m in Sources */,
 				0903EFAC16BD5EA500547357 /* UIBorderLabel.m in Sources */,
 				09130E7C16BE9B85004A289C /* WCAlertView.m in Sources */,
+				09AE2E2E16C18CF1001CB595 /* Underscore.m in Sources */,
+				09AE2E2F16C18CF1001CB595 /* Underscore+Functional.m in Sources */,
+				09AE2E3016C18CF1001CB595 /* USArrayWrapper.m in Sources */,
+				09AE2E3116C18CF1001CB595 /* USDictionaryWrapper.m in Sources */,
+				09AE2E3716C18D09001CB595 /* NSDate+MTDates.m in Sources */,
+				09AE2E3816C18D09001CB595 /* NSDateComponents+MTDates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		09A8ACBD16B42D2A005E336D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MTDates;
-			targetProxy = 09A8ACBC16B42D2A005E336D /* PBXContainerItemProxy */;
-		};
-		09A8ADCB16B84CBB005E336D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Underscore;
-			targetProxy = 09A8ADCA16B84CBB005E336D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09B23D3216B30C2E003FFD91 /* InfoPlist.strings */ = {

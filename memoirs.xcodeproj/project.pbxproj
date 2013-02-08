@@ -105,6 +105,8 @@
 		09B23D4016B30C2E003FFD91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B23D3F16B30C2E003FFD91 /* Default-568h@2x.png */; };
 		09B23DAF16B338B3003FFD91 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DAE16B338B3003FFD91 /* CoreData.framework */; };
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
+		09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */; };
+		09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,6 +251,9 @@
 		09B23D3F16B30C2E003FFD91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		09B23DAE16B338B3003FFD91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09B23DB016B338CC003FFD91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		09D157EA16C57263001D9931 /* EventSelectorController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSelectorController_iPhone.h; sourceTree = "<group>"; };
+		09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSelectorController_iPhone.m; sourceTree = "<group>"; };
+		09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSelectorController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +375,9 @@
 				09A8AD5E16B50A04005E336D /* EventEditorController_iPhone.h */,
 				09A8AD5F16B50A04005E336D /* EventEditorController_iPhone.m */,
 				09A8AD6016B50A04005E336D /* EventEditorController_iPhone.xib */,
+				09D157EA16C57263001D9931 /* EventSelectorController_iPhone.h */,
+				09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */,
+				09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */,
 				09A8AD6716B50A04005E336D /* EventListMenuController_iPhone.h */,
 				09A8AD6816B50A04005E336D /* EventListMenuController_iPhone.m */,
 				09A8AD6916B50A04005E336D /* EventListMenuController_iPhone.xib */,
@@ -669,6 +677,7 @@
 				09AF2B7116BD244D001E15BB /* cellheader_background.png in Resources */,
 				09AF2B7216BD244D001E15BB /* cellheader_background@2x.png in Resources */,
 				0903EFA916BD5B4D00547357 /* EventListMenuCell_iPhone.xib in Resources */,
+				09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +729,7 @@
 				09AE2E3116C18CF1001CB595 /* USDictionaryWrapper.m in Sources */,
 				09AE2E3716C18D09001CB595 /* NSDate+MTDates.m in Sources */,
 				09AE2E3816C18D09001CB595 /* NSDateComponents+MTDates.m in Sources */,
+				09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

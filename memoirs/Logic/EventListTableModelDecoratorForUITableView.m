@@ -7,16 +7,16 @@
 //
 
 #import "EventListTableModelDecoratorForUITableView.h"
-#import "WeeklyEventListTableModel.h"
+#import "EventListTableModel.h"
 #import "EventListGroup.h"
 #import "NSDate+MTDates.h"
 #import "EventListItem.h"
 
 @implementation EventListTableModelDecoratorForUITableView {
-    WeeklyEventListTableModel *_eventListTableModel;
+    id<EventListTableModel> _eventListTableModel;
 }
 
-- (id)initWithEventListTableModel:(WeeklyEventListTableModel *)eventListTableModel {
+- (id)initWithEventListTableModel:(id<EventListTableModel>)eventListTableModel {
     self = [super init];
     if (self) {
         _eventListTableModel = eventListTableModel;

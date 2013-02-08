@@ -254,6 +254,7 @@
 		09D157EA16C57263001D9931 /* EventSelectorController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSelectorController_iPhone.h; sourceTree = "<group>"; };
 		09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSelectorController_iPhone.m; sourceTree = "<group>"; };
 		09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSelectorController_iPhone.xib; sourceTree = "<group>"; };
+		09D157FC16C57B57001D9931 /* EventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,10 +563,11 @@
 		09B23DB216B339E2003FFD91 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				09D157FC16C57B57001D9931 /* EventListTableModel.h */,
+				09A8ACF616B507DF005E336D /* WeeklyEventListTableModel.h */,
+				09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */,
 				09A8ACF316B507DF005E336D /* EventListTableModelDecoratorForUITableView.h */,
 				09A8ACF416B507DF005E336D /* EventListTableModelDecoratorForUITableView.m */,
-				09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */,
-				09A8ACF616B507DF005E336D /* WeeklyEventListTableModel.h */,
 				09A8ACF716B507DF005E336D /* EventListGroup.h */,
 				09A8ACF816B507DF005E336D /* EventListGroup.m */,
 				09A8ADE616B85C63005E336D /* EventListItem.h */,

@@ -7,18 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EventListTableModel.h"
 
 @class AppModel;
 
-@interface WeeklyEventListTableModel : NSObject
-
-@property (strong, nonatomic) NSMutableArray *groups;
+@interface WeeklyEventListTableModel : NSObject <EventListTableModel>
 
 - (id)initWithAppModel:(AppModel *)appModel;
 
--(void)loadSectionsAroundDate:(NSDate *)currentDate;
-
--(void)loadPrevSection;
-
--(void)loadNextSection;
 @end

@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class WeeklyEventListTableModel;
+@protocol EventListTableModel;
 @class EventListGroup;
 @class EventListItem;
 
 @interface EventListTableModelDecoratorForUITableView : NSObject
 
--(id)initWithEventListTableModel:(WeeklyEventListTableModel *)eventListTableModel;
+-(id)initWithEventListTableModel:(id<EventListTableModel>)eventListTableModel;
 
 - (NSInteger)numberOfSections;
 

@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "EventListController_iPhone.h"
 #import "AppDelegate.h"
 #import "EventEditorController_iPhone.h"
+#import "EventListTableModel.h"
 #import "WeeklyEventListTableModel.h"
 #import "AppModel.h"
 #import "EventListTableModelDecoratorForUITableView.h"
@@ -20,9 +20,7 @@
 #import "Event.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSManagedObject+Helpers.h"
-#import "UIImage+Resize.h"
 #import "UIColor+Helpers.h"
-#import "JASidePanelController.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate>
 
@@ -36,7 +34,7 @@
 @implementation EventListController_iPhone {
     AppModel *_appModel;
 
-    WeeklyEventListTableModel *_eventListTableModel;
+    id<EventListTableModel> _eventListTableModel;
     EventListTableModelDecoratorForUITableView *_eventListTableModelDecorator;
 }
 

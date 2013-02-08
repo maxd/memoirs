@@ -20,6 +20,8 @@
     AppModel *_appModel;
 }
 
+@synthesize groups;
+
 - (id)initWithAppModel:(AppModel *)appModel {
     self = [super init];
     if (self) {

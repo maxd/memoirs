@@ -1,22 +1,22 @@
 //
-//  EventListTableModel.m
+//  WeeklyEventListTableModel.m
 //  memoirs
 //
 //  Created by Maxim Dobryakov on 1/26/13.
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
-#import "EventListTableModel.h"
+#import "WeeklyEventListTableModel.h"
 #import "NSDate+MTDates.h"
 #import "EventListGroup.h"
 #import "Event.h"
 #import "AppModel.h"
 #import "EventListItem.h"
 
-@interface EventListTableModel ()
+@interface WeeklyEventListTableModel ()
 @end
 
-@implementation EventListTableModel {
+@implementation WeeklyEventListTableModel {
     AppModel *_appModel;
 }
 
@@ -30,10 +30,9 @@
     return self;
 }
 
-- (void)loadWeeksAroundCurrent {
-    NSDate *currentWeek = [[NSDate date] startOfCurrentWeek];
-    NSDate *startWeek = [[currentWeek startOfPreviousWeek] oneWeekPrevious];
-    NSDate *endWeek = [[currentWeek startOfNextWeek] oneWeekNext];
+- (void)loadSectionsAroundDate:(NSDate *)currentDate {
+    NSDate *startWeek = [[currentDate startOfPreviousWeek] oneWeekPrevious];
+    NSDate *endWeek = [[currentDate startOfNextWeek] oneWeekNext];
 
     [self.groups removeAllObjects];
     for (NSDate *date = startWeek; [date isOnOrBefore:endWeek]; date = [date startOfNextWeek]) {
@@ -61,7 +60,7 @@
     return eventListGroup;
 }
 
-- (void)loadPrev {
+- (void)loadPrevSection {
     EventListGroup *eventListGroup = self.groups[0];
     NSDate *date = eventListGroup.startDate;
 
@@ -72,7 +71,7 @@
     [self.groups removeLastObject];
 }
 
-- (void)loadNext {
+- (void)loadNextSection {
     EventListGroup *eventListGroup = [self.groups lastObject];
     NSDate *date = eventListGroup.startDate;
 

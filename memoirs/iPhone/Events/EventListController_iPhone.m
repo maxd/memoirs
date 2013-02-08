@@ -10,7 +10,7 @@
 #import "EventListController_iPhone.h"
 #import "AppDelegate.h"
 #import "EventEditorController_iPhone.h"
-#import "EventListTableModel.h"
+#import "WeeklyEventListTableModel.h"
 #import "AppModel.h"
 #import "EventListTableModelDecoratorForUITableView.h"
 #import "EventListCell_iPhone.h"
@@ -36,7 +36,7 @@
 @implementation EventListController_iPhone {
     AppModel *_appModel;
 
-    EventListTableModel *_eventListTableModel;
+    WeeklyEventListTableModel *_eventListTableModel;
     EventListTableModelDecoratorForUITableView *_eventListTableModelDecorator;
 }
 
@@ -59,7 +59,7 @@
     UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStylePlain target:self action:@selector(btTodayHandler:)];
     self.navigationItem.rightBarButtonItem = btToday;
 
-    _eventListTableModel = [[EventListTableModel alloc] initWithAppModel:_appModel];
+    _eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
     _eventListTableModelDecorator = [[EventListTableModelDecoratorForUITableView alloc] initWithEventListTableModel:_eventListTableModel];
 
     [self scrollToTodayAnimated:NO];
@@ -163,17 +163,17 @@
 
     if (contentHeight != 0) {
         if (actualPosition <= 0) {
-            [_eventListTableModelDecorator loadPrev];
+            [_eventListTableModelDecorator loadPrevSection];
             [self.ctlTableView reloadData];
         } else if (actualPosition + controlHeight >= contentHeight) {
-            [_eventListTableModelDecorator loadNext];
+            [_eventListTableModelDecorator loadNextSection];
             [self.ctlTableView reloadData];
         }
     }
 }
 
 - (void)scrollToTodayAnimated:(BOOL)animated {
-    [_eventListTableModelDecorator loadWeeksAroundCurrent];
+    [_eventListTableModelDecorator loadSectionsAroundDate:[NSDate date]];
 
     [self.ctlTableView reloadData];
     [self.ctlTableView scrollToRowAtIndexPath:[_eventListTableModelDecorator currentIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:animated];

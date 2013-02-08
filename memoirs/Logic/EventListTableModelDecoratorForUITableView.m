@@ -7,16 +7,16 @@
 //
 
 #import "EventListTableModelDecoratorForUITableView.h"
-#import "EventListTableModel.h"
+#import "WeeklyEventListTableModel.h"
 #import "EventListGroup.h"
 #import "NSDate+MTDates.h"
 #import "EventListItem.h"
 
 @implementation EventListTableModelDecoratorForUITableView {
-    EventListTableModel *_eventListTableModel;
+    WeeklyEventListTableModel *_eventListTableModel;
 }
 
-- (id)initWithEventListTableModel:(EventListTableModel *)eventListTableModel {
+- (id)initWithEventListTableModel:(WeeklyEventListTableModel *)eventListTableModel {
     self = [super init];
     if (self) {
         _eventListTableModel = eventListTableModel;
@@ -59,16 +59,16 @@
     return [NSIndexPath indexPathForRow:0 inSection:section];
 }
 
-- (void)loadWeeksAroundCurrent {
-    [_eventListTableModel loadWeeksAroundCurrent];
+- (void)loadSectionsAroundDate:(NSDate *)date {
+    [_eventListTableModel loadSectionsAroundDate:date];
 }
 
-- (void)loadPrev {
-    [_eventListTableModel loadPrev];
+- (void)loadPrevSection {
+    [_eventListTableModel loadPrevSection];
 }
 
-- (void)loadNext {
-    [_eventListTableModel loadNext];
+- (void)loadNextSection {
+    [_eventListTableModel loadNextSection];
 }
 
 @end

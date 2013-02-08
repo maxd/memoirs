@@ -23,7 +23,7 @@
 		09A8ACE516B43DDC005E336D /* NSURL+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACE416B43DDC005E336D /* NSURL+Helpers.m */; };
 		09A8ACE816B442AF005E336D /* UITableViewCell+NIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACE716B442AF005E336D /* UITableViewCell+NIB.m */; };
 		09A8ACF916B507DF005E336D /* EventListTableModelDecoratorForUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACF416B507DF005E336D /* EventListTableModelDecoratorForUITableView.m */; };
-		09A8ACFA16B507DF005E336D /* EventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACF516B507DF005E336D /* EventListTableModel.m */; };
+		09A8ACFA16B507DF005E336D /* WeeklyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */; };
 		09A8ACFB16B507DF005E336D /* EventListGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACF816B507DF005E336D /* EventListGroup.m */; };
 		09A8AD4116B5082F005E336D /* MainController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD2F16B5082F005E336D /* MainController_iPhone.m */; };
 		09A8AD5A16B509F6005E336D /* ValueEditorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD5516B509F6005E336D /* ValueEditorController_iPhone.m */; };
@@ -137,8 +137,8 @@
 		09A8ACE716B442AF005E336D /* UITableViewCell+NIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+NIB.m"; sourceTree = "<group>"; };
 		09A8ACF316B507DF005E336D /* EventListTableModelDecoratorForUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableModelDecoratorForUITableView.h; sourceTree = "<group>"; };
 		09A8ACF416B507DF005E336D /* EventListTableModelDecoratorForUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListTableModelDecoratorForUITableView.m; sourceTree = "<group>"; };
-		09A8ACF516B507DF005E336D /* EventListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListTableModel.m; sourceTree = "<group>"; };
-		09A8ACF616B507DF005E336D /* EventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableModel.h; sourceTree = "<group>"; };
+		09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyEventListTableModel.m; sourceTree = "<group>"; };
+		09A8ACF616B507DF005E336D /* WeeklyEventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeklyEventListTableModel.h; sourceTree = "<group>"; };
 		09A8ACF716B507DF005E336D /* EventListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListGroup.h; sourceTree = "<group>"; };
 		09A8ACF816B507DF005E336D /* EventListGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListGroup.m; sourceTree = "<group>"; };
 		09A8AD2E16B5082F005E336D /* MainController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController_iPhone.h; sourceTree = "<group>"; };
@@ -564,8 +564,8 @@
 			children = (
 				09A8ACF316B507DF005E336D /* EventListTableModelDecoratorForUITableView.h */,
 				09A8ACF416B507DF005E336D /* EventListTableModelDecoratorForUITableView.m */,
-				09A8ACF516B507DF005E336D /* EventListTableModel.m */,
-				09A8ACF616B507DF005E336D /* EventListTableModel.h */,
+				09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */,
+				09A8ACF616B507DF005E336D /* WeeklyEventListTableModel.h */,
 				09A8ACF716B507DF005E336D /* EventListGroup.h */,
 				09A8ACF816B507DF005E336D /* EventListGroup.m */,
 				09A8ADE616B85C63005E336D /* EventListItem.h */,
@@ -698,7 +698,7 @@
 				09A8ACE516B43DDC005E336D /* NSURL+Helpers.m in Sources */,
 				09A8ACE816B442AF005E336D /* UITableViewCell+NIB.m in Sources */,
 				09A8ACF916B507DF005E336D /* EventListTableModelDecoratorForUITableView.m in Sources */,
-				09A8ACFA16B507DF005E336D /* EventListTableModel.m in Sources */,
+				09A8ACFA16B507DF005E336D /* WeeklyEventListTableModel.m in Sources */,
 				09A8ACFB16B507DF005E336D /* EventListGroup.m in Sources */,
 				09A8AD4116B5082F005E336D /* MainController_iPhone.m in Sources */,
 				09A8AD5A16B509F6005E336D /* ValueEditorController_iPhone.m in Sources */,

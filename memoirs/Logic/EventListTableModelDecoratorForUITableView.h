@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class EventListTableModel;
+@class WeeklyEventListTableModel;
 @class EventListGroup;
 @class EventListItem;
 
 @interface EventListTableModelDecoratorForUITableView : NSObject
 
--(id)initWithEventListTableModel:(EventListTableModel *)eventListTableModel;
+-(id)initWithEventListTableModel:(WeeklyEventListTableModel *)eventListTableModel;
 
 - (NSInteger)numberOfSections;
 
@@ -26,9 +26,9 @@
 
 -(NSIndexPath *)currentIndexPath;
 
--(void)loadWeeksAroundCurrent;
+-(void)loadSectionsAroundDate:(NSDate *)date;
 
--(void)loadPrev;
+-(void)loadPrevSection;
 
--(void)loadNext;
+-(void)loadNextSection;
 @end

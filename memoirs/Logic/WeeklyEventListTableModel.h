@@ -1,5 +1,5 @@
 //
-//  EventListTableModel.h
+//  WeeklyEventListTableModel.h
 //  memoirs
 //
 //  Created by Maxim Dobryakov on 1/26/13.
@@ -10,15 +10,15 @@
 
 @class AppModel;
 
-@interface EventListTableModel : NSObject
+@interface WeeklyEventListTableModel : NSObject
 
 @property (strong, nonatomic) NSMutableArray *groups;
 
 - (id)initWithAppModel:(AppModel *)appModel;
 
--(void)loadWeeksAroundCurrent;
+-(void)loadSectionsAroundDate:(NSDate *)currentDate;
 
--(void)loadPrev;
+-(void)loadPrevSection;
 
--(void)loadNext;
+-(void)loadNextSection;
 @end

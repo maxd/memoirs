@@ -10,26 +10,15 @@
 
 @implementation EventListTableView
 
+@dynamic delegate;
+
 - (void)layoutSubviews {
-    [self resetContentOffsetIfNeeded];
     [super layoutSubviews];
+    [self resetContentOffsetIfNeeded];
 }
 
 - (void)resetContentOffsetIfNeeded {
-    CGPoint contentOffset  = self.contentOffset;
-
-    CGFloat sectionHeight = [self sectionHeaderHeight];
-    CGFloat height = [self rowHeight];
-
-    NSInteger numberOfRowsInSection = [self numberOfRowsInSection:0];
-
-    if (contentOffset.y <= 0) {
-        contentOffset.y = 1 * (sectionHeight + numberOfRowsInSection * height);
-    } else if (contentOffset.y >= (self.contentSize.height - self.bounds.size.height)) {
-        contentOffset.y = self.contentSize.height - 1 * (sectionHeight + numberOfRowsInSection * height) - self.bounds.size.height;
-    }
-
-    [self setContentOffset: contentOffset];
+    [self.delegate recalculateOffsetForTableView:self];
 }
 
 @end

@@ -25,7 +25,9 @@
 - (void)setEventListItem:(EventListItem *)eventListItem {
     _eventListItem = eventListItem;
 
-    self.lblTopDate.text = [@([eventListItem.date dayOfMonth]) stringValue];
+    NSUInteger dayOfMonth = [eventListItem.date dayOfMonth];
+
+    self.lblTopDate.text = dayOfMonth > 0 ? [@(dayOfMonth) stringValue]: nil;
     self.lblBottomDate.text = [eventListItem.date stringFromDateWithFullMonth];
     self.txtText.text = eventListItem.event ? eventListItem.event.text : @"";
     

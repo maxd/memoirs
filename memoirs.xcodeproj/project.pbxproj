@@ -107,6 +107,7 @@
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
 		09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */; };
 		09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */; };
+		09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -255,6 +256,8 @@
 		09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSelectorController_iPhone.m; sourceTree = "<group>"; };
 		09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSelectorController_iPhone.xib; sourceTree = "<group>"; };
 		09D157FC16C57B57001D9931 /* EventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableModel.h; sourceTree = "<group>"; };
+		09D157FE16C57DE7001D9931 /* MonthlyEventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthlyEventListTableModel.h; sourceTree = "<group>"; };
+		09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthlyEventListTableModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +569,8 @@
 				09D157FC16C57B57001D9931 /* EventListTableModel.h */,
 				09A8ACF616B507DF005E336D /* WeeklyEventListTableModel.h */,
 				09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */,
+				09D157FE16C57DE7001D9931 /* MonthlyEventListTableModel.h */,
+				09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */,
 				09A8ACF316B507DF005E336D /* EventListTableModelDecoratorForUITableView.h */,
 				09A8ACF416B507DF005E336D /* EventListTableModelDecoratorForUITableView.m */,
 				09A8ACF716B507DF005E336D /* EventListGroup.h */,
@@ -732,6 +737,7 @@
 				09AE2E3716C18D09001CB595 /* NSDate+MTDates.m in Sources */,
 				09AE2E3816C18D09001CB595 /* NSDateComponents+MTDates.m in Sources */,
 				09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */,
+				09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventListTableView : UITableView
+@protocol EventListTableViewDelegate <UITableViewDelegate>
+
+@optional
+
+- (void)recalculateOffsetForTableView:(UITableView *)tableView;
 
 @end
+
+
+@interface EventListTableView : UITableView
+
+@property (assign, nonatomic) id <EventListTableViewDelegate> delegate;
+
+@end
+
+

@@ -21,10 +21,12 @@
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSManagedObject+Helpers.h"
 #import "UIColor+Helpers.h"
+#import "MonthlyEventListTableModel.h"
+#import "EventListTableView.h"
 
-@interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate>
+@interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate, EventListTableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *ctlTableView;
+@property (weak, nonatomic) IBOutlet EventListTableView *ctlTableView;
 
 - (IBAction)btMenuHandler:(id)sender;
 - (IBAction)btTodayHandler:(id)sender;
@@ -57,7 +59,8 @@
     UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStylePlain target:self action:@selector(btTodayHandler:)];
     self.navigationItem.rightBarButtonItem = btToday;
 
-    _eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
+//    _eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
+    _eventListTableModel = [[MonthlyEventListTableModel alloc] initWithAppModel:_appModel];
     _eventListTableModelDecorator = [[EventListTableModelDecoratorForUITableView alloc] initWithEventListTableModel:_eventListTableModel];
 
     [self scrollToTodayAnimated:NO];
@@ -154,20 +157,27 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat actualPosition = scrollView.contentOffset.y;
-    CGFloat contentHeight = scrollView.contentSize.height;
-    CGFloat controlHeight = scrollView.bounds.size.height;
+- (void)recalculateOffsetForTableView:(UITableView *)tableView {
+    CGPoint contentOffset  = tableView.contentOffset;
 
-    if (contentHeight != 0) {
-        if (actualPosition <= 0) {
-            [_eventListTableModelDecorator loadPrevSection];
-            [self.ctlTableView reloadData];
-        } else if (actualPosition + controlHeight >= contentHeight) {
-            [_eventListTableModelDecorator loadNextSection];
-            [self.ctlTableView reloadData];
-        }
+    CGFloat sectionHeight = [tableView sectionHeaderHeight];
+    CGFloat height = [tableView rowHeight];
+
+    if (contentOffset.y <= 0) {
+        [_eventListTableModelDecorator loadPrevSection];
+        [self.ctlTableView reloadData];
+
+        NSInteger numberOfRowsInSection = [tableView numberOfRowsInSection:0];
+        contentOffset.y = 1 * (sectionHeight + numberOfRowsInSection * height);
+    } else if (contentOffset.y >= (tableView.contentSize.height - tableView.bounds.size.height)) {
+        [_eventListTableModelDecorator loadNextSection];
+        [self.ctlTableView reloadData];
+
+        NSInteger numberOfRowsInSection = [tableView numberOfRowsInSection:[tableView numberOfSections] - 1];
+        contentOffset.y = tableView.contentSize.height - 1 * (sectionHeight + numberOfRowsInSection * height) - tableView.bounds.size.height;
     }
+
+    [tableView setContentOffset: contentOffset];
 }
 
 - (void)scrollToTodayAnimated:(BOOL)animated {

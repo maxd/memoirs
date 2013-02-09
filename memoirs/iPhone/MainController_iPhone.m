@@ -11,6 +11,10 @@
 #import "EventListController_iPhone.h"
 #import "AppModel.h"
 #import "SettingsController_iPhone.h"
+#import "EventListTableModel.h"
+#import "WeeklyEventListTableModel.h"
+#import "MonthlyEventListTableModel.h"
+#import "YearlyEventListTableModel.h"
 
 @interface MainController_iPhone ()
 
@@ -19,6 +23,7 @@
 @implementation MainController_iPhone {
     AppModel *_appModel;
 
+    EventListController_iPhone *_eventListController;
     EventListMenuController_iPhone *_eventListMenuPanel;
 
     UINavigationController *_eventListPanel;
@@ -36,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self showEventList];
+    [self showWeeklyEventList];
 
     _eventListMenuPanel = [EventListMenuController_iPhone new];
 
@@ -50,8 +55,8 @@
 
 - (UINavigationController *)eventListPanel {
     if (!_eventListPanel) {
-        EventListController_iPhone *eventListController = [[EventListController_iPhone alloc] initWithAppModel:_appModel];
-        _eventListPanel = [[UINavigationController alloc] initWithRootViewController:eventListController];
+        _eventListController = [[EventListController_iPhone alloc] initWithAppModel:_appModel];
+        _eventListPanel = [[UINavigationController alloc] initWithRootViewController:_eventListController];
     }
 
     return _eventListPanel;
@@ -66,12 +71,27 @@
     return _settingsPanel;
 }
 
-- (void)showEventList {
+-(void)showWeeklyEventList {
+    [self showEventListWithModel:[[WeeklyEventListTableModel alloc] initWithAppModel:_appModel]];
+}
+
+-(void)showMonthlyEventList {
+    [self showEventListWithModel:[[MonthlyEventListTableModel alloc] initWithAppModel:_appModel]];
+}
+
+-(void)showYearlyEventList {
+    [self showEventListWithModel:[[YearlyEventListTableModel alloc] initWithAppModel:_appModel]];
+}
+
+- (void)showEventListWithModel:(id <EventListTableModel>)eventListTableModel {
     if (self.centerPanel != [self eventListPanel]) {
         self.centerPanel = [self eventListPanel];
     } else {
         [self showCenterPanel:YES];
     }
+
+    _eventListController.eventListTableModel = eventListTableModel;
+    [_eventListController scrollToTodayAnimated:YES];
 }
 
 - (void)showSettings {

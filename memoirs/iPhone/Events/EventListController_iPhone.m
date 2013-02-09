@@ -37,7 +37,6 @@
 @implementation EventListController_iPhone {
     AppModel *_appModel;
 
-    id<EventListTableModel> _eventListTableModel;
     EventListTableModelDecoratorForUITableView *_eventListTableModelDecorator;
 }
 
@@ -59,12 +58,6 @@
 
     UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStylePlain target:self action:@selector(btTodayHandler:)];
     self.navigationItem.rightBarButtonItem = btToday;
-
-//    _eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
-//    _eventListTableModel = [[MonthlyEventListTableModel alloc] initWithAppModel:_appModel];
-    _eventListTableModel = [[YearlyEventListTableModel alloc] initWithAppModel:_appModel];
-
-    _eventListTableModelDecorator = [[EventListTableModelDecoratorForUITableView alloc] initWithEventListTableModel:_eventListTableModel];
 
     [self scrollToTodayAnimated:NO];
 }
@@ -184,6 +177,7 @@
 }
 
 - (void)scrollToTodayAnimated:(BOOL)animated {
+    _eventListTableModelDecorator = [[EventListTableModelDecoratorForUITableView alloc] initWithEventListTableModel:self.eventListTableModel];
     [_eventListTableModelDecorator loadSectionsAroundDate:[NSDate date]];
 
     [self.ctlTableView reloadData];

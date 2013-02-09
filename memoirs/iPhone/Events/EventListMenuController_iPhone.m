@@ -126,27 +126,27 @@
     _selectedGroup = @"menuGroupByWeek:";
     [tableView reloadData];
 
-    [(MainController_iPhone *)self.sidePanelController showEventList];
-    // ???
+    [(MainController_iPhone *)self.sidePanelController showWeeklyEventList];
 }
 
 - (void)menuGroupByMonth:(UITableView *)tableView {
     _selectedGroup = @"menuGroupByMonth:";
     [tableView reloadData];
 
-    [(MainController_iPhone *)self.sidePanelController showEventList];
-    // ???
+    [(MainController_iPhone *)self.sidePanelController showMonthlyEventList];
 }
 
 - (void)menuGroupByYear:(UITableView *)tableView {
     _selectedGroup = @"menuGroupByYear:";
     [tableView reloadData];
 
-    [(MainController_iPhone *)self.sidePanelController showEventList];
-    // ???
+    [(MainController_iPhone *)self.sidePanelController showYearlyEventList];
 }
 
 - (void)menuSettingsHandler:(UITableView *)tableView {
+    _selectedGroup = nil;
+    [tableView reloadData];
+
     [(MainController_iPhone *)self.sidePanelController showSettings];
 }
 

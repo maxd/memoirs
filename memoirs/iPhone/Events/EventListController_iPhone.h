@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class AppModel;
+@protocol EventListTableModel;
 
 @interface EventListController_iPhone : UIViewController
 
+@property (strong, nonatomic) id <EventListTableModel> eventListTableModel;
+
 - (id)initWithAppModel:(AppModel *)appModel;
 
+-(void)scrollToTodayAnimated:(BOOL)animated;
 @end

@@ -15,7 +15,9 @@
 
 - (id)initWithAppModel:(AppModel *)appModel;
 
--(void)showEventList;
+-(void)showWeeklyEventList;
+-(void)showMonthlyEventList;
+-(void)showYearlyEventList;
 
 -(void)showSettings;
 @end

@@ -23,6 +23,7 @@
 #import "UIColor+Helpers.h"
 #import "MonthlyEventListTableModel.h"
 #import "EventListTableView.h"
+#import "YearlyEventListTableModel.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate, EventListTableViewDelegate>
 
@@ -60,7 +61,9 @@
     self.navigationItem.rightBarButtonItem = btToday;
 
 //    _eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
-    _eventListTableModel = [[MonthlyEventListTableModel alloc] initWithAppModel:_appModel];
+//    _eventListTableModel = [[MonthlyEventListTableModel alloc] initWithAppModel:_appModel];
+    _eventListTableModel = [[YearlyEventListTableModel alloc] initWithAppModel:_appModel];
+
     _eventListTableModelDecorator = [[EventListTableModelDecoratorForUITableView alloc] initWithEventListTableModel:_eventListTableModel];
 
     [self scrollToTodayAnimated:NO];

@@ -15,6 +15,7 @@
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A016B88BA400C6269A /* grey-icon-overlay.png */; };
 		0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */; };
+		099CC38716C649F200A028C1 /* YearlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */; };
 		09A8ACAD16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */; };
 		09A8ACAE16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */; };
 		09A8ACDE16B43BE6005E336D /* NSManagedObject+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACD916B43BE6005E336D /* NSManagedObject+Helpers.m */; };
@@ -122,6 +123,8 @@
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		0962D8A016B88BA400C6269A /* grey-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay.png"; sourceTree = "<group>"; };
 		0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay@2x.png"; sourceTree = "<group>"; };
+		099CC38516C649F200A028C1 /* YearlyEventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyEventListTableModel.h; sourceTree = "<group>"; };
+		099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyEventListTableModel.m; sourceTree = "<group>"; };
 		09A8ACA916B3CBA5005E336D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		09A8ACAB16B3CBA5005E336D /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
@@ -571,6 +574,8 @@
 				09A8ACF516B507DF005E336D /* WeeklyEventListTableModel.m */,
 				09D157FE16C57DE7001D9931 /* MonthlyEventListTableModel.h */,
 				09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */,
+				099CC38516C649F200A028C1 /* YearlyEventListTableModel.h */,
+				099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */,
 				09A8ACF316B507DF005E336D /* EventListTableModelDecoratorForUITableView.h */,
 				09A8ACF416B507DF005E336D /* EventListTableModelDecoratorForUITableView.m */,
 				09A8ACF716B507DF005E336D /* EventListGroup.h */,
@@ -738,6 +743,7 @@
 				09AE2E3816C18D09001CB595 /* NSDateComponents+MTDates.m in Sources */,
 				09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */,
 				09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */,
+				099CC38716C649F200A028C1 /* YearlyEventListTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

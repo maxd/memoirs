@@ -33,6 +33,24 @@
     return [_context objectsForRequest:fetchRequest];
 }
 
+- (NSArray *)mostImportantEventsOfWeeksBetween:(NSDate *)from and:(NSDate *)to {
+    NSFetchRequest *fetchRequest = [Event request];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@ AND isImportantDateOfWeek == YES", from, to];
+    [fetchRequest setPredicate:predicate];
+
+    return [_context objectsForRequest:fetchRequest];
+}
+
+- (NSArray *)mostImportantEventsOfMonthsBetween:(NSDate *)from and:(NSDate *)to {
+    NSFetchRequest *fetchRequest = [Event request];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@ AND isImportantDateOfMonth == YES", from, to];
+    [fetchRequest setPredicate:predicate];
+
+    return [_context objectsForRequest:fetchRequest];
+}
+
 - (NSFetchedResultsController *)values {
     NSFetchRequest *fetchRequest = [Value request];
 

@@ -45,7 +45,7 @@
     eventListGroup.startDate = [dateInYear startOfCurrentYear];
     eventListGroup.endDate = [dateInYear endOfCurrentYear];
 
-    NSArray *events = [_appModel eventsBetween:eventListGroup.startDate and:eventListGroup.endDate]; //TODO: filter by most important flag
+    NSArray *events = [_appModel mostImportantEventsOfMonthsBetween:eventListGroup.startDate and:eventListGroup.endDate];
     for (NSDate *date = eventListGroup.startDate; [date isOnOrBefore:eventListGroup.endDate]; date = [date startOfNextMonth]) {
 
         Event *event = _.array(events).find(^BOOL(Event *e) {

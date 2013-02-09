@@ -20,6 +20,10 @@
 
 - (NSArray *)eventsBetween:(NSDate *)from and:(NSDate *)to;
 
+- (NSArray *)mostImportantEventsOfWeeksBetween:(NSDate *)from and:(NSDate *)to;
+
+- (NSArray *)mostImportantEventsOfMonthsBetween:(NSDate *)from and:(NSDate *)to;
+
 - (NSFetchedResultsController *)values;
 
 @end

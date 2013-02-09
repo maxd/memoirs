@@ -51,7 +51,7 @@
     NSDate *alignedByWeekStartDate = [eventListGroup.startDate startOfCurrentWeek];
     NSDate *alignedByWeekEndDate = [eventListGroup.endDate weekDayOfWeek] == 7 ? eventListGroup.endDate : [eventListGroup.endDate endOfPreviousWeek];
 
-    NSArray *events = [_appModel eventsBetween:alignedByWeekStartDate and:alignedByWeekEndDate]; //TODO: filter by most important flag
+    NSArray *events = [_appModel mostImportantEventsOfWeeksBetween:alignedByWeekStartDate and:alignedByWeekEndDate];
     for (NSDate *date = alignedByWeekStartDate; [date isOnOrBefore:alignedByWeekEndDate]; date = [date startOfNextWeek]) {
 
         Event *event = _.array(events).find(^BOOL(Event *e) {

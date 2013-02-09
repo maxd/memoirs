@@ -17,6 +17,7 @@
 #import "ValuesLoader.h"
 #import "WCAlertView.h"
 #import "UIColor+Helpers.h"
+#import "NSDate+MTDates.h"
 
 @implementation AppDelegate {
     AppModel *_appModel;
@@ -27,6 +28,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self configureNSDate];
+
     _appModel = [self createAppModel];
     if (!_appModel)
         return NO;
@@ -61,6 +64,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)configureNSDate {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    [NSDate setFirstDayOfWeek:calendar.firstWeekday];
+    [NSDate setTimeZone:calendar.timeZone];
 }
 
 - (AppModel *)createAppModel {

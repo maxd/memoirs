@@ -59,7 +59,12 @@
 - (UINavigationController *)eventListPanel {
     if (!_eventListPanel) {
         _eventListController = [[EventListController_iPhone alloc] initWithAppModel:_appModel];
-        _eventListPanel = [[UINavigationController alloc] initWithRootViewController:_eventListController];
+
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_eventListController];
+        [navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont: [UIFont boldSystemFontOfSize:14]}];
+        [navigationController.navigationBar setTitleVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
+
+        _eventListPanel = navigationController;
     }
 
     return _eventListPanel;

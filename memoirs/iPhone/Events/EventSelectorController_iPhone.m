@@ -24,8 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
-    
     if (self.events.count > 0) {
         self.ctlTableView.tableHeaderView = nil;
     } else {

@@ -50,8 +50,6 @@
 
     self.navigationItem.rightBarButtonItem = btEdit;
 
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
-
     _valuesResultController = [_appModel values];
     _valuesResultController.delegate = self;
 }

@@ -18,5 +18,6 @@
 
 - (id)initWithEvent:(Event *)event andDate:(NSDate *)date;
 
--(id)initWithEvent:(Event *)event startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
+- (id)initWithEvent:(Event *)event startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
+
 @end

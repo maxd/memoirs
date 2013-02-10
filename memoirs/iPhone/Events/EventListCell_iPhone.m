@@ -25,21 +25,38 @@
 - (void)setEventListItem:(EventListItem *)eventListItem {
     _eventListItem = eventListItem;
 
-    NSDate *date = eventListItem.startDate;
+    Event *event = eventListItem.event;
 
-    NSUInteger dayOfMonth = [date dayOfMonth];
+    if (event) {
+        // http://unicode.org/reports/tr35/tr35-6.html#Date_Format_Patterns
+        self.lblTopDate.text = [event.date stringFromDateWithFormat:@"dd"];
+        self.lblBottomDate.text = [event.date stringFromDateWithFullMonth];
+        self.lblText.text = event.text;
 
-    self.lblTopDate.text = dayOfMonth > 0 ? [@(dayOfMonth) stringValue]: nil;
-    self.lblBottomDate.text = [date stringFromDateWithFullMonth];
-    self.lblText.text = eventListItem.event ? eventListItem.event.text : @"";
-    
-    if (eventListItem.event.isImportantDateOfYear) {
-        self.lblImportantEvent.text = @"\U0001F49D";
-    } else if (eventListItem.event.isImportantDateOfMonth) {
-        self.lblImportantEvent.text = @"\U0001F49B";
-    } else if (eventListItem.event.isImportantDateOfWeek) {
-        self.lblImportantEvent.text = @"\U0001F49A";
+        if (event.isImportantDateOfYear) {
+            self.lblImportantEvent.text = @"\U0001F49D";
+        } else if (event.isImportantDateOfMonth) {
+            self.lblImportantEvent.text = @"\U0001F49B";
+        } else if (event.isImportantDateOfWeek) {
+            self.lblImportantEvent.text = @"\U0001F49A";
+        } else {
+            self.lblImportantEvent.text = @"";
+        }
     } else {
+        if ([eventListItem.startDate isWithinSameDay:eventListItem.endDate]) {
+            self.lblTopDate.text = [eventListItem.startDate stringFromDateWithFormat:@"dd"];
+            self.lblBottomDate.text = [eventListItem.startDate stringFromDateWithFullMonth];
+        } else if ([eventListItem.startDate isWithinSameWeek:eventListItem.endDate]) {
+            self.lblTopDate.text = @"?";
+            self.lblBottomDate.text = [eventListItem.endDate stringFromDateWithFormat:@"LLLL"];
+        } else if ([eventListItem.startDate isWithinSameMonth:eventListItem.endDate]) {
+            self.lblTopDate.text = @"?";
+            self.lblBottomDate.text = [eventListItem.endDate stringFromDateWithFormat:@"LLLL"];
+        } else {
+            self.lblTopDate.text = @"";
+            self.lblBottomDate.text = @"";
+        }
+        self.lblText.text = @"";
         self.lblImportantEvent.text = @"";
     }
 }

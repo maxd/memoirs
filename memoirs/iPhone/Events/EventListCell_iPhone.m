@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTopDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblBottomDate;
-@property (weak, nonatomic) IBOutlet UILabel *txtText;
+@property (weak, nonatomic) IBOutlet UILabel *lblText;
 @property (weak, nonatomic) IBOutlet UILabel *lblImportantEvent;
 
 @end
@@ -31,7 +31,7 @@
 
     self.lblTopDate.text = dayOfMonth > 0 ? [@(dayOfMonth) stringValue]: nil;
     self.lblBottomDate.text = [date stringFromDateWithFullMonth];
-    self.txtText.text = eventListItem.event ? eventListItem.event.text : @"";
+    self.lblText.text = eventListItem.event ? eventListItem.event.text : @"";
     
     if (eventListItem.event.isImportantDateOfYear) {
         self.lblImportantEvent.text = @"\U0001F49D";

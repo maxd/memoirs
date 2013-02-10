@@ -137,7 +137,6 @@
 								<string key="NSFrame">{{64, 0}, {233, 43}}</string>
 								<reference key="NSSuperview" ref="338670465"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -241,7 +240,7 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">txtText</string>
+						<string key="label">lblText</string>
 						<reference key="source" ref="980880787"/>
 						<reference key="destination" ref="133526572"/>
 					</object>
@@ -356,8 +355,8 @@
 						<string key="ctlDateBackground">UIImageView</string>
 						<string key="lblBottomDate">UILabel</string>
 						<string key="lblImportantEvent">UILabel</string>
+						<string key="lblText">UILabel</string>
 						<string key="lblTopDate">UILabel</string>
-						<string key="txtText">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="ctlDateBackground">
@@ -372,12 +371,12 @@
 							<string key="name">lblImportantEvent</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="lblTopDate">
-							<string key="name">lblTopDate</string>
+						<object class="IBToOneOutletInfo" key="lblText">
+							<string key="name">lblText</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="txtText">
-							<string key="name">txtText</string>
+						<object class="IBToOneOutletInfo" key="lblTopDate">
+							<string key="name">lblTopDate</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

@@ -21,7 +21,6 @@
     if (self) {
         _eventListTableModel = eventListTableModel;
     }
-
     return self;
 }
 
@@ -61,6 +60,13 @@
 
 - (void)loadSectionsAroundDate:(NSDate *)date {
     [_eventListTableModel loadSectionsAroundDate:date];
+}
+
+- (void)reloadData {
+    EventListGroup *firstEventListGroup = _eventListTableModel.groups[0];
+    EventListGroup *lastEventListGroup = [_eventListTableModel.groups lastObject];
+
+    [_eventListTableModel reloadSectionsBetween:firstEventListGroup.startDate and:lastEventListGroup.endDate];
 }
 
 - (void)loadPrevSection {

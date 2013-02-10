@@ -14,6 +14,8 @@
 
 - (void)loadSectionsAroundDate:(NSDate *)currentDate;
 
+- (void)reloadSectionsBetween:(NSDate *)startDate and:(NSDate *)endDate;
+
 - (void)loadPrevSection;
 
 - (void)loadNextSection;

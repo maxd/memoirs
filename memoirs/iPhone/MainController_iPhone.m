@@ -15,6 +15,10 @@
 #import "WeeklyEventListTableModel.h"
 #import "MonthlyEventListTableModel.h"
 #import "YearlyEventListTableModel.h"
+#import "EventListHandler.h"
+#import "WeeklyEventListHandler.h"
+#import "MonthlyEventListHandler.h"
+#import "YearlyEventListHandler.h"
 
 @interface MainController_iPhone ()
 
@@ -72,18 +76,24 @@
 }
 
 -(void)showWeeklyEventList {
-    [self showEventListWithModel:[[WeeklyEventListTableModel alloc] initWithAppModel:_appModel]];
+    WeeklyEventListTableModel *eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
+    WeeklyEventListHandler *eventListHandler = [[WeeklyEventListHandler alloc] initWithAppModel:_appModel];
+    [self showEventListWithModel:eventListTableModel andHandler:eventListHandler];
 }
 
 -(void)showMonthlyEventList {
-    [self showEventListWithModel:[[MonthlyEventListTableModel alloc] initWithAppModel:_appModel]];
+    MonthlyEventListTableModel *eventListTableModel = [[MonthlyEventListTableModel alloc] initWithAppModel:_appModel];
+    MonthlyEventListHandler *eventListHandler = [[MonthlyEventListHandler alloc] initWithAppModel:_appModel];
+    [self showEventListWithModel:eventListTableModel andHandler:eventListHandler];
 }
 
 -(void)showYearlyEventList {
-    [self showEventListWithModel:[[YearlyEventListTableModel alloc] initWithAppModel:_appModel]];
+    YearlyEventListTableModel *eventListTableModel = [[YearlyEventListTableModel alloc] initWithAppModel:_appModel];
+    YearlyEventListHandler *eventListHandler = [[YearlyEventListHandler alloc] initWithAppModel:_appModel];
+    [self showEventListWithModel:eventListTableModel andHandler:eventListHandler];
 }
 
-- (void)showEventListWithModel:(id <EventListTableModel>)eventListTableModel {
+- (void)showEventListWithModel:(id <EventListTableModel>)eventListTableModel andHandler:(id <EventListHandler>)eventListHandler {
     if (self.centerPanel != [self eventListPanel]) {
         self.centerPanel = [self eventListPanel];
     } else {
@@ -91,6 +101,10 @@
     }
 
     _eventListController.eventListTableModel = eventListTableModel;
+    _eventListController.eventListHandler = eventListHandler;
+
+    _eventListController.title = [eventListHandler navBarTitle];
+
     [_eventListController scrollToTodayAnimated:YES];
 }
 

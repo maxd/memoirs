@@ -28,7 +28,6 @@
         _appModel = appModel;
         self.groups = [NSMutableArray new];
     }
-
     return self;
 }
 
@@ -36,8 +35,12 @@
     NSDate *startWeek = [[currentDate startOfPreviousWeek] oneWeekPrevious];
     NSDate *endWeek = [[currentDate startOfNextWeek] oneWeekNext];
 
+    [self reloadSectionsBetween:startWeek and:endWeek];
+}
+
+- (void)reloadSectionsBetween:(NSDate *)startDate and:(NSDate *)endDate {
     [self.groups removeAllObjects];
-    for (NSDate *date = startWeek; [date isOnOrBefore:endWeek]; date = [date startOfNextWeek]) {
+    for (NSDate *date = startDate; [date isOnOrBefore:endDate]; date = [date startOfNextWeek]) {
         EventListGroup *eventListGroup = [self loadWeek:date];
         [self.groups addObject:eventListGroup];
     }
@@ -55,7 +58,7 @@
             return [e.date isEqualToDate:date];
         });
 
-        EventListItem *eventListItem = [[EventListItem alloc] initWithDate:date andEvent:event];
+        EventListItem *eventListItem = [[EventListItem alloc] initWithEvent:event startDate:date endDate:[date endOfCurrentDay]];
         [eventListGroup.eventListItems addObject:eventListItem];
     }
 

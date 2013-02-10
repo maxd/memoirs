@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "EventEditorController_iPhone.h"
 #import "Value.h"
 #import "NSDate+MTDates.h"
@@ -15,6 +14,10 @@
 #import "UIColor+Helpers.h"
 #import "UIImage+Resize.h"
 #import "WCAlertView.h"
+#import "EventListItem.h"
+#import "Event.h"
+#import "NSManagedObjectContext+Helpers.h"
+#import "NSManagedObject+Helpers.h"
 
 @interface EventEditorController_iPhone () <UITextViewDelegate, ValueListControllerDelegate_iPhone>
 
@@ -26,6 +29,8 @@
 
 @implementation EventEditorController_iPhone {
     AppModel *_appModel;
+
+    Value *_value;
 }
 
 - (id)initWithAppModel:(AppModel *)appModel {
@@ -61,39 +66,31 @@
     UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:@"Сохранить" style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
     self.navigationItem.rightBarButtonItem = btSave;
 
-    self.lblDate.text = [self.date stringValueWithDateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterNoStyle];
-    [self setSelectValueText:self.value.title];
-    self.txtText.text = self.text;
+    self.lblDate.text = [self.eventListItem.startDate stringValueWithDateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterNoStyle];
+    [self setSelectValue:self.eventListItem.event.value];
+    self.txtText.text = self.eventListItem.event.text;
 }
 
 - (IBAction)btSelectValueHandler:(id)sender {
     ValueListController_iPhone *valueListController = [[ValueListController_iPhone alloc] initWithAppModel:_appModel];
     valueListController.delegate = self;
-    valueListController.value = self.value;
+    valueListController.value = _value;
 
     [self.navigationController pushViewController:valueListController animated:YES];
 }
 
 - (void)valueListControllerDidSelectedValue:(ValueListController_iPhone *)valueListController {
-    self.value = valueListController.value;
-
-    [self setSelectValueText:self.value.title];
-
-    [self.btSelectValue setTitle:self.value.title forState:UIControlStateNormal];
+    [self setSelectValue:valueListController.value];
 
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
-    self.text = textView.text;
-}
-
 - (IBAction)btCancelHandler:(id)sender {
-    [self.delegate eventEditorController:self didFinishedWithSaveState:NO];
+    [self.delegate dismissEventEditorController:self];
 }
 
 - (IBAction)btSaveHandler:(id)sender {
-    if (!self.value) {
+    if (!_value) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
                                                             message:@"Пожалуйста выберите ценность дня из списка ценностей."
                                                            delegate:nil
@@ -101,7 +98,7 @@
                                                   otherButtonTitles:nil];
         
         [alertView show];
-    } else if (!self.text.length) {
+    } else if (!self.txtText.text.length) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
                                                             message:@"Пожалуйста опишите событие дня."
                                                            delegate:nil
@@ -110,21 +107,32 @@
 
         [alertView show];
     } else {
-        [self.delegate eventEditorController:self didFinishedWithSaveState:YES];
+        if (!self.eventListItem.event) {
+            self.eventListItem.event = [_appModel.context newObjectWithEntityName:[Event entityName]];
+        }
+
+        self.eventListItem.event.date = self.eventListItem.startDate;
+        self.eventListItem.event.value = _value;
+        self.eventListItem.event.text = self.txtText.text;
+
+        [_appModel.context save];
+
+        [self.delegate dismissEventEditorController:self];
     }
 }
 
 #pragma mark Helper Methods
 
-- (void)setSelectValueText:(NSString *)text {
-    if (text.length) {
-        [self.btSelectValue setTitle:text forState:UIControlStateNormal];
+- (void)setSelectValue:(Value *)value {
+    _value = value;
+
+    if (value.title.length) {
+        [self.btSelectValue setTitle:value.title forState:UIControlStateNormal];
         [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF033143] forState:UIControlStateNormal];
     } else {
         [self.btSelectValue setTitle:@"Выберите ценность" forState:UIControlStateNormal];
         [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF999999] forState:UIControlStateNormal];
     }
 }
-
 
 @end

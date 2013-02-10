@@ -15,6 +15,9 @@
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A016B88BA400C6269A /* grey-icon-overlay.png */; };
 		0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */; };
+		097FD7A016C6CD9400F092D2 /* WeeklyEventListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FD79F16C6CD9400F092D2 /* WeeklyEventListHandler.m */; };
+		097FD7A316C6DADB00F092D2 /* MonthlyEventListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FD7A216C6DADB00F092D2 /* MonthlyEventListHandler.m */; };
+		097FD7A616C6DD2D00F092D2 /* YearlyEventListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FD7A516C6DD2D00F092D2 /* YearlyEventListHandler.m */; };
 		099CC38716C649F200A028C1 /* YearlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */; };
 		09A8ACAD16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */; };
 		09A8ACAE16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */; };
@@ -123,6 +126,13 @@
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		0962D8A016B88BA400C6269A /* grey-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay.png"; sourceTree = "<group>"; };
 		0962D8A116B88BA400C6269A /* grey-icon-overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay@2x.png"; sourceTree = "<group>"; };
+		097FD79C16C6CC9400F092D2 /* EventListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListHandler.h; sourceTree = "<group>"; };
+		097FD79E16C6CD9400F092D2 /* WeeklyEventListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeklyEventListHandler.h; sourceTree = "<group>"; };
+		097FD79F16C6CD9400F092D2 /* WeeklyEventListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyEventListHandler.m; sourceTree = "<group>"; };
+		097FD7A116C6DADB00F092D2 /* MonthlyEventListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthlyEventListHandler.h; sourceTree = "<group>"; };
+		097FD7A216C6DADB00F092D2 /* MonthlyEventListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthlyEventListHandler.m; sourceTree = "<group>"; };
+		097FD7A416C6DD2D00F092D2 /* YearlyEventListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyEventListHandler.h; sourceTree = "<group>"; };
+		097FD7A516C6DD2D00F092D2 /* YearlyEventListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyEventListHandler.m; sourceTree = "<group>"; };
 		099CC38516C649F200A028C1 /* YearlyEventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyEventListTableModel.h; sourceTree = "<group>"; };
 		099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyEventListTableModel.m; sourceTree = "<group>"; };
 		09A8ACA916B3CBA5005E336D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -391,6 +401,13 @@
 				0903EFA516BD5B0E00547357 /* EventListMenuCell_iPhone.h */,
 				0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */,
 				0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */,
+				097FD79C16C6CC9400F092D2 /* EventListHandler.h */,
+				097FD79E16C6CD9400F092D2 /* WeeklyEventListHandler.h */,
+				097FD79F16C6CD9400F092D2 /* WeeklyEventListHandler.m */,
+				097FD7A116C6DADB00F092D2 /* MonthlyEventListHandler.h */,
+				097FD7A216C6DADB00F092D2 /* MonthlyEventListHandler.m */,
+				097FD7A416C6DD2D00F092D2 /* YearlyEventListHandler.h */,
+				097FD7A516C6DD2D00F092D2 /* YearlyEventListHandler.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -744,6 +761,9 @@
 				09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */,
 				09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */,
 				099CC38716C649F200A028C1 /* YearlyEventListTableModel.m in Sources */,
+				097FD7A016C6CD9400F092D2 /* WeeklyEventListHandler.m in Sources */,
+				097FD7A316C6DADB00F092D2 /* MonthlyEventListHandler.m in Sources */,
+				097FD7A616C6DD2D00F092D2 /* YearlyEventListHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

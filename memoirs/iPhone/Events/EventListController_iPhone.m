@@ -8,24 +8,17 @@
 
 #import "EventListController_iPhone.h"
 #import "AppDelegate.h"
-#import "EventEditorController_iPhone.h"
-#import "EventListTableModel.h"
-#import "WeeklyEventListTableModel.h"
 #import "AppModel.h"
 #import "EventListTableModelDecoratorForUITableView.h"
 #import "EventListCell_iPhone.h"
 #import "UITableViewCell+NIB.h"
 #import "EventListGroup.h"
 #import "EventListItem.h"
-#import "Event.h"
-#import "NSManagedObjectContext+Helpers.h"
-#import "NSManagedObject+Helpers.h"
+#import "EventListHandler.h"
 #import "UIColor+Helpers.h"
-#import "MonthlyEventListTableModel.h"
 #import "EventListTableView.h"
-#import "YearlyEventListTableModel.h"
 
-@interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventEditorController_iPhoneDelegate, EventListTableViewDelegate>
+@interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventListTableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet EventListTableView *ctlTableView;
 
@@ -50,9 +43,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"События";
-    
+
+    UIBarButtonItem *btBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"header_back_btn"] style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = btBack;
+
     UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;
 
@@ -60,6 +54,12 @@
     self.navigationItem.rightBarButtonItem = btToday;
 
     [self scrollToTodayAnimated:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self reloadData];
 }
 
 #pragma mark Button Handlers
@@ -111,46 +111,13 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     EventListGroup *eventListGroup = [_eventListTableModelDecorator eventListGroupBySection:section];
 
-    NSString *startDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.startDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
-    NSString *endDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.endDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
-    
-    return [NSString stringWithFormat:@"%@ - %@", startDateFormatted, endDateFormatted];
+    return [self.eventListHandler sectionTitle:eventListGroup];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
 
-    EventEditorController_iPhone *eventEditorController = [[EventEditorController_iPhone alloc] initWithAppModel:_appModel];
-    eventEditorController.delegate = self;
-
-    eventEditorController.date = eventListItem.date;
-    eventEditorController.value = eventListItem.event.value;
-    eventEditorController.text = eventListItem.event.text;
-
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:eventEditorController];
-
-    [self presentModalViewController:navigationController animated:YES];
-}
-
-- (void)eventEditorController:(EventEditorController_iPhone *)eventEditorController didFinishedWithSaveState:(BOOL)save {
-    NSIndexPath *indexPath = [self.ctlTableView indexPathForSelectedRow];
-
-    EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
-    if (save) {
-        if (!eventListItem.event) {
-            eventListItem.event = [_appModel.context newObjectWithEntityName:[Event entityName]];
-        }
-
-        eventListItem.event.date = eventEditorController.date;
-        eventListItem.event.value = eventEditorController.value;
-        eventListItem.event.text = eventEditorController.text;
-
-        [_appModel.context save];
-
-        [self.ctlTableView reloadData];
-    }
-
-    [self dismissModalViewControllerAnimated:YES];
+    [self.eventListHandler openEditorForViewController:self withEventListItem:eventListItem];
 }
 
 - (void)recalculateOffsetForTableView:(UITableView *)tableView {
@@ -182,6 +149,16 @@
 
     [self.ctlTableView reloadData];
     [self.ctlTableView scrollToRowAtIndexPath:[_eventListTableModelDecorator currentIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:animated];
+}
+
+- (void)reloadData {
+    CGPoint contentOffset = self.ctlTableView.contentOffset;
+
+    [_eventListTableModelDecorator reloadData];
+
+    [self.ctlTableView reloadData];
+
+    self.ctlTableView.contentOffset = contentOffset;
 }
 
 @end

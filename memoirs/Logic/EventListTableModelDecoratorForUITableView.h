@@ -14,7 +14,7 @@
 
 @interface EventListTableModelDecoratorForUITableView : NSObject
 
--(id)initWithEventListTableModel:(id<EventListTableModel>)eventListTableModel;
+- (id)initWithEventListTableModel:(id<EventListTableModel>)eventListTableModel;
 
 - (NSInteger)numberOfSections;
 
@@ -24,11 +24,14 @@
 
 - (EventListGroup *)eventListGroupBySection:(NSInteger)section;
 
--(NSIndexPath *)currentIndexPath;
+- (NSIndexPath *)currentIndexPath;
 
--(void)loadSectionsAroundDate:(NSDate *)date;
+- (void)loadSectionsAroundDate:(NSDate *)date;
 
--(void)loadPrevSection;
+- (void)reloadData;
 
--(void)loadNextSection;
+- (void)loadPrevSection;
+
+- (void)loadNextSection;
+
 @end

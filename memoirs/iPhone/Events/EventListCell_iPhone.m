@@ -25,10 +25,12 @@
 - (void)setEventListItem:(EventListItem *)eventListItem {
     _eventListItem = eventListItem;
 
-    NSUInteger dayOfMonth = [eventListItem.date dayOfMonth];
+    NSDate *date = eventListItem.startDate;
+
+    NSUInteger dayOfMonth = [date dayOfMonth];
 
     self.lblTopDate.text = dayOfMonth > 0 ? [@(dayOfMonth) stringValue]: nil;
-    self.lblBottomDate.text = [eventListItem.date stringFromDateWithFullMonth];
+    self.lblBottomDate.text = [date stringFromDateWithFullMonth];
     self.txtText.text = eventListItem.event ? eventListItem.event.text : @"";
     
     if (eventListItem.event.isImportantDateOfYear) {

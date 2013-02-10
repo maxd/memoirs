@@ -12,9 +12,11 @@
 
 @interface EventListItem : NSObject
 
-@property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) Event *event;
+@property (strong, nonatomic) NSDate *startDate;
+@property (strong, nonatomic) NSDate *endDate;
 
-- (id)initWithDate:(NSDate *)date andEvent:(Event *)event;
+- (id)initWithEvent:(Event *)event andDate:(NSDate *)date;
 
+-(id)initWithEvent:(Event *)event startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
 @end

@@ -11,11 +11,22 @@
 
 @implementation EventListItem
 
-- (id)initWithDate:(NSDate *)date andEvent:(Event *)event {
+- (id)initWithEvent:(Event *)event andDate:(NSDate *)date {
     self = [super init];
     if (self) {
-        self.date = date;
         self.event = event;
+        self.startDate = date;
+        self.endDate = date;
+    }
+    return self;
+}
+
+- (id)initWithEvent:(Event *)event startDate:(NSDate *)startDate endDate:(NSDate *)endDate {
+    self = [super init];
+    if (self) {
+        self.event = event;
+        self.startDate = startDate;
+        self.endDate = endDate;
     }
     return self;
 }

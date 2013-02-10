@@ -10,10 +10,12 @@
 
 @class AppModel;
 @protocol EventListTableModel;
+@protocol EventListHandler;
 
 @interface EventListController_iPhone : UIViewController
 
 @property (strong, nonatomic) id <EventListTableModel> eventListTableModel;
+@property (strong, nonatomic) id <EventListHandler> eventListHandler;
 
 - (id)initWithAppModel:(AppModel *)appModel;
 

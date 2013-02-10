@@ -28,7 +28,6 @@
         _appModel = appModel;
         self.groups = [NSMutableArray new];
     }
-
     return self;
 }
 
@@ -36,8 +35,12 @@
     NSDate *startMonth = [[currentDate startOfPreviousMonth] oneMonthPrevious];
     NSDate *endMonth = [[currentDate startOfNextMonth] oneMonthNext];
 
+    [self reloadSectionsBetween:startMonth and:endMonth];
+}
+
+- (void)reloadSectionsBetween:(NSDate *)startDate and:(NSDate *)endDate {
     [self.groups removeAllObjects];
-    for (NSDate *date = startMonth; [date isOnOrBefore:endMonth]; date = [date startOfNextMonth]) {
+    for (NSDate *date = startDate; [date isOnOrBefore:endDate]; date = [date startOfNextMonth]) {
         EventListGroup *eventListGroup = [self loadMonth:date];
         [self.groups addObject:eventListGroup];
     }
@@ -54,11 +57,14 @@
     NSArray *events = [_appModel mostImportantEventsOfWeeksBetween:alignedByWeekStartDate and:alignedByWeekEndDate];
     for (NSDate *date = alignedByWeekStartDate; [date isOnOrBefore:alignedByWeekEndDate]; date = [date startOfNextWeek]) {
 
+        NSDate *startDate = date;
+        NSDate *endDate = [date endOfCurrentWeek];
+
         Event *event = _.array(events).find(^BOOL(Event *e) {
-            return [e.date isEqualToDate:date];
+            return [e.date isBetweenDate:startDate andDate:endDate];
         });
 
-        EventListItem *eventListItem = [[EventListItem alloc] initWithDate:date andEvent:event];
+        EventListItem *eventListItem = [[EventListItem alloc] initWithEvent:event startDate:startDate endDate:endDate];
         [eventListGroup.eventListItems addObject:eventListItem];
     }
 

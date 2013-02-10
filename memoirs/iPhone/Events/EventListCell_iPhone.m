@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "EventListCell_iPhone.h"
 #import "EventListItem.h"
 #import "NSDate+MTDates.h"
@@ -17,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblBottomDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 @property (weak, nonatomic) IBOutlet UILabel *lblImportantEvent;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgAnimatedHighlight;
 
 @end
 
@@ -59,10 +62,33 @@
         self.lblText.text = @"";
         self.lblImportantEvent.text = @"";
     }
+
+    if ([[NSDate date] isBetweenDate:eventListItem.startDate andDate:eventListItem.endDate]) {
+        [self highlightWithAnimation];
+    }
 }
 
 - (void)awakeFromNib {
     self.ctlDateBackground.image = [[UIImage imageNamed:@"white-icon-overlay"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{5, 5, 5, 5}")];
+}
+
+- (void)highlightWithAnimation {
+    CGRect rect;
+
+    rect = self.imgAnimatedHighlight.frame;
+    rect.origin.x = -self.imgAnimatedHighlight.frame.size.width;
+    self.imgAnimatedHighlight.frame = rect;
+
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelay:1];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+
+    rect = self.imgAnimatedHighlight.frame;
+    rect.origin.x = self.frame.size.width + self.imgAnimatedHighlight.frame.size.width;
+    self.imgAnimatedHighlight.frame = rect;
+
+    [UIView commitAnimations];
 }
 
 @end

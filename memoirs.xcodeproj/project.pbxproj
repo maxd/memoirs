@@ -110,6 +110,8 @@
 		09B23D4016B30C2E003FFD91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B23D3F16B30C2E003FFD91 /* Default-568h@2x.png */; };
 		09B23DAF16B338B3003FFD91 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DAE16B338B3003FFD91 /* CoreData.framework */; };
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
+		09B9D8B416C84D9F000F3D30 /* animated-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B216C84D9F000F3D30 /* animated-highlight.png */; };
+		09B9D8B516C84D9F000F3D30 /* animated-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */; };
 		09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */; };
 		09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */; };
 		09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */; };
@@ -268,6 +270,8 @@
 		09B23D3F16B30C2E003FFD91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		09B23DAE16B338B3003FFD91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09B23DB016B338CC003FFD91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		09B9D8B216C84D9F000F3D30 /* animated-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight.png"; sourceTree = "<group>"; };
+		09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight@2x.png"; sourceTree = "<group>"; };
 		09D157EA16C57263001D9931 /* EventSelectorController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSelectorController_iPhone.h; sourceTree = "<group>"; };
 		09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSelectorController_iPhone.m; sourceTree = "<group>"; };
 		09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSelectorController_iPhone.xib; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				09AF2B5616BCFA8B001E15BB /* cell_selected_background@2x.png */,
 				09AF2B6F16BD244C001E15BB /* cellheader_background.png */,
 				09AF2B7016BD244C001E15BB /* cellheader_background@2x.png */,
+				09B9D8B216C84D9F000F3D30 /* animated-highlight.png */,
+				09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -712,6 +718,8 @@
 				09AF2B7216BD244D001E15BB /* cellheader_background@2x.png in Resources */,
 				0903EFA916BD5B4D00547357 /* EventListMenuCell_iPhone.xib in Resources */,
 				09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */,
+				09B9D8B416C84D9F000F3D30 /* animated-highlight.png in Resources */,
+				09B9D8B516C84D9F000F3D30 /* animated-highlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

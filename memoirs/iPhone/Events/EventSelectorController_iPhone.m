@@ -37,6 +37,7 @@
 
     Event *event = [self.events objectAtIndex:(NSUInteger) indexPath.row];
     cell.eventListItem = [[EventListItem alloc] initWithEvent:event andDate:event.date];
+    cell.accessoryType = UITableViewCellAccessoryNone;
 
     return cell;
 }

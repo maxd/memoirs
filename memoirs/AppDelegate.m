@@ -18,6 +18,7 @@
 #import "WCAlertView.h"
 #import "UIColor+Helpers.h"
 #import "NSDate+MTDates.h"
+#import "EventLoader.h"
 
 @implementation AppDelegate {
     AppModel *_appModel;
@@ -36,6 +37,11 @@
 
     ValuesLoader *valuesLoader = [[ValuesLoader alloc] initWithManagedContext:[_appModel context]];
     [valuesLoader loadPredefinedValuesIfRequired];
+
+    #ifdef DEBUG
+    EventLoader *eventLoader = [[EventLoader alloc] initWithAppModel:_appModel];
+    [eventLoader loadPredefinedEventsIfRequired];
+    #endif
 
     [self createWindow:_appModel];
 

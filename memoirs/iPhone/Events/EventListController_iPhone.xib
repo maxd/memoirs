@@ -196,13 +196,13 @@
 					</dictionary>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">ctlTableView</string>
-						<string key="NS.object.0">UITableView</string>
+						<string key="NS.object.0">EventListTableView</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<string key="NS.key.0">ctlTableView</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
 							<string key="name">ctlTableView</string>
-							<string key="candidateClassName">UITableView</string>
+							<string key="candidateClassName">EventListTableView</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

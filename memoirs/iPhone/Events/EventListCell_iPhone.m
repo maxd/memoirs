@@ -44,4 +44,8 @@
     }
 }
 
+- (void)awakeFromNib {
+    self.ctlDateBackground.image = [[UIImage imageNamed:@"white-icon-overlay"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{5, 5, 5, 5}")];
+}
+
 @end

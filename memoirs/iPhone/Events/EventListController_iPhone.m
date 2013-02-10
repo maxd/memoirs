@@ -98,14 +98,8 @@
     EventListCell_iPhone *cell = [EventListCell_iPhone dequeOrCreateInTable:tableView];
 
     cell.eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
-    
+
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(EventListCell_iPhone *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
-
-    cell.ctlDateBackground.image = [[UIImage imageNamed:@"white-icon-overlay"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{5, 5, 5, 5}")];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

@@ -52,6 +52,7 @@
 - (void)eventSelectorController:(EventSelectorController_iPhone *)eventSelectorController didSelectEvent:(Event *)event {
     for (Event *e in eventSelectorController.events) {
         e.isImportantDateOfMonth = NO;
+        e.isImportantDateOfYear = NO;
     }
     event.isImportantDateOfMonth = YES;
     [_appModel.context save];

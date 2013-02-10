@@ -29,18 +29,18 @@
 
     _menu = @[
         @{
-            @"title": @"Показать события",
+            @"title": @"Разделы",
             @"menu": @[
                 @{
-                    @"title": @"Недели",
+                    @"title": @"Все события",
                     @"selector": @"menuGroupByWeek:"
                 },
                 @{
-                    @"title": @"Месяца",
+                    @"title": @"События недели",
                     @"selector": @"menuGroupByMonth:"
                 },
                 @{
-                    @"title": @"Года",
+                    @"title": @"События месяца",
                     @"selector": @"menuGroupByYear:"
                 },
             ]

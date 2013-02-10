@@ -13,6 +13,7 @@
 #import "EventListItem.h"
 #import "Event.h"
 #import "NSManagedObjectContext+Helpers.h"
+#import "NSDate+MTDates.h"
 
 @interface YearlyEventListHandler () <EventSelectorControllerDelegate_iPhone>
 
@@ -35,10 +36,7 @@
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {
-    NSString *startDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.startDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
-    NSString *endDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.endDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
-
-    return [NSString stringWithFormat:@"%@ - %@", startDateFormatted, endDateFormatted];
+    return [eventListGroup.startDate stringFromDateWithFormat:@"yyyy"];
 }
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {

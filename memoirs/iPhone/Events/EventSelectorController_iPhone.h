@@ -14,6 +14,7 @@
 @interface EventSelectorController_iPhone : UIViewController
 
 @property (strong, nonatomic) NSArray *events;
+@property (strong, nonatomic) NSString *emptyMessage;
 
 @property (weak, nonatomic) id <EventSelectorControllerDelegate_iPhone> delegate;
 

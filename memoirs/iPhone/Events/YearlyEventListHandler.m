@@ -41,6 +41,8 @@
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {
     EventSelectorController_iPhone *eventSelectorController = [[EventSelectorController_iPhone alloc] init];
+    eventSelectorController.title = @"Выберите событие месяца";
+    eventSelectorController.emptyMessage = @"Чтобы выбрать главное событие месяца сначала выберите главные события недели открыв раздел \"События месяца\" в меню.";
     eventSelectorController.delegate = self;
     eventSelectorController.events = [_appModel mostImportantEventsOfWeeksBetween:eventListItem.startDate and:eventListItem.endDate];
 

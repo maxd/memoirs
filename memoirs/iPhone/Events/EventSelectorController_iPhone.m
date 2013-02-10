@@ -15,6 +15,7 @@
 @interface EventSelectorController_iPhone () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *ctlTableView;
+@property (weak, nonatomic) IBOutlet UILabel *lblEmptyMessage;
 
 @end
 
@@ -25,7 +26,11 @@
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
     
-    self.title = @"Выберите событие";
+    if (self.events.count > 0) {
+        self.ctlTableView.tableHeaderView = nil;
+    } else {
+        self.lblEmptyMessage.text = self.emptyMessage;
+    }
 }
 
 #pragma mark UITableView Handlers
@@ -54,4 +59,8 @@
     [self.delegate eventSelectorController:self didSelectEvent:event];
 }
 
+- (void)viewDidUnload {
+    [self setLblEmptyMessage:nil];
+    [super viewDidUnload];
+}
 @end

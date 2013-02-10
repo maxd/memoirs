@@ -50,7 +50,6 @@
     _eventListMenuPanel = [EventListMenuController_iPhone new];
 
     self.leftPanel = _eventListMenuPanel;
-    self.leftGapPercentage = 0.82;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {

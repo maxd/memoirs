@@ -19,6 +19,10 @@
 		097FD7A016C6CD9400F092D2 /* WeeklyEventListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FD79F16C6CD9400F092D2 /* WeeklyEventListHandler.m */; };
 		097FD7A316C6DADB00F092D2 /* MonthlyEventListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FD7A216C6DADB00F092D2 /* MonthlyEventListHandler.m */; };
 		097FD7A616C6DD2D00F092D2 /* YearlyEventListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FD7A516C6DD2D00F092D2 /* YearlyEventListHandler.m */; };
+		09859BE916C9947200FCC13E /* app-icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 09859BE816C9947200FCC13E /* app-icon-57x57.png */; };
+		09859BEC16C9948400FCC13E /* app-icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 09859BEB16C9948400FCC13E /* app-icon-114x114.png */; };
+		09859BEE16C9948C00FCC13E /* app-icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 09859BED16C9948C00FCC13E /* app-icon-72x72.png */; };
+		09859BF016C9949000FCC13E /* app-icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 09859BEF16C9949000FCC13E /* app-icon-144x144.png */; };
 		099CC38716C649F200A028C1 /* YearlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */; };
 		09A8ACAD16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAA16B3CBA5005E336D /* TPKeyboardAvoidingScrollView.m */; };
 		09A8ACAE16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ACAC16B3CBA5005E336D /* TPKeyboardAvoidingTableView.m */; };
@@ -138,6 +142,10 @@
 		097FD7A216C6DADB00F092D2 /* MonthlyEventListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthlyEventListHandler.m; sourceTree = "<group>"; };
 		097FD7A416C6DD2D00F092D2 /* YearlyEventListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyEventListHandler.h; sourceTree = "<group>"; };
 		097FD7A516C6DD2D00F092D2 /* YearlyEventListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyEventListHandler.m; sourceTree = "<group>"; };
+		09859BE816C9947200FCC13E /* app-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-57x57.png"; path = "../../app-icon-57x57.png"; sourceTree = "<group>"; };
+		09859BEB16C9948400FCC13E /* app-icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-114x114.png"; path = "../../app-icon-114x114.png"; sourceTree = "<group>"; };
+		09859BED16C9948C00FCC13E /* app-icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-72x72.png"; path = "../../app-icon-72x72.png"; sourceTree = "<group>"; };
+		09859BEF16C9949000FCC13E /* app-icon-144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-144x144.png"; path = "../../app-icon-144x144.png"; sourceTree = "<group>"; };
 		099CC38516C649F200A028C1 /* YearlyEventListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyEventListTableModel.h; sourceTree = "<group>"; };
 		099CC38616C649F200A028C1 /* YearlyEventListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyEventListTableModel.m; sourceTree = "<group>"; };
 		09A8ACA916B3CBA5005E336D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = vendor/TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -308,6 +316,10 @@
 		0962D87916B8877100C6269A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				09859BE816C9947200FCC13E /* app-icon-57x57.png */,
+				09859BED16C9948C00FCC13E /* app-icon-72x72.png */,
+				09859BEB16C9948400FCC13E /* app-icon-114x114.png */,
+				09859BEF16C9949000FCC13E /* app-icon-144x144.png */,
 				09AF2AA216BC2C06001E15BB /* values.lst */,
 				0962D87A16B887E200C6269A /* menu-icon.png */,
 				0962D87B16B887E200C6269A /* menu-icon@2x.png */,
@@ -720,6 +732,10 @@
 				09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */,
 				09B9D8B416C84D9F000F3D30 /* animated-highlight.png in Resources */,
 				09B9D8B516C84D9F000F3D30 /* animated-highlight@2x.png in Resources */,
+				09859BE916C9947200FCC13E /* app-icon-57x57.png in Resources */,
+				09859BEC16C9948400FCC13E /* app-icon-114x114.png in Resources */,
+				09859BEE16C9948C00FCC13E /* app-icon-72x72.png in Resources */,
+				09859BF016C9949000FCC13E /* app-icon-144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

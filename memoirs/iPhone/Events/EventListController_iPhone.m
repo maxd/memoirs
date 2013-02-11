@@ -54,12 +54,24 @@
     self.navigationItem.rightBarButtonItem = btToday;
 
     [self scrollToTodayAnimated:NO];
+
+    [[NSNotificationCenter defaultCenter]
+            addObserver:self
+               selector:@selector(applicationDidBecomeActive:)
+                   name:UIApplicationDidBecomeActiveNotification
+                 object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
     [self reloadData];
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark Button Handlers
@@ -153,6 +165,12 @@
     [self.ctlTableView reloadData];
 
     self.ctlTableView.contentOffset = contentOffset;
+}
+
+#pragma mark NotificationCenter Handlers
+
+- (void)applicationDidBecomeActive:(id)sender {
+    [self scrollToTodayAnimated:NO];
 }
 
 @end

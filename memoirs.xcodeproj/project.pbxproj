@@ -131,6 +131,7 @@
 		09130E7B16BE9B85004A289C /* WCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCAlertView.m; path = vendor/WCAlertView/WCAlertView/WCAlertView.m; sourceTree = "<group>"; };
 		0922F5C416C7CB860092A6C6 /* EventLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventLoader.h; sourceTree = "<group>"; };
 		0922F5C516C7CB860092A6C6 /* EventLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventLoader.m; sourceTree = "<group>"; };
+		093C1AB716C99D8300E76C0C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0962D87A16B887E200C6269A /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		0962D8A016B88BA400C6269A /* grey-icon-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-icon-overlay.png"; sourceTree = "<group>"; };
@@ -661,6 +662,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = 09B23D1A16B30C2E003FFD91;
 			productRefGroup = 09B23D2616B30C2E003FFD91 /* Products */;
@@ -804,6 +806,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				09B23D3316B30C2E003FFD91 /* en */,
+				093C1AB716C99D8300E76C0C /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

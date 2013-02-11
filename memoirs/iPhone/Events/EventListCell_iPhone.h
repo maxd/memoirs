@@ -14,6 +14,4 @@
 
 @property (strong, nonatomic) EventListItem *eventListItem;
 
-@property (weak, nonatomic) IBOutlet UIImageView *ctlDateBackground;
-
 @end

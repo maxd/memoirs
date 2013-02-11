@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 @property (weak, nonatomic) IBOutlet UILabel *lblImportantEvent;
 
+@property (weak, nonatomic) IBOutlet UIImageView *ctlDateBackground;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAnimatedHighlight;
 
 @end

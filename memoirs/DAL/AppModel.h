@@ -24,6 +24,12 @@
 
 - (NSArray *)mostImportantEventsOfMonthsBetween:(NSDate *)from and:(NSDate *)to;
 
+- (BOOL)isEventOfDayExists:(NSDate *)date;
+
+- (BOOL)isEventOfWeekExists:(NSDate *)date;
+
+- (BOOL)isEventOfMonthExists:(NSDate *)date;
+
 - (NSFetchedResultsController *)values;
 
 @end

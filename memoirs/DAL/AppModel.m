@@ -11,6 +11,7 @@
 #import "NSManagedObject+Helpers.h"
 #import "Event.h"
 #import "Value.h"
+#import "NSDate+MTDates.h"
 
 @implementation AppModel
 
@@ -49,6 +50,42 @@
     [fetchRequest setPredicate:predicate];
 
     return [_context objectsForRequest:fetchRequest];
+}
+
+- (BOOL)isEventOfDayExists:(NSDate *)date {
+    NSFetchRequest *fetchRequest = [Event request];
+
+    NSDate *from = [date startOfCurrentDay];
+    NSDate *to = [date endOfCurrentDay];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@", from, to];
+    [fetchRequest setPredicate:predicate];
+
+    return [_context countForFetchRequest:fetchRequest error:nil] > 0;
+}
+
+- (BOOL)isEventOfWeekExists:(NSDate *)date {
+    NSFetchRequest *fetchRequest = [Event request];
+
+    NSDate *from = [date startOfCurrentWeek];
+    NSDate *to = [date endOfCurrentWeek];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@ AND isImportantDateOfWeek == YES", from, to];
+    [fetchRequest setPredicate:predicate];
+
+    return [_context countForFetchRequest:fetchRequest error:nil] > 0;
+}
+
+- (BOOL)isEventOfMonthExists:(NSDate *)date {
+    NSFetchRequest *fetchRequest = [Event request];
+
+    NSDate *from = [date startOfCurrentMonth];
+    NSDate *to = [date endOfCurrentMonth];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@ AND isImportantDateOfMonth == YES", from, to];
+    [fetchRequest setPredicate:predicate];
+
+    return [_context countForFetchRequest:fetchRequest error:nil] > 0;
 }
 
 - (NSFetchedResultsController *)values {

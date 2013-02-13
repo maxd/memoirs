@@ -19,6 +19,7 @@
 #import "UIColor+Helpers.h"
 #import "NSDate+MTDates.h"
 #import "EventLoader.h"
+#import "NotificationManager.h"
 
 @implementation AppDelegate {
     AppModel *_appModel;
@@ -47,7 +48,16 @@
 
     [self applyTheme];
 
+    UILocalNotification *localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotification) {
+        [self localNotificationHandler:localNotification];
+    }
+
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)localNotification {
+    [self localNotificationHandler:localNotification];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -58,6 +68,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    [self rescheduleNotifications];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -135,6 +147,34 @@
         alertView.buttonTextColor = [UIColor colorWithHex:0xFF033143];
         alertView.buttonShadowColor = [UIColor whiteColor];
     }];
+}
+
+- (void)rescheduleNotifications {
+    NotificationManager *notificationManager = [[NotificationManager alloc] initWithAppModel:_appModel];
+    notificationManager.alertHour = 22;
+    notificationManager.alertMinute = 0;
+
+    #ifndef DEBUG
+    notificationManager.enableAlertSound = YES;
+    #endif
+
+    [notificationManager rescheduleNotifications];
+}
+
+- (void)localNotificationHandler:(UILocalNotification *)localNotification {
+    NSLog(@"localNotification = %@", localNotification);
+
+    NSString *notificationType = localNotification.userInfo[@"type"];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([notificationType isEqualToString:@"daily"]) {
+            [self.mainController showWeeklyEventList];
+        } else if ([notificationType isEqualToString:@"weekly"]) {
+            [self.mainController showMonthlyEventList];
+        } else if ([notificationType isEqualToString:@"monthly"]) {
+            [self.mainController showYearlyEventList];
+        }
+    });
 }
 
 @end

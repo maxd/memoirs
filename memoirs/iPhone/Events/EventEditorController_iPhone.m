@@ -71,6 +71,14 @@
     self.txtText.text = self.eventListItem.event.text;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    if ([_value isFault]) {
+        [self setSelectValue:nil];
+    }
+}
+
 - (IBAction)btSelectValueHandler:(id)sender {
     ValueListController_iPhone *valueListController = [[ValueListController_iPhone alloc] initWithAppModel:_appModel];
     valueListController.delegate = self;

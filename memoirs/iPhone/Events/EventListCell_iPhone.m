@@ -82,7 +82,7 @@
 
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
-    [UIView setAnimationDelay:1];
+    [UIView setAnimationDelay:0.6];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 
     rect = self.imgAnimatedHighlight.frame;

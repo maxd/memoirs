@@ -14,10 +14,10 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>app-icon.png</string>
-				<string>app-icon@2x.png</string>
-				<string>app-icon-72.png</string>
-				<string>app-icon-72@2x.png</string>
+				<string>${ICON_PREFIX}app-icon.png</string>
+				<string>${ICON_PREFIX}app-icon@2x.png</string>
+				<string>${ICON_PREFIX}app-icon-72.png</string>
+				<string>${ICON_PREFIX}app-icon-72@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

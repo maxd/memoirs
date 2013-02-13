@@ -36,7 +36,7 @@
     NSString *startDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.startDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
     NSString *endDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.endDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
 
-    return [NSString stringWithFormat:@"%@ - %@", startDateFormatted, endDateFormatted];
+    return [NSString stringWithFormat:@"неделя с %@ по %@", startDateFormatted, endDateFormatted];
 }
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {

@@ -112,6 +112,10 @@
     [_eventListController scrollToTodayAnimated:YES];
 }
 
+- (void)openEventListEditorForDate:(NSDate *)date {
+    [_eventListController openEventListEditorForDate:date];
+}
+
 - (void)showSettings {
     if (self.centerPanel != [self settingsPanel]) {
         self.centerPanel = [self settingsPanel];

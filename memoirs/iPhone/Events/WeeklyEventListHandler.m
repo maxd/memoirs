@@ -29,7 +29,7 @@
 }
 
 - (NSString *)navBarTitle {
-    return @"События недели";
+    return @"Все события";
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {

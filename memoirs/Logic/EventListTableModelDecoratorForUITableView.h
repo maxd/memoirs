@@ -24,7 +24,7 @@
 
 - (EventListGroup *)eventListGroupBySection:(NSInteger)section;
 
-- (NSIndexPath *)currentIndexPath;
+- (NSIndexPath *)indexPathForDate:(NSDate *)date;
 
 - (void)loadSectionsAroundDate:(NSDate *)date;
 

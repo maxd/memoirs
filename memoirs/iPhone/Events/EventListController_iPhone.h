@@ -19,5 +19,8 @@
 
 - (id)initWithAppModel:(AppModel *)appModel;
 
--(void)scrollToTodayAnimated:(BOOL)animated;
+- (void)scrollToTodayAnimated:(BOOL)animated;
+
+- (void)openEventListEditorForDate:(NSDate *)date;
+
 @end

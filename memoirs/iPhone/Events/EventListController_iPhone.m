@@ -154,7 +154,16 @@
     [_eventListTableModelDecorator loadSectionsAroundDate:[NSDate date]];
 
     [self.ctlTableView reloadData];
-    [self.ctlTableView scrollToRowAtIndexPath:[_eventListTableModelDecorator currentIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:animated];
+
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:[_eventListTableModelDecorator indexPathForDate:[NSDate date]].section];
+    [self.ctlTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:animated];
+}
+
+- (void)openEventListEditorForDate:(NSDate *)date {
+    NSIndexPath *indexPath = [_eventListTableModelDecorator indexPathForDate:date];
+    EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
+
+    [self.eventListHandler openEditorForViewController:self withEventListItem:eventListItem];
 }
 
 - (void)reloadData {

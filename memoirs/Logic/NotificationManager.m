@@ -10,6 +10,10 @@
 #import "AppModel.h"
 #import "NSDate+MTDates.h"
 
+//#define TEST_DAILY_NOTIFICATIONS    10
+//#define TEST_WEEKLY_NOTIFICATIONS   10
+//#define TEST_MONTHLY_NOTIFICATIONS  10
+
 @implementation NotificationManager {
     AppModel *_appModel;
 }
@@ -33,12 +37,18 @@
 - (void)scheduleDailyNotification {
     UILocalNotification *localNotification = [UILocalNotification new];
 
-    NSDate *date = [[NSDate date] endOfCurrentDay];
-    NSDate *fireDate = [NSDate dateFromYear:date.year month:date.monthOfYear day:date.dayOfMonth hour:self.alertHour minute:self.alertMinute];
+    NSDate *fireDate;
 
-    if ([_appModel isEventOfDayExists:fireDate]) {
-        fireDate = [fireDate oneDayNext];
-    }
+    #ifdef TEST_DAILY_NOTIFICATIONS
+        fireDate = [NSDate dateWithTimeIntervalSinceNow:TEST_DAILY_NOTIFICATIONS];
+    #else
+        NSDate *date = [[NSDate date] endOfCurrentDay];
+        fireDate = [NSDate dateFromYear:date.year month:date.monthOfYear day:date.dayOfMonth hour:self.alertHour minute:self.alertMinute];
+
+        if ([_appModel isEventOfDayExists:fireDate]) {
+            fireDate = [fireDate oneDayNext];
+        }
+    #endif
 
     localNotification.fireDate = fireDate;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
@@ -60,12 +70,18 @@
 - (void)scheduleWeeklyNotification {
     UILocalNotification *localNotification = [UILocalNotification new];
 
-    NSDate *date = [[NSDate date] endOfCurrentWeek];
-    NSDate *fireDate = [NSDate dateFromYear:date.year month:date.monthOfYear day:date.dayOfMonth hour:self.alertHour minute:self.alertMinute];
+    NSDate *fireDate;
 
-    if ([_appModel isEventOfWeekExists:fireDate]) {
-        fireDate = [fireDate oneWeekNext];
-    }
+    #ifdef TEST_WEEKLY_NOTIFICATIONS
+        fireDate = [NSDate dateWithTimeIntervalSinceNow:TEST_WEEKLY_NOTIFICATIONS];
+    #else
+        NSDate *date = [[NSDate date] endOfCurrentWeek];
+        fireDate = [NSDate dateFromYear:date.year month:date.monthOfYear day:date.dayOfMonth hour:self.alertHour minute:self.alertMinute];
+
+        if ([_appModel isEventOfWeekExists:fireDate]) {
+            fireDate = [fireDate oneWeekNext];
+        }
+    #endif
 
     localNotification.fireDate = fireDate;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
@@ -87,12 +103,18 @@
 - (void)scheduleMonthlyNotification {
     UILocalNotification *localNotification = [UILocalNotification new];
 
-    NSDate *date = [[NSDate date] endOfCurrentMonth];
-    NSDate *fireDate = [NSDate dateFromYear:date.year month:date.monthOfYear day:date.dayOfMonth hour:self.alertHour minute:self.alertMinute];
+    NSDate *fireDate;
 
-    if ([_appModel isEventOfMonthExists:fireDate]) {
-        fireDate = [fireDate oneMonthNext];
-    }
+    #ifdef TEST_MONTHLY_NOTIFICATIONS
+        fireDate = [NSDate dateWithTimeIntervalSinceNow:TEST_MONTHLY_NOTIFICATIONS];
+    #else
+        NSDate *date = [[NSDate date] endOfCurrentMonth];
+        fireDate = [NSDate dateFromYear:date.year month:date.monthOfYear day:date.dayOfMonth hour:self.alertHour minute:self.alertMinute];
+
+        if ([_appModel isEventOfMonthExists:fireDate]) {
+            fireDate = [fireDate oneMonthNext];
+        }
+    #endif
 
     localNotification.fireDate = fireDate;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];

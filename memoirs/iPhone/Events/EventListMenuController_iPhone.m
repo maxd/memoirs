@@ -21,7 +21,6 @@
 
 @implementation EventListMenuController_iPhone {
     NSArray *_menu;
-    NSString *_selectedGroup;
 }
 
 - (void)viewDidLoad {
@@ -55,8 +54,6 @@
             ]
         }
     ];
-
-    _selectedGroup = @"menuGroupByWeek:";
 }
 
 #pragma mark UITableView Handlers
@@ -91,11 +88,7 @@
 
     EventListMenuCell_iPhone *cell = [EventListMenuCell_iPhone dequeOrCreateInTable:tableView];
 
-    BOOL isSelected = [menuItem[@"selector"] isEqualToString:_selectedGroup];
-    NSString *checkboxText = isSelected ? @"\u2713" : @"\u2001";
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", checkboxText, menuItem[@"title"]];
-    cell.selected = isSelected;
+    cell.textLabel.text = menuItem[@"title"];
 
     return cell;
 }
@@ -123,28 +116,24 @@
 #pragma mark Menu Handlers
 
 - (void)menuGroupByWeek:(UITableView *)tableView {
-    _selectedGroup = @"menuGroupByWeek:";
     [tableView reloadData];
 
     [(MainController_iPhone *)self.sidePanelController showWeeklyEventList];
 }
 
 - (void)menuGroupByMonth:(UITableView *)tableView {
-    _selectedGroup = @"menuGroupByMonth:";
     [tableView reloadData];
 
     [(MainController_iPhone *)self.sidePanelController showMonthlyEventList];
 }
 
 - (void)menuGroupByYear:(UITableView *)tableView {
-    _selectedGroup = @"menuGroupByYear:";
     [tableView reloadData];
 
     [(MainController_iPhone *)self.sidePanelController showYearlyEventList];
 }
 
 - (void)menuSettingsHandler:(UITableView *)tableView {
-    _selectedGroup = nil;
     [tableView reloadData];
 
     [(MainController_iPhone *)self.sidePanelController showSettings];

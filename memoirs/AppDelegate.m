@@ -162,8 +162,6 @@
 }
 
 - (void)localNotificationHandler:(UILocalNotification *)localNotification {
-    NSLog(@"localNotification = %@", localNotification);
-
     NSString *notificationType = localNotification.userInfo[@"type"];
 
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -174,6 +172,8 @@
         } else if ([notificationType isEqualToString:@"monthly"]) {
             [self.mainController showYearlyEventList];
         }
+
+        [self.mainController openEventListEditorForDate:localNotification.fireDate];
     });
 }
 

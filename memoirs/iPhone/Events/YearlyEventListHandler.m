@@ -32,7 +32,7 @@
 }
 
 - (NSString *)navBarTitle {
-    return @"События года";
+    return @"События месяца";
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {

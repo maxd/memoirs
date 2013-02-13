@@ -43,19 +43,22 @@
     return _eventListTableModel.groups[(NSUInteger)section];
 }
 
-- (NSIndexPath *)currentIndexPath {
-    NSDate *currentDate = [NSDate date];
+- (NSIndexPath *)indexPathForDate:(NSDate *)date {
+    for (NSUInteger section = 0; section < _eventListTableModel.groups.count; section++) {
+        EventListGroup *eventListGroup = _eventListTableModel.groups[section];
 
-    NSInteger section = 0;
-    for (int i = 0; i < _eventListTableModel.groups.count; i++) {
-        EventListGroup *eventListGroup = _eventListTableModel.groups[(NSUInteger) i];
-        if ([currentDate isBetweenDate:eventListGroup.startDate andDate:eventListGroup.endDate]) {
-            section = i;
-            break;
+        if ([date isBetweenDate:eventListGroup.startDate andDate:eventListGroup.endDate]) {
+            for (NSUInteger row = 0; row < eventListGroup.eventListItems.count; row++) {
+                EventListItem *eventListItem = eventListGroup.eventListItems[row];
+
+                if ([date isBetweenDate:eventListItem.startDate andDate:eventListItem.endDate]) {
+                    return [NSIndexPath indexPathForRow:row inSection:section];
+                }
+            }
         }
     }
 
-    return [NSIndexPath indexPathForRow:0 inSection:section];
+    return [NSIndexPath indexPathForRow:0 inSection:0];
 }
 
 - (void)loadSectionsAroundDate:(NSDate *)date {

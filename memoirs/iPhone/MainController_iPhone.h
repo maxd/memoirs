@@ -15,9 +15,12 @@
 
 - (id)initWithAppModel:(AppModel *)appModel;
 
--(void)showWeeklyEventList;
--(void)showMonthlyEventList;
--(void)showYearlyEventList;
+- (void)showWeeklyEventList;
+- (void)showMonthlyEventList;
+- (void)showYearlyEventList;
 
--(void)showSettings;
+- (void)openEventListEditorForDate:(NSDate *)date;
+
+- (void)showSettings;
+
 @end

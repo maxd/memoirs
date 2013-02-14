@@ -42,6 +42,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.trackedViewName = @"Value List";
+
     self.title = @"Ценности";
 
     btAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(btAddHandler:)];

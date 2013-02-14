@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface EventListMenuController_iPhone : UIViewController
+@interface EventListMenuController_iPhone : GAITrackedViewController
 
 @end

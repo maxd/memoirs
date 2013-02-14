@@ -127,6 +127,8 @@
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
 		09B9D8B416C84D9F000F3D30 /* animated-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B216C84D9F000F3D30 /* animated-highlight.png */; };
 		09B9D8B516C84D9F000F3D30 /* animated-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */; };
+		09CDD2A116CD50BF00CA349D /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDD29F16CD50BF00CA349D /* libGoogleAnalytics.a */; };
+		09CDD2A316CD50FA00CA349D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDD2A216CD50FA00CA349D /* SystemConfiguration.framework */; };
 		09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */; };
 		09D157EE16C57263001D9931 /* EventSelectorController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */; };
 		09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */; };
@@ -305,6 +307,14 @@
 		09B23DB016B338CC003FFD91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09B9D8B216C84D9F000F3D30 /* animated-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight.png"; sourceTree = "<group>"; };
 		09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight@2x.png"; sourceTree = "<group>"; };
+		09CDD29916CD50BF00CA349D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = vendor/GoogleAnalytics/GAI.h; sourceTree = "<group>"; };
+		09CDD29A16CD50BF00CA349D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = vendor/GoogleAnalytics/GAITrackedViewController.h; sourceTree = "<group>"; };
+		09CDD29B16CD50BF00CA349D /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = vendor/GoogleAnalytics/GAITracker.h; sourceTree = "<group>"; };
+		09CDD29C16CD50BF00CA349D /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransaction.h; path = vendor/GoogleAnalytics/GAITransaction.h; sourceTree = "<group>"; };
+		09CDD29D16CD50BF00CA349D /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransactionItem.h; path = vendor/GoogleAnalytics/GAITransactionItem.h; sourceTree = "<group>"; };
+		09CDD29E16CD50BF00CA349D /* libGoogleAnalytics_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics_debug.a; path = vendor/GoogleAnalytics/libGoogleAnalytics_debug.a; sourceTree = "<group>"; };
+		09CDD29F16CD50BF00CA349D /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = vendor/GoogleAnalytics/libGoogleAnalytics.a; sourceTree = "<group>"; };
+		09CDD2A216CD50FA00CA349D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		09D157EA16C57263001D9931 /* EventSelectorController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSelectorController_iPhone.h; sourceTree = "<group>"; };
 		09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSelectorController_iPhone.m; sourceTree = "<group>"; };
 		09D157EC16C57263001D9931 /* EventSelectorController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSelectorController_iPhone.xib; sourceTree = "<group>"; };
@@ -318,11 +328,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CDD2A316CD50FA00CA349D /* SystemConfiguration.framework in Frameworks */,
 				09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */,
 				09B23DAF16B338B3003FFD91 /* CoreData.framework in Frameworks */,
 				09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */,
 				09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */,
 				09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */,
+				09CDD2A116CD50BF00CA349D /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +579,7 @@
 		09B23D2816B30C2E003FFD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09CDD29716CD50B000CA349D /* GoogleAnalytics */,
 				09AE2E3216C18CFF001CB595 /* MTDates */,
 				09AE2E2416C18CDC001CB595 /* Underscore */,
 				09130E7916BE9B7B004A289C /* WCAlertView */,
@@ -577,6 +590,7 @@
 				09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */,
 				09B23DB016B338CC003FFD91 /* QuartzCore.framework */,
 				09B23DAE16B338B3003FFD91 /* CoreData.framework */,
+				09CDD2A216CD50FA00CA349D /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -662,6 +676,20 @@
 				0925633A16CAB02700E64FC0 /* NotificationManager.m */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		09CDD29716CD50B000CA349D /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				09CDD29916CD50BF00CA349D /* GAI.h */,
+				09CDD29A16CD50BF00CA349D /* GAITrackedViewController.h */,
+				09CDD29B16CD50BF00CA349D /* GAITracker.h */,
+				09CDD29C16CD50BF00CA349D /* GAITransaction.h */,
+				09CDD29D16CD50BF00CA349D /* GAITransactionItem.h */,
+				09CDD29E16CD50BF00CA349D /* libGoogleAnalytics_debug.a */,
+				09CDD29F16CD50BF00CA349D /* libGoogleAnalytics.a */,
+			);
+			name = GoogleAnalytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -896,6 +924,10 @@
 				GCC_PREFIX_HEADER = "memoirs/memoirs-Prefix.pch";
 				INFOPLIST_FILE = "memoirs/memoirs-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor/GoogleAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor\"/**";
@@ -970,6 +1002,10 @@
 				GCC_PREFIX_HEADER = "memoirs/memoirs-Prefix.pch";
 				INFOPLIST_FILE = "memoirs/memoirs-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor/GoogleAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor\"/**";
@@ -984,6 +1020,10 @@
 				GCC_PREFIX_HEADER = "memoirs/memoirs-Prefix.pch";
 				INFOPLIST_FILE = "memoirs/memoirs-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor/GoogleAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor\"/**";

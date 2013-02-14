@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @protocol EventSelectorControllerDelegate_iPhone;
 @class Event;
 
-@interface EventSelectorController_iPhone : UIViewController
+@interface EventSelectorController_iPhone : GAITrackedViewController
 
 @property (strong, nonatomic) NSArray *events;
 @property (strong, nonatomic) NSString *emptyMessage;

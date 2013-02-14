@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @protocol EventEditorController_iPhoneDelegate;
 
@@ -14,7 +15,7 @@
 @class EventListItem;
 
 
-@interface EventEditorController_iPhone : UIViewController
+@interface EventEditorController_iPhone : GAITrackedViewController
 
 @property (weak, nonatomic) id<EventEditorController_iPhoneDelegate> delegate;
 

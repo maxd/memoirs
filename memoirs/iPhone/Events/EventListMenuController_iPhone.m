@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.trackedViewName = @"Menu";
+
     _menu = @[
         @{
             @"title": @"Разделы",

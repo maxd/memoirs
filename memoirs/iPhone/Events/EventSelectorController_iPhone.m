@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.trackedViewName = @"Event Selector";
+
     if (self.events.count > 0) {
         self.ctlTableView.tableHeaderView = nil;
     } else {
@@ -57,8 +59,4 @@
     [self.delegate eventSelectorController:self didSelectEvent:event];
 }
 
-- (void)viewDidUnload {
-    [self setLblEmptyMessage:nil];
-    [super viewDidUnload];
-}
 @end

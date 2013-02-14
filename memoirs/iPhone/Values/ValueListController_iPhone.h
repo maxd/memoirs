@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @protocol ValueListControllerDelegate_iPhone;
 
@@ -14,7 +15,7 @@
 @class Value;
 
 
-@interface ValueListController_iPhone : UIViewController
+@interface ValueListController_iPhone : GAITrackedViewController
 
 @property (strong, nonatomic) Value *value;
 

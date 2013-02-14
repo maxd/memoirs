@@ -20,6 +20,7 @@
 #import "NSDate+MTDates.h"
 #import "EventLoader.h"
 #import "NotificationManager.h"
+#import "GAI.h"
 
 @implementation AppDelegate {
     AppModel *_appModel;
@@ -30,6 +31,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [self configureAnalytics];
     [self configureNSDate];
 
     _appModel = [self createAppModel];
@@ -82,6 +85,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)configureAnalytics {
+    [GAI sharedInstance].dispatchInterval = 10;
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-38508832-1"];
 }
 
 - (void)configureNSDate {
@@ -171,6 +180,8 @@
 
         [self.mainController openEventListEditorForDate:localNotification.fireDate];
     });
+
+    [[[GAI sharedInstance] defaultTracker] sendEventWithCategory:@"User Action" withAction:@"Open Notification" withLabel:notificationType withValue:nil];
 }
 
 @end

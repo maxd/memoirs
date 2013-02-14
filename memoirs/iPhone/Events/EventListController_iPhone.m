@@ -17,6 +17,7 @@
 #import "EventListHandler.h"
 #import "UIColor+Helpers.h"
 #import "EventListTableView.h"
+#import "GAITracker.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventListTableViewDelegate>
 
@@ -43,6 +44,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.trackedViewName = @"Event List";
 
     UIBarButtonItem *btBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"header_back_btn"] style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.backBarButtonItem = btBack;
@@ -157,6 +160,8 @@
 
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:[_eventListTableModelDecorator indexPathForDate:[NSDate date]].section];
     [self.ctlTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:animated];
+
+    [self.tracker sendEventWithCategory:@"User Action" withAction:@"Button Touch" withLabel:@"Today" withValue:nil];
 }
 
 - (void)openEventListEditorForDate:(NSDate *)date {

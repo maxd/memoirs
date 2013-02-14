@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @class AppModel;
 @protocol EventListTableModel;
 @protocol EventListHandler;
 
-@interface EventListController_iPhone : UIViewController
+@interface EventListController_iPhone : GAITrackedViewController
 
 @property (strong, nonatomic) id <EventListTableModel> eventListTableModel;
 @property (strong, nonatomic) id <EventListHandler> eventListHandler;

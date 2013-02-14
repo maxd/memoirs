@@ -12,6 +12,7 @@
 #import "Value.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSManagedObject+Helpers.h"
+#import "GAITracker.h"
 
 @interface ValueEditorController_iPhone ()
 
@@ -33,6 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.trackedViewName = @"Value Editor";
 
     self.title = @"Ценность";
 
@@ -75,6 +78,8 @@
         self.value.title = title;
 
         [[_appModel context] save];
+
+        [self.tracker sendEventWithCategory:@"User Action" withAction:@"Button Touch" withLabel:@"Save Value" withValue:nil];
 
         [self.delegate dismissValueEditorController:self];
     }

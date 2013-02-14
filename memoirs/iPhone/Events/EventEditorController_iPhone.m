@@ -18,6 +18,7 @@
 #import "Event.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSManagedObject+Helpers.h"
+#import "GAITracker.h"
 
 @interface EventEditorController_iPhone () <UITextViewDelegate, ValueListControllerDelegate_iPhone>
 
@@ -43,6 +44,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.trackedViewName = @"Event Editor";
 
     self.title = @"Событие дня";
 
@@ -124,6 +127,8 @@
         self.eventListItem.event.text = self.txtText.text;
 
         [_appModel.context save];
+
+        [self.tracker sendEventWithCategory:@"User Action" withAction:@"Button Touch" withLabel:@"Save Event" withValue:nil];
 
         [self.delegate dismissEventEditorController:self];
     }

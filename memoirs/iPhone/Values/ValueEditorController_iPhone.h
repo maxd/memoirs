@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @protocol ValueEditorControllerDelegate_iPhone;
 
@@ -14,7 +15,7 @@
 @class AppModel;
 
 
-@interface ValueEditorController_iPhone : UIViewController
+@interface ValueEditorController_iPhone : GAITrackedViewController
 
 @property (weak, nonatomic) id<ValueEditorControllerDelegate_iPhone> delegate;
 

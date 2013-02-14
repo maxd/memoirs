@@ -14,6 +14,7 @@
 #import "Event.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSDate+MTDates.h"
+#import "GAI.h"
 
 @interface YearlyEventListHandler () <EventSelectorControllerDelegate_iPhone>
 
@@ -58,6 +59,8 @@
     [_appModel.context save];
 
     [eventSelectorController.navigationController popViewControllerAnimated:YES];
+
+    [[GAI sharedInstance].defaultTracker sendEventWithCategory:@"User Action" withAction:@"Button Touch" withLabel:@"Select Monthly Event" withValue:nil];
 }
 
 @end

@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.trackedViewName = @"Important Values";
+
     self.title = @"TOP 10 ценностей";
 }
 

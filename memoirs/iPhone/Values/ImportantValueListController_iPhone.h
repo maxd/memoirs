@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface ImportantValueListController_iPhone : UIViewController
+@interface ImportantValueListController_iPhone : GAITrackedViewController
 
 @end

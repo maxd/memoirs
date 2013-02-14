@@ -12,6 +12,9 @@
 #import "Event.h"
 #import "AppModel.h"
 #import "EventListItem.h"
+#import "Underscore.h"
+
+#define _ Underscore
 
 @interface WeeklyEventListTableModel ()
 @end

@@ -12,6 +12,9 @@
 #import "AppModel.h"
 #import "Event.h"
 #import "EventListItem.h"
+#import "Underscore.h"
+
+#define _ Underscore
 
 @implementation YearlyEventListTableModel {
     AppModel *_appModel;

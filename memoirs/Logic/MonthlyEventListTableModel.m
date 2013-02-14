@@ -12,6 +12,9 @@
 #import "EventListGroup.h"
 #import "Event.h"
 #import "EventListItem.h"
+#import "Underscore.h"
+
+#define _ Underscore
 
 @interface MonthlyEventListTableModel ()
 @end

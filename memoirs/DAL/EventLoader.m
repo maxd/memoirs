@@ -14,6 +14,9 @@
 #import "NSManagedObject+Helpers.h"
 #import "Value.h"
 #import "NSDate+MTDates.h"
+#import "Underscore.h"
+
+#define _ Underscore
 
 #define IS_EVENTS_LOADED_KEY @"isEventsLoaded"
 

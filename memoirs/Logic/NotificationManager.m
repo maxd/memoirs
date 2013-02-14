@@ -29,9 +29,17 @@
 - (void)rescheduleNotifications {
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
 
-    [self scheduleDailyNotification];
-    [self scheduleWeeklyNotification];
-    [self scheduleMonthlyNotification];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"daily_reminders"]) {
+        [self scheduleDailyNotification];
+    }
+
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"weekly_reminders"]) {
+        [self scheduleWeeklyNotification];
+    }
+
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"monthly_reminders"]) {
+        [self scheduleMonthlyNotification];
+    }
 }
 
 - (void)scheduleDailyNotification {

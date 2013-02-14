@@ -75,6 +75,9 @@
 - (UINavigationController *)settingsPanel {
     if (!_settingsPanel) {
         SettingsController_iPhone *settingsController = [SettingsController_iPhone new];
+        settingsController.showDoneButton = NO;
+        settingsController.showCreditsFooter = NO;
+
         _settingsPanel = [[UINavigationController alloc] initWithRootViewController:settingsController];
     }
 

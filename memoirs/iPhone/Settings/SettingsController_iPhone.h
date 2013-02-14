@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GAITrackedViewController.h"
+#import "IASKAppSettingsViewController.h"
 
-@interface SettingsController_iPhone : GAITrackedViewController
+@interface SettingsController_iPhone : IASKAppSettingsViewController
 
 @end

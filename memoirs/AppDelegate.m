@@ -34,6 +34,7 @@
 
     [self configureAnalytics];
     [self configureNSDate];
+    [self configureUserDefaults];
 
     _appModel = [self createAppModel];
     if (!_appModel)
@@ -97,6 +98,13 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     [NSDate setFirstDayOfWeek:calendar.firstWeekday];
     [NSDate setTimeZone:calendar.timeZone];
+}
+
+- (void)configureUserDefaults {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"UserDefaults" ofType:@"plist"];
+    NSDictionary *defaults = [NSDictionary dictionaryWithContentsOfFile:path];
+
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
 }
 
 - (AppModel *)createAppModel {

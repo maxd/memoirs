@@ -10,9 +10,7 @@
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
 
-@interface SettingsController_iPhone () <UITableViewDataSource, UITableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UITableView *ctlTableView;
+@interface SettingsController_iPhone ()
 
 @end
 
@@ -21,24 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.trackedViewName = @"Settings";
-
     self.title = @"Настройки";
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
 
     UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;
-}
-
-#pragma mark UITableView Handlers
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
 }
 
 #pragma mark Action Handlers

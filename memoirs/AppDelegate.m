@@ -111,11 +111,7 @@
 - (void)createWindow:(AppModel *)appModel {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.mainController = [[MainController_iPhone alloc] initWithAppModel:appModel];
-    } else {
-//        self.mainController = [[EventListController_iPad alloc] initWithAppModel:appModel];
-    }
+    self.mainController = [[MainController_iPhone alloc] initWithAppModel:appModel];
 
     self.window.rootViewController = self.mainController;
     [self.window makeKeyAndVisible];

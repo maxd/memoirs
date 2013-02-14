@@ -19,6 +19,7 @@
 #import "WeeklyEventListHandler.h"
 #import "MonthlyEventListHandler.h"
 #import "YearlyEventListHandler.h"
+#import "ImportantValueListController_iPhone.h"
 
 @interface MainController_iPhone ()
 
@@ -32,6 +33,7 @@
 
     UINavigationController *_eventListPanel;
     UINavigationController *_settingsPanel;
+    UINavigationController *_importantValueListPane;
 }
 
 - (id)initWithAppModel:(AppModel *)appModel {
@@ -79,6 +81,14 @@
     return _settingsPanel;
 }
 
+ - (UINavigationController *)importantValueListPane {
+     if (!_importantValueListPane) {
+         ImportantValueListController_iPhone *importantValueListController = [ImportantValueListController_iPhone new];
+         _importantValueListPane = [[UINavigationController alloc] initWithRootViewController:importantValueListController];
+     }
+     return _importantValueListPane;
+ }
+
 -(void)showWeeklyEventList {
     WeeklyEventListTableModel *eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
     WeeklyEventListHandler *eventListHandler = [[WeeklyEventListHandler alloc] initWithAppModel:_appModel];
@@ -119,6 +129,14 @@
 - (void)showSettings {
     if (self.centerPanel != [self settingsPanel]) {
         self.centerPanel = [self settingsPanel];
+    } else {
+        [self showCenterPanel:YES];
+    }
+}
+
+- (void)showImportantValueList {
+    if (self.centerPanel != [self importantValueListPane]) {
+        self.centerPanel = [self importantValueListPane];
     } else {
         [self showCenterPanel:YES];
     }

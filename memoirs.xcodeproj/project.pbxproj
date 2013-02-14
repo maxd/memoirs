@@ -11,6 +11,8 @@
 		0903EFA916BD5B4D00547357 /* EventListMenuCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903EFA816BD5B4D00547357 /* EventListMenuCell_iPhone.xib */; };
 		0903EFAC16BD5EA500547357 /* UIBorderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903EFAB16BD5EA500547357 /* UIBorderLabel.m */; };
 		09130E7C16BE9B85004A289C /* WCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09130E7B16BE9B85004A289C /* WCAlertView.m */; };
+		091A010016CCA42B00FC8334 /* ImportantValueListController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 091A00FE16CCA42B00FC8334 /* ImportantValueListController_iPhone.m */; };
+		091A010116CCA42B00FC8334 /* ImportantValueListController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091A00FF16CCA42B00FC8334 /* ImportantValueListController_iPhone.xib */; };
 		0922F5C616C7CB860092A6C6 /* EventLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0922F5C516C7CB860092A6C6 /* EventLoader.m */; };
 		0925633B16CAB02700E64FC0 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0925633A16CAB02700E64FC0 /* NotificationManager.m */; };
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
@@ -138,6 +140,9 @@
 		0903EFAB16BD5EA500547357 /* UIBorderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBorderLabel.m; sourceTree = "<group>"; };
 		09130E7A16BE9B85004A289C /* WCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCAlertView.h; path = vendor/WCAlertView/WCAlertView/WCAlertView.h; sourceTree = "<group>"; };
 		09130E7B16BE9B85004A289C /* WCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCAlertView.m; path = vendor/WCAlertView/WCAlertView/WCAlertView.m; sourceTree = "<group>"; };
+		091A00FD16CCA42B00FC8334 /* ImportantValueListController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportantValueListController_iPhone.h; sourceTree = "<group>"; };
+		091A00FE16CCA42B00FC8334 /* ImportantValueListController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportantValueListController_iPhone.m; sourceTree = "<group>"; };
+		091A00FF16CCA42B00FC8334 /* ImportantValueListController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportantValueListController_iPhone.xib; sourceTree = "<group>"; };
 		0922F5C416C7CB860092A6C6 /* EventLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventLoader.h; sourceTree = "<group>"; };
 		0922F5C516C7CB860092A6C6 /* EventLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventLoader.m; sourceTree = "<group>"; };
 		0925633916CAB02700E64FC0 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
@@ -473,6 +478,9 @@
 				09A8AD5416B509F6005E336D /* ValueEditorController_iPhone.h */,
 				09A8AD5516B509F6005E336D /* ValueEditorController_iPhone.m */,
 				09A8AD5616B509F6005E336D /* ValueEditorController_iPhone.xib */,
+				091A00FD16CCA42B00FC8334 /* ImportantValueListController_iPhone.h */,
+				091A00FE16CCA42B00FC8334 /* ImportantValueListController_iPhone.m */,
+				091A00FF16CCA42B00FC8334 /* ImportantValueListController_iPhone.xib */,
 			);
 			path = Values;
 			sourceTree = "<group>";
@@ -775,6 +783,7 @@
 				0965533316CBFD3A0050597D /* dev-app-icon-72@2x.png in Resources */,
 				0965533416CBFD3A0050597D /* dev-app-icon.png in Resources */,
 				0965533516CBFD3A0050597D /* dev-app-icon@2x.png in Resources */,
+				091A010116CCA42B00FC8334 /* ImportantValueListController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,6 +843,7 @@
 				097FD7A616C6DD2D00F092D2 /* YearlyEventListHandler.m in Sources */,
 				0922F5C616C7CB860092A6C6 /* EventLoader.m in Sources */,
 				0925633B16CAB02700E64FC0 /* NotificationManager.m in Sources */,
+				091A010016CCA42B00FC8334 /* ImportantValueListController_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,6 +42,10 @@
                     @"title": @"События месяца",
                     @"selector": @"menuGroupByYear:"
                 },
+                @{
+                        @"title": @"ТОП 10 ценностей",
+                        @"selector": @"menuImportantValuesHandler:"
+                },
             ]
         },
         @{
@@ -116,26 +120,22 @@
 #pragma mark Menu Handlers
 
 - (void)menuGroupByWeek:(UITableView *)tableView {
-    [tableView reloadData];
-
     [(MainController_iPhone *)self.sidePanelController showWeeklyEventList];
 }
 
 - (void)menuGroupByMonth:(UITableView *)tableView {
-    [tableView reloadData];
-
     [(MainController_iPhone *)self.sidePanelController showMonthlyEventList];
 }
 
 - (void)menuGroupByYear:(UITableView *)tableView {
-    [tableView reloadData];
-
     [(MainController_iPhone *)self.sidePanelController showYearlyEventList];
 }
 
-- (void)menuSettingsHandler:(UITableView *)tableView {
-    [tableView reloadData];
+- (void)menuImportantValuesHandler:(UITableView *)tableView {
+    [(MainController_iPhone *)self.sidePanelController showImportantValueList];
+}
 
+- (void)menuSettingsHandler:(UITableView *)tableView {
     [(MainController_iPhone *)self.sidePanelController showSettings];
 }
 

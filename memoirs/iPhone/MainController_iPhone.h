@@ -23,4 +23,6 @@
 
 - (void)showSettings;
 
+- (void)showImportantValueList;
+
 @end

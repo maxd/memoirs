@@ -15,6 +15,7 @@
 #import "ValueEditorController_iPhone.h"
 #import "NSManagedObjectContext+Helpers.h"
 #import "WCAlertView.h"
+#import "GAITracker.h"
 
 @interface ValueListController_iPhone () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, ValueEditorControllerDelegate_iPhone>
 
@@ -166,6 +167,8 @@
 
         [context deleteObject:value];
         [context save];
+
+        [self.tracker sendEventWithCategory:@"User Action" withAction:@"Button Touch" withLabel:@"Delete Value" withValue:nil];
     }
 }
 

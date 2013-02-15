@@ -86,8 +86,13 @@
 
  - (UINavigationController *)importantValueListPane {
      if (!_importantValueListPane) {
-         ImportantValueListController_iPhone *importantValueListController = [ImportantValueListController_iPhone new];
-         _importantValueListPane = [[UINavigationController alloc] initWithRootViewController:importantValueListController];
+         ImportantValueListController_iPhone *importantValueListController = [[ImportantValueListController_iPhone alloc] initWithAppModel:_appModel];
+
+         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:importantValueListController];
+         [navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont: [UIFont boldSystemFontOfSize:14]}];
+         [navigationController.navigationBar setTitleVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
+
+         _importantValueListPane = navigationController;
      }
      return _importantValueListPane;
  }

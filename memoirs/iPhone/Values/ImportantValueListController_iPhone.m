@@ -7,6 +7,10 @@
 //
 
 #import "ImportantValueListController_iPhone.h"
+#import "AppModel.h"
+#import "ImportantValueListCell_iPhone.h"
+#import "UITableViewCell+NIB.h"
+#import "Value.h"
 
 @interface ImportantValueListController_iPhone () <UITableViewDelegate, UITableViewDataSource>
 
@@ -14,22 +18,53 @@
 
 @end
 
-@implementation ImportantValueListController_iPhone
+@implementation ImportantValueListController_iPhone {
+    AppModel *_appModel;
+
+    NSArray *_values;
+}
+
+- (id)initWithAppModel:(AppModel *)appModel {
+    self = [super init];
+    if (self) {
+        _appModel = appModel;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     self.trackedViewName = @"Important Values";
 
-    self.title = @"TOP 10 ценностей";
+    self.title = @"TOP жизненных ценностей";
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    _values = [_appModel topValues];
+}
+
+#pragma mark UITableView Handlers
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [_values count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    Value *value = [_values objectAtIndex:(NSUInteger) indexPath.row];
+
+    ImportantValueListCell_iPhone *cell = [ImportantValueListCell_iPhone dequeOrCreateInTable:tableView];
+
+    cell.textLabel.text = value.title;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Событий: %d", value.events.count];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
 }
 
 @end

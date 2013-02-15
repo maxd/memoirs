@@ -45,7 +45,7 @@
                     @"selector": @"menuGroupByYear:"
                 },
                 @{
-                        @"title": @"ТОП 10 ценностей",
+                        @"title": @"ТОP ценностей",
                         @"selector": @"menuImportantValuesHandler:"
                 },
             ]

@@ -21,7 +21,7 @@
 
 @property (strong, nonatomic) Value *value;
 
--(id)initWithAppModel:(AppModel *)appModel;
+- (id)initWithAppModel:(AppModel *)appModel;
 
 @end
 

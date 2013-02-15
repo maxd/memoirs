@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 
+@class AppModel;
+
+
 @interface ImportantValueListController_iPhone : GAITrackedViewController
+
+- (id)initWithAppModel:(AppModel *)appModel;
 
 @end

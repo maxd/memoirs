@@ -32,4 +32,6 @@
 
 - (NSFetchedResultsController *)values;
 
+- (NSArray *)topValues;
+
 @end

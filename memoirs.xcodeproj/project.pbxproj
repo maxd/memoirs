@@ -15,6 +15,8 @@
 		091A010116CCA42B00FC8334 /* ImportantValueListController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091A00FF16CCA42B00FC8334 /* ImportantValueListController_iPhone.xib */; };
 		0922F5C616C7CB860092A6C6 /* EventLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0922F5C516C7CB860092A6C6 /* EventLoader.m */; };
 		0925633B16CAB02700E64FC0 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0925633A16CAB02700E64FC0 /* NotificationManager.m */; };
+		092BB78816CEA23B00894102 /* ImportantValueListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 092BB78716CEA23B00894102 /* ImportantValueListCell_iPhone.m */; };
+		092BB78B16CEA25600894102 /* ImportantValueListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092BB78A16CEA25600894102 /* ImportantValueListCell_iPhone.xib */; };
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D8A016B88BA400C6269A /* grey-icon-overlay.png */; };
@@ -166,6 +168,9 @@
 		0922F5C516C7CB860092A6C6 /* EventLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventLoader.m; sourceTree = "<group>"; };
 		0925633916CAB02700E64FC0 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
 		0925633A16CAB02700E64FC0 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
+		092BB78616CEA23B00894102 /* ImportantValueListCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportantValueListCell_iPhone.h; sourceTree = "<group>"; };
+		092BB78716CEA23B00894102 /* ImportantValueListCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportantValueListCell_iPhone.m; sourceTree = "<group>"; };
+		092BB78A16CEA25600894102 /* ImportantValueListCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportantValueListCell_iPhone.xib; sourceTree = "<group>"; };
 		093C1AB716C99D8300E76C0C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0962D87A16B887E200C6269A /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
@@ -606,6 +611,9 @@
 				091A00FD16CCA42B00FC8334 /* ImportantValueListController_iPhone.h */,
 				091A00FE16CCA42B00FC8334 /* ImportantValueListController_iPhone.m */,
 				091A00FF16CCA42B00FC8334 /* ImportantValueListController_iPhone.xib */,
+				092BB78616CEA23B00894102 /* ImportantValueListCell_iPhone.h */,
+				092BB78716CEA23B00894102 /* ImportantValueListCell_iPhone.m */,
+				092BB78A16CEA25600894102 /* ImportantValueListCell_iPhone.xib */,
 			);
 			path = Values;
 			sourceTree = "<group>";
@@ -931,6 +939,7 @@
 				091A010116CCA42B00FC8334 /* ImportantValueListController_iPhone.xib in Resources */,
 				098AEF7E16CD88F0004A8804 /* InAppSettings.bundle in Resources */,
 				098AEFB816CD9BAB004A8804 /* UserDefaults.plist in Resources */,
+				092BB78B16CEA25600894102 /* ImportantValueListCell_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,6 +1014,7 @@
 				098AEFAC16CD8BA8004A8804 /* IASKSlider.m in Sources */,
 				098AEFAD16CD8BA8004A8804 /* IASKSwitch.m in Sources */,
 				098AEFAE16CD8BA8004A8804 /* IASKTextField.m in Sources */,
+				092BB78816CEA23B00894102 /* ImportantValueListCell_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

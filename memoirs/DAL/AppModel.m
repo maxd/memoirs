@@ -12,6 +12,9 @@
 #import "Event.h"
 #import "Value.h"
 #import "NSDate+MTDates.h"
+#import "Underscore.h"
+
+#define _ Underscore
 
 @implementation AppModel
 
@@ -95,6 +98,27 @@
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
 
     return [_context resultsControllerForRequest:fetchRequest];
+}
+
+- (NSArray *)topValues {
+    NSFetchRequest *fetchRequest = [Value request];
+    NSArray *values = [_context objectsForRequest:fetchRequest];
+
+    values = _.array(values).sort(^NSComparisonResult(Value *a, Value *b) {
+        int countA = a.events.count;
+        int countB = b.events.count;
+
+        if (countA > countB) {
+            return NSOrderedAscending;
+        } else if (countA < countB) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
+        }
+
+    }).unwrap;
+
+    return values;
 }
 
 @end

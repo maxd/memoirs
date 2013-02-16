@@ -37,7 +37,7 @@
 
     self.trackedViewName = @"Important Values";
 
-    self.title = @"TOP жизненных ценностей";
+    self.title = NSLocalizedString(@"TOP Life Values", @"NavBar title");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,7 +58,7 @@
     ImportantValueListCell_iPhone *cell = [ImportantValueListCell_iPhone dequeOrCreateInTable:tableView];
 
     cell.textLabel.text = value.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Событий: %d", value.events.count];
+    cell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Events: %d", @"Detail text of cell"), value.events.count];
 
     return cell;
 }

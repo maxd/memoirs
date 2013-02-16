@@ -33,7 +33,7 @@
 }
 
 - (NSString *)navBarTitle {
-    return @"События недели";
+    return NSLocalizedString(@"Events of week", @"NavBar title");
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {
@@ -42,8 +42,8 @@
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {
     EventSelectorController_iPhone *eventSelectorController = [[EventSelectorController_iPhone alloc] init];
-    eventSelectorController.title = @"Выберите событие недели";
-    eventSelectorController.emptyMessage = @"Чтобы выбрать главное событие недели сначала создайте сами события открыв раздел \"Все события\" в меню.";
+    eventSelectorController.title = NSLocalizedString(@"Select event of week", @"NavBar title");
+    eventSelectorController.emptyMessage = NSLocalizedString(@"To select the important event of the week, first create the events themselves open to \"All Events\" in the menu.", @"Empty list message");
     eventSelectorController.delegate = self;
     eventSelectorController.events = [_appModel eventsBetween:eventListItem.startDate and:eventListItem.endDate];
 

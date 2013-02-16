@@ -61,8 +61,8 @@
     localNotification.fireDate = fireDate;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.repeatInterval = NSDayCalendarUnit;
-    localNotification.alertAction = @"Записать";
-    localNotification.alertBody = @"Запишите главное событие вашего дня в Мемуарник.";
+    localNotification.alertAction = NSLocalizedString(@"Create Event", @"Remind title");
+    localNotification.alertBody = NSLocalizedString(@"Create importnat event of yours day in My Memoirs", @"Remind text");
 
     if (self.enableAlertSound) {
         localNotification.soundName = UILocalNotificationDefaultSoundName;
@@ -94,8 +94,8 @@
     localNotification.fireDate = fireDate;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.repeatInterval = NSWeekCalendarUnit;
-    localNotification.alertAction = @"Выбрать";
-    localNotification.alertBody = @"Выберите главное событие недели в Мемуарнике.";
+    localNotification.alertAction = NSLocalizedString(@"Select Event", @"Remind title");
+    localNotification.alertBody = NSLocalizedString(@"Select importnat event of yours week in My Memoirs", @"Remind text");
 
     if (self.enableAlertSound) {
         localNotification.soundName = UILocalNotificationDefaultSoundName;
@@ -127,8 +127,8 @@
     localNotification.fireDate = fireDate;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.repeatInterval = NSMonthCalendarUnit;
-    localNotification.alertAction = @"Выбрать";
-    localNotification.alertBody = @"Выберите главное событие месяца в Мемуарнике.";
+    localNotification.alertAction = NSLocalizedString(@"Select Event", @"Remind title");
+    localNotification.alertBody = NSLocalizedString(@"Select importnat event of yours month in My Memoirs", @"Remind text");
 
     if (self.enableAlertSound) {
         localNotification.soundName = UILocalNotificationDefaultSoundName;

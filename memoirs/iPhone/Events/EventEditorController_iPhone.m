@@ -47,7 +47,7 @@
 
     self.trackedViewName = @"Event Editor";
 
-    self.title = @"Событие дня";
+    self.title = NSLocalizedString(@"Event of Day", @"NavBar title");
 
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]]];
 
@@ -63,10 +63,10 @@
     UIBarButtonItem *btBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"header_back_btn"] style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.backBarButtonItem = btBack;
 
-    UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:@"Отмена" style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
+    UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Cancel button") style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
     self.navigationItem.leftBarButtonItem = btCancel;
 
-    UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:@"Сохранить" style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
+    UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save button") style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
     self.navigationItem.rightBarButtonItem = btSave;
 
     self.lblDate.text = [self.eventListItem.startDate stringValueWithDateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterNoStyle];
@@ -102,18 +102,16 @@
 
 - (IBAction)btSaveHandler:(id)sender {
     if (!_value) {
-        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
-                                                            message:@"Пожалуйста выберите ценность дня из списка ценностей."
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
+                                                            message:NSLocalizedString(@"Please select life value from list.", @"Alert text")
+                                                           delegate:nil cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
         
         [alertView show];
     } else if (!self.txtText.text.length) {
-        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
-                                                            message:@"Пожалуйста опишите событие дня."
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
+                                                            message:NSLocalizedString(@"Please describe event of day.", @"Alert text")
+                                                           delegate:nil cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
 
         [alertView show];
@@ -143,7 +141,7 @@
         [self.btSelectValue setTitle:value.title forState:UIControlStateNormal];
         [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF033143] forState:UIControlStateNormal];
     } else {
-        [self.btSelectValue setTitle:@"Выберите ценность" forState:UIControlStateNormal];
+        [self.btSelectValue setTitle:NSLocalizedString(@"Select Life Value", @"Placholder text") forState:UIControlStateNormal];
         [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF999999] forState:UIControlStateNormal];
     }
 }

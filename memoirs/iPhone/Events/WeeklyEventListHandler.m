@@ -29,14 +29,14 @@
 }
 
 - (NSString *)navBarTitle {
-    return @"Все события";
+    return NSLocalizedString(@"All Events", @"NavBar title");
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {
     NSString *startDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.startDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
     NSString *endDateFormatted = [NSDateFormatter localizedStringFromDate:eventListGroup.endDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
 
-    return [NSString stringWithFormat:@"неделя с %@ по %@", startDateFormatted, endDateFormatted];
+    return [NSString stringWithFormat:NSLocalizedString(@"Week from %@ till %@", @"Section title"), startDateFormatted, endDateFormatted];
 }
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {

@@ -53,7 +53,7 @@
     UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;
 
-    UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:@"Сегодня" style:UIBarButtonItemStylePlain target:self action:@selector(btTodayHandler:)];
+    UIBarButtonItem *btToday = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Today", @"Button text") style:UIBarButtonItemStylePlain target:self action:@selector(btTodayHandler:)];
     self.navigationItem.rightBarButtonItem = btToday;
 
     [self scrollToTodayAnimated:NO];

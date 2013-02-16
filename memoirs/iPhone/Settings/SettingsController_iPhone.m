@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Настройки";
+    self.title = NSLocalizedString(@"Settings", @"NavBar title");
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
 

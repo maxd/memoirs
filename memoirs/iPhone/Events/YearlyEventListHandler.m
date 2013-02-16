@@ -33,7 +33,7 @@
 }
 
 - (NSString *)navBarTitle {
-    return @"События месяца";
+    return NSLocalizedString(@"Event of Month", @"NavBar title");
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {
@@ -42,8 +42,8 @@
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {
     EventSelectorController_iPhone *eventSelectorController = [[EventSelectorController_iPhone alloc] init];
-    eventSelectorController.title = @"Выберите событие месяца";
-    eventSelectorController.emptyMessage = @"Чтобы выбрать главное событие месяца сначала выберите главные события недели открыв раздел \"События недели\" в меню.";
+    eventSelectorController.title = NSLocalizedString(@"Select Event of Month", @"NavBar title");
+    eventSelectorController.emptyMessage = NSLocalizedString(@"To select the importnant event of the month, first select the main event of the week opening section \"Events of the Week\" in the menu.", @"Empty list message");
     eventSelectorController.delegate = self;
     eventSelectorController.events = [_appModel mostImportantEventsOfWeeksBetween:eventListItem.startDate and:eventListItem.endDate];
 

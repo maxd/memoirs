@@ -30,22 +30,22 @@
 
     _menu = @[
         @{
-            @"title": @"Разделы",
+            @"title": NSLocalizedString(@"Sections", @"Menu header"),
             @"menu": @[
                 @{
-                    @"title": @"Все события",
+                    @"title": NSLocalizedString(@"All Events", @"Menu item"),
                     @"selector": @"menuGroupByWeek:"
                 },
                 @{
-                    @"title": @"События недели",
+                    @"title": NSLocalizedString(@"Events of Week", @"Menu item"),
                     @"selector": @"menuGroupByMonth:"
                 },
                 @{
-                    @"title": @"События месяца",
+                    @"title": NSLocalizedString(@"Events of Month", @"Menu item"),
                     @"selector": @"menuGroupByYear:"
                 },
                 @{
-                        @"title": @"ТОP ценностей",
+                        @"title": NSLocalizedString(@"TOP Life Values", @"Menu item"),
                         @"selector": @"menuImportantValuesHandler:"
                 },
             ]
@@ -54,7 +54,7 @@
             @"title": @" ",
             @"menu": @[
                 @{
-                    @"title": @"Настройки",
+                    @"title": NSLocalizedString(@"Settings", @"Menu item"),
                     @"selector": @"menuSettingsHandler:"
                 }
             ]

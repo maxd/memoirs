@@ -45,7 +45,7 @@
 
     self.trackedViewName = @"Value List";
 
-    self.title = @"Ценности";
+    self.title = NSLocalizedString(@"Life Values", @"NavBar title");
 
     btAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(btAddHandler:)];
     btEdit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(btEditHandler:)];
@@ -155,8 +155,8 @@
 
 - (void)deleteValue:(Value *)value {
     if (value.events.count > 0) {
-        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
-                                                            message:@"Вы не можете удалить ценность которая уже используется в событиях."
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
+                                                            message:NSLocalizedString(@"You can't remove already used life value.", @"Alert text")
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];

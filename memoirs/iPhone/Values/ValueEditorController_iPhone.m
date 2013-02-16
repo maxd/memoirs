@@ -37,12 +37,12 @@
 
     self.trackedViewName = @"Value Editor";
 
-    self.title = @"Ценность";
+    self.title = NSLocalizedString(@"Life Value", @"NavBar title");
 
-    UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:@"Отмена" style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
+    UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Cancel button") style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
     self.navigationItem.leftBarButtonItem = btCancel;
 
-    UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:@"Сохранить" style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
+    UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save button") style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
     self.navigationItem.rightBarButtonItem = btSave;
 
     self.txtTitle.background = [[UIImage imageNamed:@"edit_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
@@ -63,8 +63,8 @@
     NSString *title = self.txtTitle.text;
 
     if (!title.length) {
-        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:@"Предупреждение"
-                                                            message:@"Пожалуйста введите название ценности."
+        WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
+                                                            message:NSLocalizedString(@"Please enter life value name.", @"Alert text")
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];

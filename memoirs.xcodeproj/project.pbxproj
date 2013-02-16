@@ -93,7 +93,6 @@
 		09AF2A8D16B998C8001E15BB /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8C16B998C8001E15BB /* Value.m */; };
 		09AF2A9016BB17A2001E15BB /* ValueListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2A8F16BB17A2001E15BB /* ValueListCell_iPhone.m */; };
 		09AF2A9216BB17D8001E15BB /* ValueListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2A9116BB17D8001E15BB /* ValueListCell_iPhone.xib */; };
-		09AF2AA316BC2C06001E15BB /* values.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2AA216BC2C06001E15BB /* values.lst */; };
 		09AF2AA616BC2C58001E15BB /* ValuesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2AA516BC2C58001E15BB /* ValuesLoader.m */; };
 		09AF2AD316BC4701001E15BB /* header_bkd_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2AD116BC4701001E15BB /* header_bkd_dark.png */; };
 		09AF2AD416BC4701001E15BB /* header_bkd_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2AD216BC4701001E15BB /* header_bkd_dark@2x.png */; };
@@ -146,6 +145,7 @@
 		09B23DB116B338CC003FFD91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23DB016B338CC003FFD91 /* QuartzCore.framework */; };
 		09B9D8B416C84D9F000F3D30 /* animated-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B216C84D9F000F3D30 /* animated-highlight.png */; };
 		09B9D8B516C84D9F000F3D30 /* animated-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */; };
+		09C74F7B16CFFED000AC6E54 /* values.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09C74F7D16CFFED000AC6E54 /* values.lst */; };
 		09CDD2A116CD50BF00CA349D /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDD29F16CD50BF00CA349D /* libGoogleAnalytics.a */; };
 		09CDD2A316CD50FA00CA349D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDD2A216CD50FA00CA349D /* SystemConfiguration.framework */; };
 		09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */; };
@@ -299,7 +299,6 @@
 		09AF2A8E16BB17A2001E15BB /* ValueListCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueListCell_iPhone.h; sourceTree = "<group>"; };
 		09AF2A8F16BB17A2001E15BB /* ValueListCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueListCell_iPhone.m; sourceTree = "<group>"; };
 		09AF2A9116BB17D8001E15BB /* ValueListCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueListCell_iPhone.xib; sourceTree = "<group>"; };
-		09AF2AA216BC2C06001E15BB /* values.lst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = values.lst; sourceTree = "<group>"; };
 		09AF2AA416BC2C58001E15BB /* ValuesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuesLoader.h; sourceTree = "<group>"; };
 		09AF2AA516BC2C58001E15BB /* ValuesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValuesLoader.m; sourceTree = "<group>"; };
 		09AF2AD116BC4701001E15BB /* header_bkd_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_bkd_dark.png; sourceTree = "<group>"; };
@@ -361,6 +360,8 @@
 		09B23DB016B338CC003FFD91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09B9D8B216C84D9F000F3D30 /* animated-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight.png"; sourceTree = "<group>"; };
 		09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight@2x.png"; sourceTree = "<group>"; };
+		09C74F7C16CFFED000AC6E54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/values.lst; sourceTree = "<group>"; };
+		09C74F7F16CFFF6400AC6E54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text; name = ru; path = ru.lproj/values.lst; sourceTree = "<group>"; };
 		09CDD29916CD50BF00CA349D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = vendor/GoogleAnalytics/GAI.h; sourceTree = "<group>"; };
 		09CDD29A16CD50BF00CA349D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = vendor/GoogleAnalytics/GAITrackedViewController.h; sourceTree = "<group>"; };
 		09CDD29B16CD50BF00CA349D /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = vendor/GoogleAnalytics/GAITracker.h; sourceTree = "<group>"; };
@@ -420,7 +421,7 @@
 				0965532F16CBFD3A0050597D /* dev-app-icon-72@2x.png */,
 				0965533016CBFD3A0050597D /* dev-app-icon.png */,
 				0965533116CBFD3A0050597D /* dev-app-icon@2x.png */,
-				09AF2AA216BC2C06001E15BB /* values.lst */,
+				09C74F7D16CFFED000AC6E54 /* values.lst */,
 				0962D87A16B887E200C6269A /* menu-icon.png */,
 				0962D87B16B887E200C6269A /* menu-icon@2x.png */,
 				0962D8A016B88BA400C6269A /* grey-icon-overlay.png */,
@@ -885,7 +886,7 @@
 				0962D8A216B88BA400C6269A /* grey-icon-overlay.png in Resources */,
 				0962D8A316B88BA400C6269A /* grey-icon-overlay@2x.png in Resources */,
 				09AF2A9216BB17D8001E15BB /* ValueListCell_iPhone.xib in Resources */,
-				09AF2AA316BC2C06001E15BB /* values.lst in Resources */,
+				09C74F7B16CFFED000AC6E54 /* values.lst in Resources */,
 				09AF2AD316BC4701001E15BB /* header_bkd_dark.png in Resources */,
 				09AF2AD416BC4701001E15BB /* header_bkd_dark@2x.png in Resources */,
 				09AF2AD716BC4A09001E15BB /* header_bkd.png in Resources */,
@@ -1028,6 +1029,15 @@
 				093C1AB716C99D8300E76C0C /* ru */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		09C74F7D16CFFED000AC6E54 /* values.lst */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09C74F7C16CFFED000AC6E54 /* en */,
+				09C74F7F16CFFF6400AC6E54 /* ru */,
+			);
+			name = values.lst;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -146,6 +146,7 @@
 		09B9D8B416C84D9F000F3D30 /* animated-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B216C84D9F000F3D30 /* animated-highlight.png */; };
 		09B9D8B516C84D9F000F3D30 /* animated-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */; };
 		09C74F7B16CFFED000AC6E54 /* values.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09C74F7D16CFFED000AC6E54 /* values.lst */; };
+		09C74F8A16D0B11300AC6E54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09C74F8816D0B11300AC6E54 /* Localizable.strings */; };
 		09CDD2A116CD50BF00CA349D /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDD29F16CD50BF00CA349D /* libGoogleAnalytics.a */; };
 		09CDD2A316CD50FA00CA349D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDD2A216CD50FA00CA349D /* SystemConfiguration.framework */; };
 		09D157ED16C57263001D9931 /* EventSelectorController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157EB16C57263001D9931 /* EventSelectorController_iPhone.m */; };
@@ -362,6 +363,8 @@
 		09B9D8B316C84D9F000F3D30 /* animated-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animated-highlight@2x.png"; sourceTree = "<group>"; };
 		09C74F7C16CFFED000AC6E54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/values.lst; sourceTree = "<group>"; };
 		09C74F7F16CFFF6400AC6E54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text; name = ru; path = ru.lproj/values.lst; sourceTree = "<group>"; };
+		09C74F8916D0B11300AC6E54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		09C74F8C16D0B14300AC6E54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		09CDD29916CD50BF00CA349D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = vendor/GoogleAnalytics/GAI.h; sourceTree = "<group>"; };
 		09CDD29A16CD50BF00CA349D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = vendor/GoogleAnalytics/GAITrackedViewController.h; sourceTree = "<group>"; };
 		09CDD29B16CD50BF00CA349D /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = vendor/GoogleAnalytics/GAITracker.h; sourceTree = "<group>"; };
@@ -742,6 +745,7 @@
 			children = (
 				09B23D3116B30C2E003FFD91 /* memoirs-Info.plist */,
 				09B23D3216B30C2E003FFD91 /* InfoPlist.strings */,
+				09C74F8816D0B11300AC6E54 /* Localizable.strings */,
 				09B23D3516B30C2E003FFD91 /* main.m */,
 				09B23D3716B30C2E003FFD91 /* memoirs-Prefix.pch */,
 				09B23D3B16B30C2E003FFD91 /* Default.png */,
@@ -941,6 +945,7 @@
 				098AEF7E16CD88F0004A8804 /* InAppSettings.bundle in Resources */,
 				098AEFB816CD9BAB004A8804 /* UserDefaults.plist in Resources */,
 				092BB78B16CEA25600894102 /* ImportantValueListCell_iPhone.xib in Resources */,
+				09C74F8A16D0B11300AC6E54 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,6 +1043,15 @@
 				09C74F7F16CFFF6400AC6E54 /* ru */,
 			);
 			name = values.lst;
+			sourceTree = "<group>";
+		};
+		09C74F8816D0B11300AC6E54 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09C74F8916D0B11300AC6E54 /* en */,
+				09C74F8C16D0B14300AC6E54 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

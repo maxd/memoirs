@@ -141,7 +141,7 @@
         [self.btSelectValue setTitle:value.title forState:UIControlStateNormal];
         [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF033143] forState:UIControlStateNormal];
     } else {
-        [self.btSelectValue setTitle:NSLocalizedString(@"Select Life Value", @"Placholder text") forState:UIControlStateNormal];
+        [self.btSelectValue setTitle:NSLocalizedString(@"Select Life Value", @"Placeholder text") forState:UIControlStateNormal];
         [self.btSelectValue setTitleColor:[UIColor colorWithHex:0xFF999999] forState:UIControlStateNormal];
     }
 }

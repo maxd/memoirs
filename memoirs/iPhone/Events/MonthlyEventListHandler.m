@@ -33,7 +33,7 @@
 }
 
 - (NSString *)navBarTitle {
-    return NSLocalizedString(@"Events of week", @"NavBar title");
+    return NSLocalizedString(@"Events of Week", @"NavBar title");
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {

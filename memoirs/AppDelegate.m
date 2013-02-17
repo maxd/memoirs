@@ -40,12 +40,10 @@
     if (!_appModel)
         return NO;
 
-    ValuesLoader *valuesLoader = [[ValuesLoader alloc] initWithManagedContext:[_appModel context]];
-    [valuesLoader loadPredefinedValuesIfRequired];
+    [self loadPredefinedValues];
 
     #ifdef DEBUG
-    EventLoader *eventLoader = [[EventLoader alloc] initWithAppModel:_appModel];
-    [eventLoader loadPredefinedEventsIfRequired];
+    [self loadPredefinedEvents];
     #endif
 
     [self createWindow:_appModel];
@@ -194,6 +192,16 @@
     });
 
     [[[GAI sharedInstance] defaultTracker] sendEventWithCategory:@"User Action" withAction:@"Open Notification" withLabel:notificationType withValue:nil];
+}
+
+- (void)loadPredefinedEvents {
+    EventLoader *eventLoader = [[EventLoader alloc] initWithAppModel:_appModel];
+    [eventLoader loadPredefinedEventsIfRequired];
+}
+
+- (void)loadPredefinedValues {
+    ValuesLoader *valuesLoader = [[ValuesLoader alloc] initWithManagedContext:[_appModel context]];
+    [valuesLoader loadPredefinedValuesIfRequired];
 }
 
 @end

@@ -132,9 +132,9 @@
 		09AF2B7216BD244D001E15BB /* cellheader_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2B7016BD244C001E15BB /* cellheader_background@2x.png */; };
 		09AF2B7816BD2863001E15BB /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2B7516BD2863001E15BB /* JASidePanelController.m */; };
 		09AF2B7916BD2863001E15BB /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */; };
-		09B0150416D0E952008E49A6 /* predefined_events.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09B0150616D0E952008E49A6 /* predefined_events.lst */; };
 		09B0151516D11776008E49A6 /* cell_background_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B0151416D11776008E49A6 /* cell_background_highlight@2x.png */; };
 		09B0151816D11BC6008E49A6 /* cell_background_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B0151716D11BC6008E49A6 /* cell_background_highlight.png */; };
+		09B0153716D11EB0008E49A6 /* predefined_events.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09B0153516D11EB0008E49A6 /* predefined_events.lst */; };
 		09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2916B30C2E003FFD91 /* UIKit.framework */; };
 		09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2B16B30C2E003FFD91 /* Foundation.framework */; };
 		09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */; };
@@ -347,10 +347,10 @@
 		09AF2B7516BD2863001E15BB /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASidePanelController.m; path = vendor/JASidePanels/JASidePanels/Source/JASidePanelController.m; sourceTree = "<group>"; };
 		09AF2B7616BD2863001E15BB /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JASidePanel.h"; path = "vendor/JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
 		09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JASidePanel.m"; path = "vendor/JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
-		09B0150516D0E952008E49A6 /* predefined_events.lst */ = {isa = PBXFileReference; lastKnownFileType = file.lst; name = predefined_events.lst; path = ru.lproj/predefined_events.lst; sourceTree = "<group>"; };
-		09B0150716D0E957008E49A6 /* predefined_events.lst */ = {isa = PBXFileReference; lastKnownFileType = file.lst; name = predefined_events.lst; path = en.lproj/predefined_events.lst; sourceTree = "<group>"; };
 		09B0151416D11776008E49A6 /* cell_background_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_background_highlight@2x.png"; sourceTree = "<group>"; };
 		09B0151716D11BC6008E49A6 /* cell_background_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background_highlight.png; sourceTree = "<group>"; };
+		09B0153616D11EB0008E49A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/predefined_events.lst; sourceTree = "<group>"; };
+		09B0153816D11EB8008E49A6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text; name = ru; path = ru.lproj/predefined_events.lst; sourceTree = "<group>"; };
 		09B23D2516B30C2E003FFD91 /* memoirs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoirs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B23D2916B30C2E003FFD91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09B23D2B16B30C2E003FFD91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -432,7 +432,7 @@
 				0965533016CBFD3A0050597D /* dev-app-icon.png */,
 				0965533116CBFD3A0050597D /* dev-app-icon@2x.png */,
 				09C74F7D16CFFED000AC6E54 /* values.lst */,
-				09B0150616D0E952008E49A6 /* predefined_events.lst */,
+				09B0153516D11EB0008E49A6 /* predefined_events.lst */,
 				0962D87A16B887E200C6269A /* menu-icon.png */,
 				0962D87B16B887E200C6269A /* menu-icon@2x.png */,
 				0962D8A016B88BA400C6269A /* grey-icon-overlay.png */,
@@ -956,9 +956,9 @@
 				098AEFB816CD9BAB004A8804 /* UserDefaults.plist in Resources */,
 				092BB78B16CEA25600894102 /* ImportantValueListCell_iPhone.xib in Resources */,
 				09C74F8A16D0B11300AC6E54 /* Localizable.strings in Resources */,
-				09B0150416D0E952008E49A6 /* predefined_events.lst in Resources */,
 				09B0151516D11776008E49A6 /* cell_background_highlight@2x.png in Resources */,
 				09B0151816D11BC6008E49A6 /* cell_background_highlight.png in Resources */,
+				09B0153716D11EB0008E49A6 /* predefined_events.lst in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,11 +1040,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		09B0150616D0E952008E49A6 /* predefined_events.lst */ = {
+		09B0153516D11EB0008E49A6 /* predefined_events.lst */ = {
 			isa = PBXVariantGroup;
 			children = (
-				09B0150516D0E952008E49A6 /* predefined_events.lst */,
-				09B0150716D0E957008E49A6 /* predefined_events.lst */,
+				09B0153616D11EB0008E49A6 /* en */,
+				09B0153816D11EB8008E49A6 /* ru */,
 			);
 			name = predefined_events.lst;
 			sourceTree = "<group>";

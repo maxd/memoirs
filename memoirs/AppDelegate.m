@@ -92,6 +92,10 @@
     [GAI sharedInstance].dispatchInterval = 10;
     [GAI sharedInstance].trackUncaughtExceptions = YES;
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-38508832-1"];
+
+    #ifdef DEBUG
+    [GAI sharedInstance].optOut = YES;
+    #endif
 }
 
 - (void)configureNSDate {

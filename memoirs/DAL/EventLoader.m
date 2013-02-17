@@ -55,7 +55,7 @@
 
     NSDate *date = [[NSDate date] startOfCurrentWeek];
 
-    for (NSUInteger i = 0; i < lines.count; i += 2) {
+    for (NSUInteger i = 0; i < lines.count; i += 3) {
         NSString *valueTitle = lines[i];
         NSString *text = lines[i + 1];
 

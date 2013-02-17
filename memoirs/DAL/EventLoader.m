@@ -49,73 +49,17 @@
     [fetchedResultsController performFetch:nil];
     _values = fetchedResultsController.fetchedObjects;
 
-    NSArray *events = @[
-        @{
-            @"valueText": @"Саморазвитие",
-            @"text": @"Разобрался с некоторыми вопросами про знаки в ПДД. Грубо прикинул стоимость покупки машины."
-        },
-        @{
-            @"valueText": @"Саморазвитие",
-            @"text": @"Составил список автошкол вблизи Лесной и Старой Деревни. Часть информации о них прийдется выяснять по телефону."
-        },
-        @{
-            @"valueText": @"Карьера",
-            @"text": @"Начал работать на новой работе. Занимаюсь проектом по сбору и отображению статистики."
-        },
-        @{
-            @"valueText": @"Карьера",
-            @"text": @"Сделал несколько секции одной из страниц приложения. Убедил не использовать ERB, решили использовать SLIM т.к. админка разрабатывается на нем.\n\nПлохо сплю, немогу уснуть т.к. поменял режим. Плюс свободного времени стало меньше."
-        },
-        @{
-            @"valueText": @"Карьера",
-            @"text": @"Сделал все секции."
-        },
-        @{
-            @"valueText": @"Профессиональная деятельность",
-            @"text": @"Доделал через пол года восстановление покупок в Паспорте. Потребовался час времени."
-        },
-        @{
-            @"valueText": @"Встреча",
-            @"text": @"Посидели в баре с увольненцами из Studio Mobile"
-        },
-        @{
-            @"valueText": @"Профессиональная деятельность",
-            @"text": @"Поправил приложение Паспорт и залил обновление на AppStore."
-        },
-        @{
-            @"valueText": @"Саморазвитие",
-            @"text": @"Поговорил с Ромкой по поводу Sky Aces Server. Теперь можно начинать его делать."
-        },
-        @{
-            @"valueText": @"Карьера",
-            @"text": @"Сделал что планировал по работе."
-        },
-        @{
-            @"valueText": @"Впечатления",
-            @"text": @"Узнал куда идет 2 трамвай."
-        },
-        @{
-            @"valueText": @"Отдых",
-            @"text": @"Хорошо провел вечер и выспался."
-        },
-        @{
-            @"valueText": @"Отдых",
-            @"text": @"Ушел с работы на час раньше т.к. отработал 40 часов."
-        },
-        @{
-            @"valueText": @"Профессиональная деятельность",
-            @"text": @"Начал работать над memoirs."
-        },
-        @{
-            @"valueText": @"Профессиональная деятельность",
-            @"text": @"Сделал бесконечную прокрутку в memoirs."
-        },
-    ];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"predefined_events" ofType:@"lst"];
+    NSString *fileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSArray *lines = [fileContent componentsSeparatedByString:@"\n"];
 
     NSDate *date = [[NSDate date] startOfCurrentWeek];
 
-    for (NSDictionary *event in events) {
-        [self loadEventToDate:date withValue:event[@"valueText"] andText:event[@"text"]];
+    for (NSUInteger i = 0; i < lines.count; i += 2) {
+        NSString *valueTitle = lines[i];
+        NSString *text = lines[i + 1];
+
+        [self loadEventToDate:date withValue:valueTitle andText:text];
         date = [date startOfNextDay];
     }
 

@@ -18,6 +18,7 @@
 #import "UIColor+Helpers.h"
 #import "EventListTableView.h"
 #import "GAITracker.h"
+#import "NSDate+MTDates.h"
 
 @interface EventListController_iPhone () <UITableViewDataSource, UITableViewDelegate, EventListTableViewDelegate>
 
@@ -31,6 +32,9 @@
 @implementation EventListController_iPhone {
     AppModel *_appModel;
 
+    UIColor *_highlightedBackground;
+    UIColor *_regularBackground;
+
     EventListTableModelDecoratorForUITableView *_eventListTableModelDecorator;
 }
 
@@ -38,6 +42,9 @@
     self = [super init];
     if (self) {
         _appModel = appModel;
+
+        _highlightedBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background_highlight"]];
+        _regularBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
     }
     return self;
 }
@@ -127,6 +134,16 @@
     EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
 
     [self.eventListHandler openEditorForViewController:self withEventListItem:eventListItem];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    EventListItem *eventListItem = [_eventListTableModelDecorator eventListItemByIndexPath:indexPath];
+
+    if ([[NSDate date] isBetweenDate:eventListItem.startDate andDate:eventListItem.endDate]) {
+        cell.backgroundColor = _highlightedBackground;
+    } else {
+        cell.backgroundColor = _regularBackground;
+    }
 }
 
 - (void)recalculateOffsetForTableView:(UITableView *)tableView {

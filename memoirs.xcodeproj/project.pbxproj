@@ -133,6 +133,8 @@
 		09AF2B7816BD2863001E15BB /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2B7516BD2863001E15BB /* JASidePanelController.m */; };
 		09AF2B7916BD2863001E15BB /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */; };
 		09B0150416D0E952008E49A6 /* predefined_events.lst in Resources */ = {isa = PBXBuildFile; fileRef = 09B0150616D0E952008E49A6 /* predefined_events.lst */; };
+		09B0151516D11776008E49A6 /* cell_background_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B0151416D11776008E49A6 /* cell_background_highlight@2x.png */; };
+		09B0151816D11BC6008E49A6 /* cell_background_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B0151716D11BC6008E49A6 /* cell_background_highlight.png */; };
 		09B23D2A16B30C2E003FFD91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2916B30C2E003FFD91 /* UIKit.framework */; };
 		09B23D2C16B30C2E003FFD91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2B16B30C2E003FFD91 /* Foundation.framework */; };
 		09B23D2E16B30C2E003FFD91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B23D2D16B30C2E003FFD91 /* CoreGraphics.framework */; };
@@ -347,6 +349,8 @@
 		09AF2B7716BD2863001E15BB /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JASidePanel.m"; path = "vendor/JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		09B0150516D0E952008E49A6 /* predefined_events.lst */ = {isa = PBXFileReference; lastKnownFileType = file.lst; name = predefined_events.lst; path = ru.lproj/predefined_events.lst; sourceTree = "<group>"; };
 		09B0150716D0E957008E49A6 /* predefined_events.lst */ = {isa = PBXFileReference; lastKnownFileType = file.lst; name = predefined_events.lst; path = en.lproj/predefined_events.lst; sourceTree = "<group>"; };
+		09B0151416D11776008E49A6 /* cell_background_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_background_highlight@2x.png"; sourceTree = "<group>"; };
+		09B0151716D11BC6008E49A6 /* cell_background_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background_highlight.png; sourceTree = "<group>"; };
 		09B23D2516B30C2E003FFD91 /* memoirs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoirs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B23D2916B30C2E003FFD91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09B23D2B16B30C2E003FFD91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -463,6 +467,8 @@
 				09AF2B0D16BC8240001E15BB /* grey-chevron@2x.png */,
 				09AF2B5116BCF6CF001E15BB /* cell_background.png */,
 				09AF2B5216BCF6CF001E15BB /* cell_background@2x.png */,
+				09B0151716D11BC6008E49A6 /* cell_background_highlight.png */,
+				09B0151416D11776008E49A6 /* cell_background_highlight@2x.png */,
 				09AF2B5516BCFA8B001E15BB /* cell_selected_background.png */,
 				09AF2B5616BCFA8B001E15BB /* cell_selected_background@2x.png */,
 				09AF2B6F16BD244C001E15BB /* cellheader_background.png */,
@@ -951,6 +957,8 @@
 				092BB78B16CEA25600894102 /* ImportantValueListCell_iPhone.xib in Resources */,
 				09C74F8A16D0B11300AC6E54 /* Localizable.strings in Resources */,
 				09B0150416D0E952008E49A6 /* predefined_events.lst in Resources */,
+				09B0151516D11776008E49A6 /* cell_background_highlight@2x.png in Resources */,
+				09B0151816D11BC6008E49A6 /* cell_background_highlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

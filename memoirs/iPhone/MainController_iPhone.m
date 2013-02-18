@@ -51,7 +51,7 @@
 
     _eventListMenuPanel = [EventListMenuController_iPhone new];
 
-    self.leftPanel = _eventListMenuPanel;
+    self.leftPanel = [[UINavigationController alloc] initWithRootViewController:_eventListMenuPanel];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {

@@ -28,6 +28,8 @@
 
     self.trackedViewName = @"Menu";
 
+    self.title = NSLocalizedString(@"My Memoirs", @"App name in NavBar");
+
     _menu = @[
         @{
             @"title": NSLocalizedString(@"Sections", @"Menu header"),

@@ -53,14 +53,14 @@
     NSString *fileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSArray *lines = [fileContent componentsSeparatedByString:@"\n"];
 
-    NSDate *date = [[NSDate date] startOfCurrentWeek];
+    NSDate *date = [[NSDate date] startOfPreviousDay];
 
     for (NSUInteger i = 0; i < lines.count; i += 3) {
         NSString *valueTitle = lines[i];
         NSString *text = lines[i + 1];
 
         [self loadEventToDate:date withValue:valueTitle andText:text];
-        date = [date startOfNextDay];
+        date = [date startOfPreviousDay];
     }
 
     [_appModel.context save];

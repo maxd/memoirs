@@ -53,10 +53,10 @@
             ]
         },
         @{
-            @"title": @" ",
+            @"title": NSLocalizedString(@"Settings", @"Menu item"),
             @"menu": @[
                 @{
-                    @"title": NSLocalizedString(@"Settings", @"Menu item"),
+                    @"title": NSLocalizedString(@"Reminders", @"Menu item"),
                     @"selector": @"menuSettingsHandler:"
                 }
             ]
@@ -96,7 +96,7 @@
 
     EventListMenuCell_iPhone *cell = [EventListMenuCell_iPhone dequeOrCreateInTable:tableView];
 
-    cell.textLabel.text = menuItem[@"title"];
+    cell.textLabel.text = [NSString stringWithFormat:@"\u2001 %@", menuItem[@"title"]];
 
     return cell;
 }

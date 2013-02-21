@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTopDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblBottomDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblCenterDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 @property (weak, nonatomic) IBOutlet UILabel *lblImportantEvent;
 
@@ -35,6 +36,7 @@
         // http://unicode.org/reports/tr35/tr35-6.html#Date_Format_Patterns
         self.lblTopDate.text = [event.date stringFromDateWithFormat:@"dd"];
         self.lblBottomDate.text = [event.date stringFromDateWithFullMonth];
+        self.lblCenterDate.text = @"";
         self.lblText.text = event.text;
 
         if (event.isImportantDateOfYear) {
@@ -50,15 +52,19 @@
         if ([eventListItem.startDate isWithinSameDay:eventListItem.endDate]) {
             self.lblTopDate.text = [eventListItem.startDate stringFromDateWithFormat:@"dd"];
             self.lblBottomDate.text = [eventListItem.startDate stringFromDateWithFullMonth];
+            self.lblCenterDate.text = @"";
         } else if ([eventListItem.startDate isWithinSameWeek:eventListItem.endDate]) {
-            self.lblTopDate.text = @"?";
-            self.lblBottomDate.text = [eventListItem.endDate stringFromDateWithFormat:@"LLLL"];
+            self.lblTopDate.text = @"";
+            self.lblBottomDate.text = @"";
+            self.lblCenterDate.text = [eventListItem.endDate stringFromDateWithFormat:@"LLLL"];
         } else if ([eventListItem.startDate isWithinSameMonth:eventListItem.endDate]) {
-            self.lblTopDate.text = @"?";
-            self.lblBottomDate.text = [eventListItem.endDate stringFromDateWithFormat:@"LLLL"];
+            self.lblTopDate.text = @"";
+            self.lblBottomDate.text = @"";
+            self.lblCenterDate.text = [eventListItem.endDate stringFromDateWithFormat:@"LLLL"];
         } else {
             self.lblTopDate.text = @"";
             self.lblBottomDate.text = @"";
+            self.lblCenterDate.text = @"";
         }
         self.lblText.text = @"";
         self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder"];

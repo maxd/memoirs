@@ -39,15 +39,7 @@
         self.lblCenterDate.text = @"";
         self.lblText.text = event.text;
 
-        if (event.isImportantDateOfYear) {
-            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
-        } else if (event.isImportantDateOfMonth) {
-            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
-        } else if (event.isImportantDateOfWeek) {
-            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
-        } else {
-            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder"];
-        }
+        self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
     } else {
         if ([eventListItem.startDate isWithinSameDay:eventListItem.endDate]) {
             self.lblTopDate.text = [eventListItem.startDate stringFromDateWithFormat:@"dd"];

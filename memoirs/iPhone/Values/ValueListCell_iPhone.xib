@@ -42,9 +42,10 @@
 							<object class="IBUILabel" id="920046261">
 								<reference key="NSNextResponder" ref="836915663"/>
 								<int key="NSvFlags">256</int>
-								<string key="NSFrame">{{10, 0}, {280, 43}}</string>
+								<string key="NSFrame">{{10, 0}, {280, 49}}</string>
 								<reference key="NSSuperview" ref="836915663"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -72,9 +73,10 @@
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{300, 43}</string>
+						<string key="NSFrameSize">{300, 49}</string>
 						<reference key="NSSuperview" ref="706932385"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="920046261"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -87,7 +89,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 44}</string>
+				<string key="NSFrameSize">{320, 50}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="836915663"/>
@@ -96,6 +98,7 @@
 				<int key="IBUISelectionStyle">0</int>
 				<int key="IBUIAccessoryType">1</int>
 				<reference key="IBUIContentView" ref="836915663"/>
+				<real value="50" key="IBUIRowHeight"/>
 				<real value="0.0" key="IBUIStyle"/>
 				<reference key="IBUITextLabel" ref="920046261"/>
 			</object>

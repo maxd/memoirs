@@ -38,13 +38,13 @@
         self.lblText.text = event.text;
 
         if (event.isImportantDateOfYear) {
-            self.lblImportantEvent.text = @"\U0001F49D";
+            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
         } else if (event.isImportantDateOfMonth) {
-            self.lblImportantEvent.text = @"\U0001F49B";
+            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
         } else if (event.isImportantDateOfWeek) {
-            self.lblImportantEvent.text = @"\U0001F49A";
+            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
         } else {
-            self.lblImportantEvent.text = @"";
+            self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder"];
         }
     } else {
         if ([eventListItem.startDate isWithinSameDay:eventListItem.endDate]) {
@@ -61,16 +61,12 @@
             self.lblBottomDate.text = @"";
         }
         self.lblText.text = @"";
-        self.lblImportantEvent.text = @"";
+        self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder"];
     }
 
     if ([[NSDate date] isBetweenDate:eventListItem.startDate andDate:eventListItem.endDate]) {
         [self highlightWithAnimation];
     }
-}
-
-- (void)awakeFromNib {
-    self.ctlDateBackground.image = [[UIImage imageNamed:@"white-icon-overlay"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{5, 5, 5, 5}")];
 }
 
 - (void)highlightWithAnimation {

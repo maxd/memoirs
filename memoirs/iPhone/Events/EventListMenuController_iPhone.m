@@ -78,7 +78,7 @@
     UIBorderLabel *label = [UIBorderLabel new];
 
     label.textColor = [UIColor colorWithHex:0xFF033143];
-    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellheader_background"]];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"header_bg"]];
     label.text = [self tableView:tableView titleForHeaderInSection:section];
     label.font = [UIFont boldSystemFontOfSize:14];
     label.leftInset = 10.0;
@@ -102,7 +102,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(EventListMenuCell_iPhone *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg"]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

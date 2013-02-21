@@ -43,8 +43,8 @@
     if (self) {
         _appModel = appModel;
 
-        _highlightedBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background_highlight"]];
-        _regularBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_background"]];
+        _highlightedBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg_highlight"]];
+        _regularBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg"]];
     }
     return self;
 }
@@ -108,7 +108,7 @@
     UILabel *label = [UILabel new];
 
     label.textColor = [UIColor colorWithHex:0xFF033143];
-    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellheader_background"]];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"header_bg"]];
     label.text = [self tableView:tableView titleForHeaderInSection:section];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont boldSystemFontOfSize:14];

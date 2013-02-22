@@ -11,6 +11,8 @@
 #import "ImportantValueListCell_iPhone.h"
 #import "UITableViewCell+NIB.h"
 #import "Value.h"
+#import "UIViewController+JASidePanel.h"
+#import "JASidePanelController.h"
 
 @interface ImportantValueListController_iPhone () <UITableViewDelegate, UITableViewDataSource>
 
@@ -38,7 +40,10 @@
     self.trackedViewName = @"Important Values";
 
     self.title = NSLocalizedString(@"TOP Life Values", @"NavBar title");
-    
+
+    UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
+    self.navigationItem.leftBarButtonItem = btMenu;
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]];    
 }
 
@@ -71,6 +76,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath.row != 0 ? tableView.rowHeight : tableView.rowHeight - 1;
+}
+
+#pragma mark Action Handlers
+
+- (void)btMenuHandler:(id)sender {
+    [self.sidePanelController showLeftPanel:YES];
 }
 
 @end

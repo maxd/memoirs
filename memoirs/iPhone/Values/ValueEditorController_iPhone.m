@@ -47,7 +47,7 @@
     UIBarButtonItem *btSave = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save button") style:UIBarButtonItemStylePlain target:self action:@selector(btSaveHandler:)];
     self.navigationItem.rightBarButtonItem = btSave;
 
-    self.txtTitle.background = [[UIImage imageNamed:@"edit_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    self.txtTitle.background = [[UIImage imageNamed:@"edit_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     self.txtTitle.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
     self.txtTitle.leftViewMode = UITextFieldViewModeAlways;
     [self.txtTitle becomeFirstResponder];

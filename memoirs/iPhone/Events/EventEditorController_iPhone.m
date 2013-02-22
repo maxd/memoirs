@@ -51,11 +51,11 @@
 
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]]];
 
-    [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"btn"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{6, 6, 6, 6}")] forState:UIControlStateNormal];
-    [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"btn_active"] resizableImageWithCapInsets:UIEdgeInsetsFromString(@"{6, 6, 6, 6}")] forState:UIControlStateHighlighted];
+    [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"edit_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)] forState:UIControlStateNormal];
+    [self.btSelectValue setBackgroundImage:[[UIImage imageNamed:@"edit_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)] forState:UIControlStateHighlighted];
     [self.btSelectValue setImageEdgeInsets:UIEdgeInsetsMake(0, self.btSelectValue.frame.size.width - 20, 0, 0)];
 
-    UIImage *txtTextBgImage = [[UIImage imageNamed:@"edit_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    UIImage *txtTextBgImage = [[UIImage imageNamed:@"edit_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     txtTextBgImage = [txtTextBgImage scaleToSize:self.txtText.frame.size];
 
     self.txtText.backgroundColor = [UIColor colorWithPatternImage:txtTextBgImage];

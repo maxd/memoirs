@@ -30,6 +30,8 @@
 
     self.title = NSLocalizedString(@"My Memoirs", @"App name in NavBar");
 
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]]];
+
     _menu = @[
         @{
             @"title": NSLocalizedString(@"Sections", @"Menu header"),

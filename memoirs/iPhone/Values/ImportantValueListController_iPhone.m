@@ -69,4 +69,8 @@
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg"]];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath.row != 0 ? tableView.rowHeight : tableView.rowHeight - 1;
+}
+
 @end

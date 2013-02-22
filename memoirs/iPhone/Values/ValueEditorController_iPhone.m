@@ -38,6 +38,8 @@
     self.trackedViewName = @"Value Editor";
 
     self.title = NSLocalizedString(@"Life Value", @"NavBar title");
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]];
 
     UIBarButtonItem *btCancel = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Cancel button") style:UIBarButtonItemStylePlain target:self action:@selector(btCancelHandler:)];
     self.navigationItem.leftBarButtonItem = btCancel;

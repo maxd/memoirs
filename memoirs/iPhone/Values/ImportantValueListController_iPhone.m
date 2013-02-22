@@ -38,6 +38,8 @@
     self.trackedViewName = @"Important Values";
 
     self.title = NSLocalizedString(@"TOP Life Values", @"NavBar title");
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]];    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

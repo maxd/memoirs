@@ -49,8 +49,8 @@
                     @"selector": @"menuGroupByYear:"
                 },
                 @{
-                        @"title": NSLocalizedString(@"TOP Life Values", @"Menu item"),
-                        @"selector": @"menuImportantValuesHandler:"
+                    @"title": NSLocalizedString(@"TOP Life Values", @"Menu item"),
+                    @"selector": @"menuImportantValuesHandler:"
                 },
             ]
         },

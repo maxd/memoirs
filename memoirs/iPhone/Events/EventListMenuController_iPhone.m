@@ -38,19 +38,23 @@
             @"menu": @[
                 @{
                     @"title": NSLocalizedString(@"All Events", @"Menu item"),
-                    @"selector": @"menuGroupByWeek:"
+                    @"selector": @"menuGroupByWeek:",
+                    @"prefix": @"\u2B50"
                 },
                 @{
                     @"title": NSLocalizedString(@"Events of Week", @"Menu item"),
-                    @"selector": @"menuGroupByMonth:"
+                    @"selector": @"menuGroupByMonth:",
+                    @"prefix": @"\u2B50"
                 },
                 @{
                     @"title": NSLocalizedString(@"Events of Month", @"Menu item"),
-                    @"selector": @"menuGroupByYear:"
+                    @"selector": @"menuGroupByYear:",
+                    @"prefix": @"\u2B50"
                 },
                 @{
                     @"title": NSLocalizedString(@"TOP Life Values", @"Menu item"),
-                    @"selector": @"menuImportantValuesHandler:"
+                    @"selector": @"menuImportantValuesHandler:",
+                    @"prefix": @"\U0001F31F"
                 },
             ]
         },
@@ -59,8 +63,16 @@
             @"menu": @[
                 @{
                     @"title": NSLocalizedString(@"Reminders", @"Menu item"),
-                    @"selector": @"menuSettingsHandler:"
-                }
+                    @"selector": @"menuSettingsHandler:",
+                    @"prefix": @"\U0001F514"
+                },
+#ifdef LITE
+                @{
+                    @"title": NSLocalizedString(@"Purchase Full Version!", @"Menu item"),
+                    @"selector": @"menuPurchaseHandler:",
+                    @"prefix": @"\U0001F4B0"
+                },
+#endif
             ]
         }
     ];
@@ -98,7 +110,13 @@
 
     EventListMenuCell_iPhone *cell = [EventListMenuCell_iPhone dequeOrCreateInTable:tableView];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"\u2001 %@", menuItem[@"title"]];
+    NSString *prefix = @"\u2001";
+    
+    if (menuItem[@"prefix"]) {
+        prefix = menuItem[@"prefix"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", prefix, menuItem[@"title"]];
 
     return cell;
 }

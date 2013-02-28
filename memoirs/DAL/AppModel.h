@@ -34,4 +34,6 @@
 
 - (NSArray *)topValues;
 
+- (NSInteger)eventCount;
+
 @end

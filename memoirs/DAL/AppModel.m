@@ -121,4 +121,10 @@
     return values;
 }
 
+- (NSInteger)eventCount {
+    NSFetchRequest *fetchRequest = [Event request];
+    
+    return [_context countForFetchRequest:fetchRequest error:nil];
+}
+
 @end

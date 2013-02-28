@@ -20,6 +20,7 @@
 #import "MonthlyEventListHandler.h"
 #import "YearlyEventListHandler.h"
 #import "ImportantValueListController_iPhone.h"
+#import "PurchaseController_iPhone.h"
 
 @interface MainController_iPhone ()
 
@@ -34,6 +35,7 @@
     UINavigationController *_eventListPanel;
     UINavigationController *_settingsPanel;
     UINavigationController *_importantValueListPane;
+    UINavigationController *_purchasePanel;
 }
 
 - (id)initWithAppModel:(AppModel *)appModel {
@@ -95,7 +97,19 @@
          _importantValueListPane = navigationController;
      }
      return _importantValueListPane;
- }
+}
+
+#ifdef LITE
+- (UINavigationController *)purchasePanel {
+    if (!_purchasePanel) {
+        PurchaseController_iPhone *purchaseController = [PurchaseController_iPhone new];
+        
+        _purchasePanel = [[UINavigationController alloc] initWithRootViewController:purchaseController];
+    }
+    
+    return _purchasePanel;
+}
+#endif
 
 -(void)showWeeklyEventList {
     WeeklyEventListTableModel *eventListTableModel = [[WeeklyEventListTableModel alloc] initWithAppModel:_appModel];
@@ -149,5 +163,15 @@
         [self showCenterPanel:YES];
     }
 }
+
+#ifdef LITE
+- (void)showPurchase {
+    if (self.centerPanel != [self purchasePanel]) {
+        self.centerPanel = [self purchasePanel];
+    } else {
+        [self showCenterPanel:YES];
+    }
+}
+#endif
 
 @end

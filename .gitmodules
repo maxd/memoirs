@@ -16,3 +16,6 @@
 [submodule "vendor/InAppSettingsKit"]
 	path = vendor/InAppSettingsKit
 	url = git://github.com/futuretap/InAppSettingsKit.git
+[submodule "vendor/InAppPurchase"]
+	path = vendor/InAppPurchase
+	url = git@github.com:maxd/InAppPurchase.git

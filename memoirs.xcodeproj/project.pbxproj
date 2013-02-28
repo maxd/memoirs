@@ -165,6 +165,14 @@
 		0930B85316DD411D00BCED30 /* light_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0972958E16D7D5BE00934A8E /* light_bg.png */; };
 		0930B85416DD411D00BCED30 /* edit_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0972959216D7DC4200934A8E /* edit_bg.png */; };
 		0930B85516DD411D00BCED30 /* edit_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0972959316D7DC4200934A8E /* edit_bg@2x.png */; };
+		0930B87B16DD477A00BCED30 /* libInAppPurchase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930B87716DD474D00BCED30 /* libInAppPurchase.a */; };
+		0930B87C16DD47D000BCED30 /* InAppPurchase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0930B87916DD474D00BCED30 /* InAppPurchase.bundle */; };
+		0930B88216DD487200BCED30 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930B88116DD487200BCED30 /* StoreKit.framework */; };
+		0930B88616DD51F600BCED30 /* PurchaseController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930B88416DD51F600BCED30 /* PurchaseController_iPhone.m */; };
+		0930B88716DD51F600BCED30 /* PurchaseController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0930B88516DD51F600BCED30 /* PurchaseController_iPhone.xib */; };
+		0930B8A016DD554D00BCED30 /* PurchaseFullVersionProductActivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930B89F16DD554D00BCED30 /* PurchaseFullVersionProductActivator.m */; };
+		0930B8A416DD5E7600BCED30 /* WCAlertViewAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930B8A316DD5E7500BCED30 /* WCAlertViewAlertHandler.m */; };
+		0955EFC216DFBF0B007EA40D /* NVUIGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0955EFC116DFBF0B007EA40D /* NVUIGradientButton.m */; };
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0965532A16CBFD2E0050597D /* adhoc-app-icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0965532616CBFD2E0050597D /* adhoc-app-icon-72.png */; };
@@ -305,6 +313,37 @@
 		09D1580016C57DE7001D9931 /* MonthlyEventListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D157FF16C57DE7001D9931 /* MonthlyEventListTableModel.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0930B87616DD474D00BCED30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 093E1BF715A5EE7F00D5538A;
+			remoteInfo = InAppPurchase;
+		};
+		0930B87816DD474D00BCED30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 093E1CDB15A62E0200D5538A;
+			remoteInfo = InAppPurchaseResources;
+		};
+		0930B87D16DD483F00BCED30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 093E1BF615A5EE7F00D5538A;
+			remoteInfo = InAppPurchase;
+		};
+		0930B87F16DD484D00BCED30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 093E1CDA15A62E0200D5538A;
+			remoteInfo = InAppPurchaseResources;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0903EFA516BD5B0E00547357 /* EventListMenuCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListMenuCell_iPhone.h; sourceTree = "<group>"; };
 		0903EFA616BD5B0E00547357 /* EventListMenuCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListMenuCell_iPhone.m; sourceTree = "<group>"; };
@@ -325,7 +364,19 @@
 		092BB78A16CEA25600894102 /* ImportantValueListCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportantValueListCell_iPhone.xib; sourceTree = "<group>"; };
 		0930B85A16DD411D00BCED30 /* memoirs-lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "memoirs-lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0930B85C16DD411D00BCED30 /* memoirs-lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "memoirs-lite-Info.plist"; path = "/Users/mdobryakov/Projects/memoirs/memoirs-lite-Info.plist"; sourceTree = "<absolute>"; };
+		0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InAppPurchase.xcodeproj; path = vendor/InAppPurchase/InAppPurchase.xcodeproj; sourceTree = "<group>"; };
+		0930B88116DD487200BCED30 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0930B88316DD51F600BCED30 /* PurchaseController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseController_iPhone.h; sourceTree = "<group>"; };
+		0930B88416DD51F600BCED30 /* PurchaseController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseController_iPhone.m; sourceTree = "<group>"; };
+		0930B88516DD51F600BCED30 /* PurchaseController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseController_iPhone.xib; sourceTree = "<group>"; };
+		0930B89E16DD554D00BCED30 /* PurchaseFullVersionProductActivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseFullVersionProductActivator.h; sourceTree = "<group>"; };
+		0930B89F16DD554D00BCED30 /* PurchaseFullVersionProductActivator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseFullVersionProductActivator.m; sourceTree = "<group>"; };
+		0930B8A116DD55E000BCED30 /* ProductIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductIdentifiers.h; sourceTree = "<group>"; };
+		0930B8A216DD5E7500BCED30 /* WCAlertViewAlertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAlertViewAlertHandler.h; sourceTree = "<group>"; };
+		0930B8A316DD5E7500BCED30 /* WCAlertViewAlertHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertViewAlertHandler.m; sourceTree = "<group>"; };
 		093C1AB716C99D8300E76C0C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0955EFC016DFBF0B007EA40D /* NVUIGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NVUIGradientButton.h; path = vendor/NVUIGradientButton/lib/NVUIGradientButton/NVUIGradientButton.h; sourceTree = "<group>"; };
+		0955EFC116DFBF0B007EA40D /* NVUIGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NVUIGradientButton.m; path = vendor/NVUIGradientButton/lib/NVUIGradientButton/NVUIGradientButton.m; sourceTree = "<group>"; };
 		0962D87A16B887E200C6269A /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		0962D87B16B887E200C6269A /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		0965532616CBFD2E0050597D /* adhoc-app-icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adhoc-app-icon-72.png"; sourceTree = SOURCE_ROOT; };
@@ -543,6 +594,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0930B88216DD487200BCED30 /* StoreKit.framework in Frameworks */,
 				0930B80216DD411D00BCED30 /* MessageUI.framework in Frameworks */,
 				0930B80316DD411D00BCED30 /* SystemConfiguration.framework in Frameworks */,
 				0930B80416DD411D00BCED30 /* QuartzCore.framework in Frameworks */,
@@ -550,6 +602,7 @@
 				0930B80616DD411D00BCED30 /* UIKit.framework in Frameworks */,
 				0930B80716DD411D00BCED30 /* Foundation.framework in Frameworks */,
 				0930B80816DD411D00BCED30 /* CoreGraphics.framework in Frameworks */,
+				0930B87B16DD477A00BCED30 /* libInAppPurchase.a in Frameworks */,
 				0930B80916DD411D00BCED30 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +632,24 @@
 				09130E7B16BE9B85004A289C /* WCAlertView.m */,
 			);
 			name = WCAlertView;
+			sourceTree = "<group>";
+		};
+		0930B86E16DD474D00BCED30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0930B87716DD474D00BCED30 /* libInAppPurchase.a */,
+				0930B87916DD474D00BCED30 /* InAppPurchase.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0955EFBF16DFBEDD007EA40D /* NVUIGradientButton */ = {
+			isa = PBXGroup;
+			children = (
+				0955EFC016DFBF0B007EA40D /* NVUIGradientButton.h */,
+				0955EFC116DFBF0B007EA40D /* NVUIGradientButton.m */,
+			);
+			name = NVUIGradientButton;
 			sourceTree = "<group>";
 		};
 		0962D87916B8877100C6269A /* Resources */ = {
@@ -803,6 +874,14 @@
 				09A8AD7716B50A38005E336D /* SettingsController_iPhone.h */,
 				09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */,
 				09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */,
+				0930B88316DD51F600BCED30 /* PurchaseController_iPhone.h */,
+				0930B88416DD51F600BCED30 /* PurchaseController_iPhone.m */,
+				0930B88516DD51F600BCED30 /* PurchaseController_iPhone.xib */,
+				0930B8A116DD55E000BCED30 /* ProductIdentifiers.h */,
+				0930B89E16DD554D00BCED30 /* PurchaseFullVersionProductActivator.h */,
+				0930B89F16DD554D00BCED30 /* PurchaseFullVersionProductActivator.m */,
+				0930B8A216DD5E7500BCED30 /* WCAlertViewAlertHandler.h */,
+				0930B8A316DD5E7500BCED30 /* WCAlertViewAlertHandler.m */,
 				098AEFB716CD9BAB004A8804 /* UserDefaults.plist */,
 				098AEF7D16CD88F0004A8804 /* InAppSettings.bundle */,
 			);
@@ -882,6 +961,8 @@
 		09B23D2816B30C2E003FFD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */,
+				0955EFBF16DFBEDD007EA40D /* NVUIGradientButton */,
 				098AEF8016CD8B50004A8804 /* InAppSettingsKit */,
 				09CDD29716CD50B000CA349D /* GoogleAnalytics */,
 				09AE2E3216C18CFF001CB595 /* MTDates */,
@@ -896,6 +977,7 @@
 				09B23DAE16B338B3003FFD91 /* CoreData.framework */,
 				09CDD2A216CD50FA00CA349D /* SystemConfiguration.framework */,
 				098AEFAF16CD8DF6004A8804 /* MessageUI.framework */,
+				0930B88116DD487200BCED30 /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1013,6 +1095,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				0930B88016DD484D00BCED30 /* PBXTargetDependency */,
+				0930B87E16DD483F00BCED30 /* PBXTargetDependency */,
 			);
 			name = "memoirs-lite";
 			productName = memoirs;
@@ -1056,6 +1140,12 @@
 			mainGroup = 09B23D1A16B30C2E003FFD91;
 			productRefGroup = 09B23D2616B30C2E003FFD91 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0930B86E16DD474D00BCED30 /* Products */;
+					ProjectRef = 0930B86D16DD474D00BCED30 /* InAppPurchase.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				09B23D2416B30C2E003FFD91 /* memoirs */,
@@ -1063,6 +1153,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0930B87716DD474D00BCED30 /* libInAppPurchase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libInAppPurchase.a;
+			remoteRef = 0930B87616DD474D00BCED30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0930B87916DD474D00BCED30 /* InAppPurchase.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InAppPurchase.bundle;
+			remoteRef = 0930B87816DD474D00BCED30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0930B80A16DD411D00BCED30 /* Resources */ = {
@@ -1144,6 +1251,8 @@
 				0930B85316DD411D00BCED30 /* light_bg.png in Resources */,
 				0930B85416DD411D00BCED30 /* edit_bg.png in Resources */,
 				0930B85516DD411D00BCED30 /* edit_bg@2x.png in Resources */,
+				0930B87C16DD47D000BCED30 /* InAppPurchase.bundle in Resources */,
+				0930B88716DD51F600BCED30 /* PurchaseController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,6 +1410,10 @@
 				0930B7FE16DD411D00BCED30 /* IASKSwitch.m in Sources */,
 				0930B7FF16DD411D00BCED30 /* IASKTextField.m in Sources */,
 				0930B80016DD411D00BCED30 /* ImportantValueListCell_iPhone.m in Sources */,
+				0930B88616DD51F600BCED30 /* PurchaseController_iPhone.m in Sources */,
+				0930B8A016DD554D00BCED30 /* PurchaseFullVersionProductActivator.m in Sources */,
+				0930B8A416DD5E7600BCED30 /* WCAlertViewAlertHandler.m in Sources */,
+				0955EFC216DFBF0B007EA40D /* NVUIGradientButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1378,6 +1491,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0930B87E16DD483F00BCED30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InAppPurchase;
+			targetProxy = 0930B87D16DD483F00BCED30 /* PBXContainerItemProxy */;
+		};
+		0930B88016DD484D00BCED30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InAppPurchaseResources;
+			targetProxy = 0930B87F16DD484D00BCED30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		09B0153516D11EB0008E49A6 /* predefined_events.lst */ = {
 			isa = PBXVariantGroup;
@@ -1421,7 +1547,7 @@
 		0930B85716DD411D00BCED30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_ID_SUFFIX = "memoirs-lite-dev";
+				BUNDLE_ID_SUFFIX = "memoirs-lite";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "memoirs/memoirs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1437,7 +1563,7 @@
 				);
 				PRODUCT_NAME = "memoirs-lite";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor/InAppSettingsKit/InAppSettingsKit\" \"${PROJECT_DIR}/vendor/GoogleAnalytics\" \"${PROJECT_DIR}/vendor/MTDates/MTDates\" \"${PROJECT_DIR}/vendor/underscore/Underscore\" \"${PROJECT_DIR}/vendor/WCAlertView/WCAlertView\" \"${PROJECT_DIR}/vendor/JASidePanels/JASidePanels/Source\" \"${PROJECT_DIR}/vendor/TPKeyboardAvoiding\"";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor/InAppSettingsKit/InAppSettingsKit\" \"${PROJECT_DIR}/vendor/GoogleAnalytics\" \"${PROJECT_DIR}/vendor/MTDates/MTDates\" \"${PROJECT_DIR}/vendor/underscore/Underscore\" \"${PROJECT_DIR}/vendor/WCAlertView/WCAlertView\" \"${PROJECT_DIR}/vendor/JASidePanels/JASidePanels/Source\" \"${PROJECT_DIR}/vendor/TPKeyboardAvoiding\" \"${PROJECT_DIR}/vendor/InAppPurchase/InAppPurchase\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1458,7 +1584,7 @@
 				);
 				PRODUCT_NAME = "memoirs-lite";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor/InAppSettingsKit/InAppSettingsKit\" \"${PROJECT_DIR}/vendor/GoogleAnalytics\" \"${PROJECT_DIR}/vendor/MTDates/MTDates\" \"${PROJECT_DIR}/vendor/underscore/Underscore\" \"${PROJECT_DIR}/vendor/WCAlertView/WCAlertView\" \"${PROJECT_DIR}/vendor/JASidePanels/JASidePanels/Source\" \"${PROJECT_DIR}/vendor/TPKeyboardAvoiding\"";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor/InAppSettingsKit/InAppSettingsKit\" \"${PROJECT_DIR}/vendor/GoogleAnalytics\" \"${PROJECT_DIR}/vendor/MTDates/MTDates\" \"${PROJECT_DIR}/vendor/underscore/Underscore\" \"${PROJECT_DIR}/vendor/WCAlertView/WCAlertView\" \"${PROJECT_DIR}/vendor/JASidePanels/JASidePanels/Source\" \"${PROJECT_DIR}/vendor/TPKeyboardAvoiding\" \"${PROJECT_DIR}/vendor/InAppPurchase/InAppPurchase\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1466,7 +1592,7 @@
 		0930B85916DD411D00BCED30 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_ID_SUFFIX = "memoirs-lite-adhoc";
+				BUNDLE_ID_SUFFIX = "memoirs-lite";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "memoirs/memoirs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = LITE;
@@ -1479,7 +1605,7 @@
 				);
 				PRODUCT_NAME = "memoirs-lite";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor/InAppSettingsKit/InAppSettingsKit\" \"${PROJECT_DIR}/vendor/GoogleAnalytics\" \"${PROJECT_DIR}/vendor/MTDates/MTDates\" \"${PROJECT_DIR}/vendor/underscore/Underscore\" \"${PROJECT_DIR}/vendor/WCAlertView/WCAlertView\" \"${PROJECT_DIR}/vendor/JASidePanels/JASidePanels/Source\" \"${PROJECT_DIR}/vendor/TPKeyboardAvoiding\"";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/vendor/InAppSettingsKit/InAppSettingsKit\" \"${PROJECT_DIR}/vendor/GoogleAnalytics\" \"${PROJECT_DIR}/vendor/MTDates/MTDates\" \"${PROJECT_DIR}/vendor/underscore/Underscore\" \"${PROJECT_DIR}/vendor/WCAlertView/WCAlertView\" \"${PROJECT_DIR}/vendor/JASidePanels/JASidePanels/Source\" \"${PROJECT_DIR}/vendor/TPKeyboardAvoiding\" \"${PROJECT_DIR}/vendor/InAppPurchase/InAppPurchase\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;

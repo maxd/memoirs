@@ -163,4 +163,10 @@
     [(MainController_iPhone *)self.sidePanelController showSettings];
 }
 
+#ifdef LITE
+- (void)menuPurchaseHandler:(UITableView *)tableView {
+    [(MainController_iPhone *)self.sidePanelController showPurchase];
+}
+#endif
+
 @end

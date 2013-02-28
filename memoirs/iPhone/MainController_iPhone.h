@@ -25,4 +25,8 @@
 
 - (void)showImportantValueList;
 
+#ifdef LITE
+- (void)showPurchase;
+#endif
+
 @end

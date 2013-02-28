@@ -19,3 +19,6 @@
 [submodule "vendor/InAppPurchase"]
 	path = vendor/InAppPurchase
 	url = git@github.com:maxd/InAppPurchase.git
+[submodule "vendor/NVUIGradientButton"]
+	path = vendor/NVUIGradientButton
+	url = git://github.com/nverinaud/NVUIGradientButton.git

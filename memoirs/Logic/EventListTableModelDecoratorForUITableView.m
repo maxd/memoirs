@@ -47,13 +47,11 @@
     for (NSUInteger section = 0; section < _eventListTableModel.groups.count; section++) {
         EventListGroup *eventListGroup = _eventListTableModel.groups[section];
 
-        if ([date isBetweenDate:eventListGroup.startDate andDate:eventListGroup.endDate]) {
-            for (NSUInteger row = 0; row < eventListGroup.eventListItems.count; row++) {
-                EventListItem *eventListItem = eventListGroup.eventListItems[row];
+        for (NSUInteger row = 0; row < eventListGroup.eventListItems.count; row++) {
+            EventListItem *eventListItem = eventListGroup.eventListItems[row];
 
-                if ([date isBetweenDate:eventListItem.startDate andDate:eventListItem.endDate]) {
-                    return [NSIndexPath indexPathForRow:row inSection:section];
-                }
+            if ([date isBetweenDate:eventListItem.startDate andDate:eventListItem.endDate]) {
+                return [NSIndexPath indexPathForRow:row inSection:section];
             }
         }
     }

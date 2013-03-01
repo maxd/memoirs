@@ -10,4 +10,12 @@
 
 @implementation ImportantValueListCell_iPhone
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    CGRect frame = self.textLabel.frame;
+
+    self.textLabel.frame = CGRectMake(frame.origin.x, (self.frame.size.height - frame.size.height) / 2, frame.size.width, frame.size.height);
+}
+
 @end

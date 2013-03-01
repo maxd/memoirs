@@ -14,7 +14,9 @@
 
 @end
 
-@implementation SettingsController_iPhone
+@implementation SettingsController_iPhone {
+    UIColor *_regularBackground;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,12 +27,20 @@
 
     UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;
+
+    _regularBackground = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg"]];
 }
 
 #pragma mark Action Handlers
 
 - (void)btMenuHandler:(id)sender {
     [self.sidePanelController showLeftPanel:YES];
+}
+
+#pragma mark Table Handler
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = _regularBackground;
 }
 
 @end

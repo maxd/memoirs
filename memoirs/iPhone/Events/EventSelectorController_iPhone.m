@@ -25,6 +25,8 @@
     [super viewDidLoad];
 
     self.trackedViewName = @"Event Selector";
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]]];
 
     if (self.events.count > 0) {
         self.ctlTableView.tableHeaderView = nil;

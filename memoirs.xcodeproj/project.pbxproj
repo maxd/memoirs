@@ -36,7 +36,7 @@
 		0930B7D016DD411D00BCED30 /* EventListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD6216B50A04005E336D /* EventListCell_iPhone.m */; };
 		0930B7D116DD411D00BCED30 /* EventListController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD6516B50A04005E336D /* EventListController_iPhone.m */; };
 		0930B7D216DD411D00BCED30 /* EventListMenuController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD6816B50A04005E336D /* EventListMenuController_iPhone.m */; };
-		0930B7D316DD411D00BCED30 /* SettingsController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */; };
+		0930B7D316DD411D00BCED30 /* RemindersSettingsController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD7816B50A38005E336D /* RemindersSettingsController_iPhone.m */; };
 		0930B7D416DD411D00BCED30 /* EventListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD9116B5765D005E336D /* EventListTableView.m */; };
 		0930B7D516DD411D00BCED30 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */; };
 		0930B7D616DD411D00BCED30 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADB216B706D8005E336D /* AppModel.m */; };
@@ -100,7 +100,7 @@
 		0930B81216DD411D00BCED30 /* EventListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD6316B50A04005E336D /* EventListCell_iPhone.xib */; };
 		0930B81316DD411D00BCED30 /* EventListController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD6616B50A04005E336D /* EventListController_iPhone.xib */; };
 		0930B81416DD411D00BCED30 /* EventListMenuController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD6916B50A04005E336D /* EventListMenuController_iPhone.xib */; };
-		0930B81516DD411D00BCED30 /* SettingsController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */; };
+		0930B81516DD411D00BCED30 /* RemindersSettingsController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD7916B50A38005E336D /* RemindersSettingsController_iPhone.xib */; };
 		0930B81616DD411D00BCED30 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0930B81716DD411D00BCED30 /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
 		0930B81816DD411D00BCED30 /* ValueListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AF2A9116BB17D8001E15BB /* ValueListCell_iPhone.xib */; };
@@ -235,8 +235,8 @@
 		09A8AD6F16B50A04005E336D /* EventListController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD6616B50A04005E336D /* EventListController_iPhone.xib */; };
 		09A8AD7016B50A04005E336D /* EventListMenuController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD6816B50A04005E336D /* EventListMenuController_iPhone.m */; };
 		09A8AD7116B50A04005E336D /* EventListMenuController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD6916B50A04005E336D /* EventListMenuController_iPhone.xib */; };
-		09A8AD7A16B50A38005E336D /* SettingsController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */; };
-		09A8AD7B16B50A38005E336D /* SettingsController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */; };
+		09A8AD7A16B50A38005E336D /* RemindersSettingsController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD7816B50A38005E336D /* RemindersSettingsController_iPhone.m */; };
+		09A8AD7B16B50A38005E336D /* RemindersSettingsController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A8AD7916B50A38005E336D /* RemindersSettingsController_iPhone.xib */; };
 		09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8AD9116B5765D005E336D /* EventListTableView.m */; };
 		09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADAA16B703A0005E336D /* Model.xcdatamodeld */; };
 		09A8ADB316B706D8005E336D /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8ADB216B706D8005E336D /* AppModel.m */; };
@@ -476,9 +476,9 @@
 		09A8AD6716B50A04005E336D /* EventListMenuController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListMenuController_iPhone.h; sourceTree = "<group>"; };
 		09A8AD6816B50A04005E336D /* EventListMenuController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListMenuController_iPhone.m; sourceTree = "<group>"; };
 		09A8AD6916B50A04005E336D /* EventListMenuController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListMenuController_iPhone.xib; sourceTree = "<group>"; };
-		09A8AD7716B50A38005E336D /* SettingsController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController_iPhone.h; sourceTree = "<group>"; };
-		09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController_iPhone.m; sourceTree = "<group>"; };
-		09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController_iPhone.xib; sourceTree = "<group>"; };
+		09A8AD7716B50A38005E336D /* RemindersSettingsController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersSettingsController_iPhone.h; sourceTree = "<group>"; };
+		09A8AD7816B50A38005E336D /* RemindersSettingsController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersSettingsController_iPhone.m; sourceTree = "<group>"; };
+		09A8AD7916B50A38005E336D /* RemindersSettingsController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindersSettingsController_iPhone.xib; sourceTree = "<group>"; };
 		09A8AD9016B5765D005E336D /* EventListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableView.h; sourceTree = "<group>"; };
 		09A8AD9116B5765D005E336D /* EventListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListTableView.m; sourceTree = "<group>"; };
 		09A8ADAB16B703A0005E336D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -871,9 +871,9 @@
 		09A8AD5316B509DF005E336D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				09A8AD7716B50A38005E336D /* SettingsController_iPhone.h */,
-				09A8AD7816B50A38005E336D /* SettingsController_iPhone.m */,
-				09A8AD7916B50A38005E336D /* SettingsController_iPhone.xib */,
+				09A8AD7716B50A38005E336D /* RemindersSettingsController_iPhone.h */,
+				09A8AD7816B50A38005E336D /* RemindersSettingsController_iPhone.m */,
+				09A8AD7916B50A38005E336D /* RemindersSettingsController_iPhone.xib */,
 				0930B88316DD51F600BCED30 /* PurchaseController_iPhone.h */,
 				0930B88416DD51F600BCED30 /* PurchaseController_iPhone.m */,
 				0930B88516DD51F600BCED30 /* PurchaseController_iPhone.xib */,
@@ -1186,7 +1186,7 @@
 				0930B81216DD411D00BCED30 /* EventListCell_iPhone.xib in Resources */,
 				0930B81316DD411D00BCED30 /* EventListController_iPhone.xib in Resources */,
 				0930B81416DD411D00BCED30 /* EventListMenuController_iPhone.xib in Resources */,
-				0930B81516DD411D00BCED30 /* SettingsController_iPhone.xib in Resources */,
+				0930B81516DD411D00BCED30 /* RemindersSettingsController_iPhone.xib in Resources */,
 				0930B81616DD411D00BCED30 /* menu-icon.png in Resources */,
 				0930B81716DD411D00BCED30 /* menu-icon@2x.png in Resources */,
 				0930B81816DD411D00BCED30 /* ValueListCell_iPhone.xib in Resources */,
@@ -1270,7 +1270,7 @@
 				09A8AD6D16B50A04005E336D /* EventListCell_iPhone.xib in Resources */,
 				09A8AD6F16B50A04005E336D /* EventListController_iPhone.xib in Resources */,
 				09A8AD7116B50A04005E336D /* EventListMenuController_iPhone.xib in Resources */,
-				09A8AD7B16B50A38005E336D /* SettingsController_iPhone.xib in Resources */,
+				09A8AD7B16B50A38005E336D /* RemindersSettingsController_iPhone.xib in Resources */,
 				0962D87C16B887E200C6269A /* menu-icon.png in Resources */,
 				0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */,
 				09AF2A9216BB17D8001E15BB /* ValueListCell_iPhone.xib in Resources */,
@@ -1364,7 +1364,7 @@
 				0930B7D016DD411D00BCED30 /* EventListCell_iPhone.m in Sources */,
 				0930B7D116DD411D00BCED30 /* EventListController_iPhone.m in Sources */,
 				0930B7D216DD411D00BCED30 /* EventListMenuController_iPhone.m in Sources */,
-				0930B7D316DD411D00BCED30 /* SettingsController_iPhone.m in Sources */,
+				0930B7D316DD411D00BCED30 /* RemindersSettingsController_iPhone.m in Sources */,
 				0930B7D416DD411D00BCED30 /* EventListTableView.m in Sources */,
 				0930B7D516DD411D00BCED30 /* Model.xcdatamodeld in Sources */,
 				0930B7D616DD411D00BCED30 /* AppModel.m in Sources */,
@@ -1440,7 +1440,7 @@
 				09A8AD6C16B50A04005E336D /* EventListCell_iPhone.m in Sources */,
 				09A8AD6E16B50A04005E336D /* EventListController_iPhone.m in Sources */,
 				09A8AD7016B50A04005E336D /* EventListMenuController_iPhone.m in Sources */,
-				09A8AD7A16B50A38005E336D /* SettingsController_iPhone.m in Sources */,
+				09A8AD7A16B50A38005E336D /* RemindersSettingsController_iPhone.m in Sources */,
 				09A8AD9216B5765D005E336D /* EventListTableView.m in Sources */,
 				09A8ADAF16B703A0005E336D /* Model.xcdatamodeld in Sources */,
 				09A8ADB316B706D8005E336D /* AppModel.m in Sources */,

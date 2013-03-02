@@ -1,20 +1,20 @@
 //
-//  SettingsController_iPhone.m
+//  RemindersSettingsController_iPhone.m
 //  memoirs
 //
 //  Created by Maxim Dobryakov on 1/26/13.
 //  Copyright (c) 2013 protonail.com. All rights reserved.
 //
 
-#import "SettingsController_iPhone.h"
+#import "RemindersSettingsController_iPhone.h"
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
 
-@interface SettingsController_iPhone ()
+@interface RemindersSettingsController_iPhone ()
 
 @end
 
-@implementation SettingsController_iPhone {
+@implementation RemindersSettingsController_iPhone {
     UIColor *_regularBackground;
 }
 

@@ -1,5 +1,5 @@
 //
-//  SettingsController_iPhone.h
+//  RemindersSettingsController_iPhone.h
 //  memoirs
 //
 //  Created by Maxim Dobryakov on 1/26/13.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "IASKAppSettingsViewController.h"
 
-@interface SettingsController_iPhone : IASKAppSettingsViewController
+@interface RemindersSettingsController_iPhone : IASKAppSettingsViewController
 
 @end

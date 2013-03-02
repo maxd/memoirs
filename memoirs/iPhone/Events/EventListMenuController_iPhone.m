@@ -160,7 +160,7 @@
 }
 
 - (void)menuSettingsHandler:(UITableView *)tableView {
-    [(MainController_iPhone *)self.sidePanelController showSettings];
+    [(MainController_iPhone *) self.sidePanelController showRemindersSettings];
 }
 
 #ifdef LITE

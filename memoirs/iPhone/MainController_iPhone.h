@@ -21,7 +21,7 @@
 
 - (void)openEventListEditorForDate:(NSDate *)date;
 
-- (void)showSettings;
+- (void)showRemindersSettings;
 
 - (void)showImportantValueList;
 

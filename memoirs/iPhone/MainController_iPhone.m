@@ -10,7 +10,7 @@
 #import "EventListMenuController_iPhone.h"
 #import "EventListController_iPhone.h"
 #import "AppModel.h"
-#import "SettingsController_iPhone.h"
+#import "RemindersSettingsController_iPhone.h"
 #import "EventListTableModel.h"
 #import "WeeklyEventListTableModel.h"
 #import "MonthlyEventListTableModel.h"
@@ -33,7 +33,7 @@
     EventListMenuController_iPhone *_eventListMenuPanel;
 
     UINavigationController *_eventListPanel;
-    UINavigationController *_settingsPanel;
+    UINavigationController *_remindersSettingsPanel;
     UINavigationController *_importantValueListPane;
     UINavigationController *_purchasePanel;
 }
@@ -74,16 +74,16 @@
     return _eventListPanel;
 }
 
-- (UINavigationController *)settingsPanel {
-    if (!_settingsPanel) {
-        SettingsController_iPhone *settingsController = [SettingsController_iPhone new];
-        settingsController.showDoneButton = NO;
-        settingsController.showCreditsFooter = NO;
+- (UINavigationController *)remindersSettingsPanel {
+    if (!_remindersSettingsPanel) {
+        RemindersSettingsController_iPhone *remindersSettingsController = [RemindersSettingsController_iPhone new];
+        remindersSettingsController.showDoneButton = NO;
+        remindersSettingsController.showCreditsFooter = NO;
 
-        _settingsPanel = [[UINavigationController alloc] initWithRootViewController:settingsController];
+        _remindersSettingsPanel = [[UINavigationController alloc] initWithRootViewController:remindersSettingsController];
     }
 
-    return _settingsPanel;
+    return _remindersSettingsPanel;
 }
 
  - (UINavigationController *)importantValueListPane {
@@ -148,9 +148,9 @@
     [_eventListController openEventListEditorForDate:date];
 }
 
-- (void)showSettings {
-    if (self.centerPanel != [self settingsPanel]) {
-        self.centerPanel = [self settingsPanel];
+- (void)showRemindersSettings {
+    if (self.centerPanel != [self remindersSettingsPanel]) {
+        self.centerPanel = [self remindersSettingsPanel];
     } else {
         [self showCenterPanel:YES];
     }

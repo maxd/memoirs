@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = NSLocalizedString(@"Settings", @"NavBar title");
+    self.title = NSLocalizedString(@"Reminders", @"NavBar title");
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]];
 

@@ -34,7 +34,7 @@
 
     if (event) {
         // http://unicode.org/reports/tr35/tr35-6.html#Date_Format_Patterns
-        self.lblTopDate.text = [event.date stringFromDateWithFormat:@"dd"];
+        self.lblTopDate.text = [event.date stringFromDateWithFormat:@"d"];
         self.lblBottomDate.text = [event.date stringFromDateWithFullMonth];
         self.lblCenterDate.text = @"";
         self.lblText.text = event.text;
@@ -42,7 +42,7 @@
         self.ctlDateBackground.image = [UIImage imageNamed:@"date_holder_blue"];
     } else {
         if ([eventListItem.startDate isWithinSameDay:eventListItem.endDate]) {
-            self.lblTopDate.text = [eventListItem.startDate stringFromDateWithFormat:@"dd"];
+            self.lblTopDate.text = [eventListItem.startDate stringFromDateWithFormat:@"d"];
             self.lblBottomDate.text = [eventListItem.startDate stringFromDateWithFullMonth];
             self.lblCenterDate.text = @"";
         } else if ([eventListItem.startDate isWithinSameWeek:eventListItem.endDate]) {

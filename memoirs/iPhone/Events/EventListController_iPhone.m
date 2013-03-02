@@ -54,6 +54,8 @@
 
     self.trackedViewName = @"Event List";
 
+    self.ctlTableView.scrollsToTop = NO;
+
     UIBarButtonItem *btBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"header_back_btn"] style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.backBarButtonItem = btBack;
 

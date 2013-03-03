@@ -29,4 +29,6 @@
 - (void)showPurchase;
 #endif
 
+- (void)showTutorial;
+
 @end

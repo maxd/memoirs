@@ -73,6 +73,11 @@
                     @"prefix": @"\U0001F4B0"
                 },
 #endif
+                @{
+                    @"title": NSLocalizedString(@"Tutorial", @"Menu item"),
+                    @"selector": @"menuTutorialHandler:",
+                    @"prefix": @"\U0001F393"
+                },
             ]
         }
     ];
@@ -168,5 +173,9 @@
     [(MainController_iPhone *)self.sidePanelController showPurchase];
 }
 #endif
+
+- (void)menuTutorialHandler:(UITableView *)tableView {
+    [(MainController_iPhone *) self.sidePanelController showTutorial];
+}
 
 @end

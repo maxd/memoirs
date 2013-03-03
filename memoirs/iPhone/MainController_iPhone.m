@@ -21,6 +21,9 @@
 #import "YearlyEventListHandler.h"
 #import "ImportantValueListController_iPhone.h"
 #import "PurchaseController_iPhone.h"
+#import "TutorialController.h"
+
+#define IS_TUTORIAL_SHOWN_FIRST_TIME_KEY @"is-tutorial-shown-first-time"
 
 @interface MainController_iPhone ()
 
@@ -56,6 +59,10 @@
     self.leftPanel = [[UINavigationController alloc] initWithRootViewController:_eventListMenuPanel];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self showTutorialFirstTime];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return toInterfaceOrientation == UIInterfaceOrientationPortrait;
 }
@@ -86,7 +93,7 @@
     return _remindersSettingsPanel;
 }
 
- - (UINavigationController *)importantValueListPane {
+- (UINavigationController *)importantValueListPane {
      if (!_importantValueListPane) {
          ImportantValueListController_iPhone *importantValueListController = [[ImportantValueListController_iPhone alloc] initWithAppModel:_appModel];
 
@@ -173,5 +180,23 @@
     }
 }
 #endif
+
+- (void)showTutorial {
+    [self showCenterPanel:YES];
+
+    TutorialController *tutorialController = [TutorialController new];
+    tutorialController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentModalViewController:tutorialController animated:YES];
+}
+
+- (void)showTutorialFirstTime {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults boolForKey:IS_TUTORIAL_SHOWN_FIRST_TIME_KEY]) {
+        [self showTutorial];
+        
+        [userDefaults setBool:YES forKey:IS_TUTORIAL_SHOWN_FIRST_TIME_KEY];
+        [userDefaults synchronize];
+    }
+}
 
 @end

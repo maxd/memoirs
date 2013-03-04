@@ -13,6 +13,7 @@
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
 			<string>IBUIButton</string>
+			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
 			<string>IBUIScrollView</string>
 			<string>IBUITextView</string>
@@ -112,13 +113,23 @@
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
+							<object class="IBUIImageView" id="848902797">
+								<reference key="NSNextResponder" ref="122801098"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{20, 87}, {280, 309}}</string>
+								<reference key="NSSuperview" ref="122801098"/>
+								<reference key="NSWindow"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
 							<object class="IBUITextView" id="655965910">
 								<reference key="NSNextResponder" ref="122801098"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 87}, {280, 309}}</string>
 								<reference key="NSSuperview" ref="122801098"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="848902797"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -228,6 +239,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">imgTextBg</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="848902797"/>
+					</object>
+					<int key="connectionID">24</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="655965910"/>
 						<reference key="destination" ref="372490531"/>
@@ -278,6 +297,7 @@
 							<reference ref="23949776"/>
 							<reference ref="543779749"/>
 							<reference ref="655965910"/>
+							<reference ref="848902797"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -296,6 +316,11 @@
 						<reference key="object" ref="23949776"/>
 						<reference key="parent" ref="122801098"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="848902797"/>
+						<reference key="parent" ref="122801098"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -307,6 +332,7 @@
 				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<real value="0.0" key="10.IBUIButtonInspectorSelectedEdgeInsetMetadataKey"/>
 				<real value="0.0" key="10.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.CustomClassName">TPKeyboardAvoidingScrollView</string>
@@ -316,15 +342,35 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">24</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">EventEditorController_iPhone</string>
 					<string key="superclassName">GAITrackedViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="btCancelHandler:">id</string>
+						<string key="btSaveHandler:">id</string>
+						<string key="btSelectValueHandler:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="btCancelHandler:">
+							<string key="name">btCancelHandler:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="btSaveHandler:">
+							<string key="name">btSaveHandler:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="btSelectValueHandler:">
+							<string key="name">btSelectValueHandler:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="btSelectValue">UIButton</string>
+						<string key="imgTextBg">UIImageView</string>
 						<string key="lblDate">UILabel</string>
 						<string key="txtText">UITextView</string>
 					</dictionary>
@@ -332,6 +378,10 @@
 						<object class="IBToOneOutletInfo" key="btSelectValue">
 							<string key="name">btSelectValue</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="imgTextBg">
+							<string key="name">imgTextBg</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="lblDate">
 							<string key="name">lblDate</string>

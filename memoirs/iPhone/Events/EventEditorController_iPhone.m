@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 @property (weak, nonatomic) IBOutlet UIButton *btSelectValue;
 @property (weak, nonatomic) IBOutlet UITextView *txtText;
+@property (weak, nonatomic) IBOutlet UIImageView *imgTextBg;
 
 @end
 
@@ -58,7 +59,7 @@
     UIImage *txtTextBgImage = [[UIImage imageNamed:@"edit_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     txtTextBgImage = [txtTextBgImage scaleToSize:self.txtText.frame.size];
 
-    self.txtText.backgroundColor = [UIColor colorWithPatternImage:txtTextBgImage];
+    self.imgTextBg.image = txtTextBgImage;
 
     UIBarButtonItem *btBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"header_back_btn"] style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.backBarButtonItem = btBack;

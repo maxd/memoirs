@@ -13,6 +13,7 @@
 @implementation Value
 
 @dynamic title;
+@dynamic text;
 @dynamic events;
 
 @end

@@ -80,9 +80,33 @@
     Value *value = [_valuesResultController objectAtIndexPath:indexPath];
 
     ValueListCell_iPhone *cell = [ValueListCell_iPhone dequeOrCreateInTable:tableView];
-    cell.textLabel.text = value.title;
+    cell.lblTitle.text = value.title;
+    [cell.btInfo addTarget:self action:@selector(infoButtonHandler:event:) forControlEvents:UIControlEventTouchUpInside];
 
     return cell;
+}
+
+- (void)infoButtonHandler:(id)sender event:(id)event {
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.ctlTableView];
+
+    NSIndexPath *indexPath = [self.ctlTableView indexPathForRowAtPoint:currentTouchPosition];
+    
+    if (indexPath != nil) {
+        Value *value = [_valuesResultController objectAtIndexPath:indexPath];
+        
+        [WCAlertView showAlertWithTitle:value.title
+                                message:value.text
+                     customizationBlock:nil
+                        completionBlock:^(NSUInteger buttonIndex, WCAlertView *alertView) {
+                            if (buttonIndex == 0) {
+                                [self selectValue:value];
+                            }
+                        }
+                      cancelButtonTitle:NSLocalizedString(@"Close", @"Button title")
+                      otherButtonTitles:NSLocalizedString(@"Choose", @"Button title"), nil];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

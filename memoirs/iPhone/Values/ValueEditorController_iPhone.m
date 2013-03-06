@@ -13,10 +13,13 @@
 #import "NSManagedObjectContext+Helpers.h"
 #import "NSManagedObject+Helpers.h"
 #import "GAITracker.h"
+#import "UIImage+Resize.h"
 
 @interface ValueEditorController_iPhone ()
 
 @property (weak, nonatomic) IBOutlet UITextField *txtTitle;
+@property (weak, nonatomic) IBOutlet UITextView *txtDescription;
+@property (weak, nonatomic) IBOutlet UIImageView *imgDescriptionBg;
 
 @end
 
@@ -53,7 +56,12 @@
     self.txtTitle.placeholder = NSLocalizedString(@"Life Value", @"Placeholder text");
     [self.txtTitle becomeFirstResponder];
 
+    UIImage *txtTextBgImage = [[UIImage imageNamed:@"edit_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    txtTextBgImage = [txtTextBgImage scaleToSize:self.txtDescription.frame.size];
+    self.imgDescriptionBg.image = txtTextBgImage;
+
     self.txtTitle.text = self.value.title;
+    self.txtDescription.text = self.value.text;
 }
 
 #pragma mark Action Handler
@@ -64,6 +72,7 @@
 
 - (void)btSaveHandler:(id)sender {
     NSString *title = self.txtTitle.text;
+    NSString *description = self.txtDescription.text;
 
     if (!title.length) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
@@ -79,6 +88,7 @@
         }
 
         self.value.title = title;
+        self.value.text = description;
 
         [[_appModel context] save];
 

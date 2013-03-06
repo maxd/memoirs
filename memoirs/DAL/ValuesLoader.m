@@ -36,13 +36,14 @@
 }
 
 - (void)loadPredefinedValues {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"values" ofType:@"lst"];
-    NSString *fileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    NSArray *lines = [fileContent componentsSeparatedByString:@"\n"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"values" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSArray *valuesJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 
-    for (NSString *line in lines) {
+    for (NSDictionary *valueJson in valuesJson) {
         Value *value = [_context newObjectWithEntityName:[Value entityName]];
-        value.title = line;
+        value.title = valueJson[@"title"];
+        value.text = valueJson[@"description"];
     }
 
     [_context save];

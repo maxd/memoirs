@@ -10,4 +10,7 @@
 
 @interface ValueListCell_iPhone : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UIButton *btInfo;
+
 @end

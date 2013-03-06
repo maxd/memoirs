@@ -1,0 +1,186 @@
+[
+    {
+      "title": "Adventure",
+      "description": "To explore the unknown, to get exciting, unusual, and sometimes dangerous experience."
+    },
+    {
+      "title": "Aesthetics",
+      "description": "To appreciate or study the nature of beauty in arts, ideas, surroundings or objects."
+    },
+    {
+      "title": "Attractiveness",
+      "description": "To have an attractive appearance."
+    },
+    {
+      "title": "Belonging",
+      "description": "To be accepted as a worthwhile member of a particular group of people."
+    },
+    {
+      "title": "Caring",
+      "description": "To show compassion, to help those in need, to care for others."
+    },
+    {
+      "title": "Community",
+      "description": "To belong to a group of people that has a larger purpose beyond one's self. To perform in effective and caring teamwork."
+    },
+    {
+      "title": "Competition",
+      "description": "To participate in activities that pit personal skills and abilities against others."
+    },
+    {
+      "title": "Conformity",
+      "description": "To act and behave with social norms."
+    },
+    {
+      "title": "Control",
+      "description": "To be in command of your surroundings."
+    },
+    {
+      "title": "Cooperation",
+      "description": "To accomplish complex tasks together. To act towards a common purpose."
+    },
+    {
+      "title": "Creativity",
+      "description": "To express your ideas in new and unique way. To be innovative."
+    },
+    {
+      "title": "Discovery",
+      "description": "To learn something that was not known before, to identify new approaches."
+    },
+    {
+      "title": "Diversity",
+      "description": "To appreciate differences in people, ideas, situations and places."
+    },
+    {
+      "title": "Economic Security",
+      "description": "To have a steady income that fully meets my family's basic needs."
+    },
+    {
+      "title": "Family",
+      "description": "To build and maintain a close knit family."
+    },
+    {
+      "title": "Fairness",
+      "description": "To demonstrate a commitment to impartiality and honesty : free from self-interest, prejudice, or favoritism."
+    },
+    {
+      "title": "Fidelity",
+      "description": "To be faithful and loyal to family and friends."
+    },
+    {
+      "title": "Friendship",
+      "description": "To connect with people you trust and respect and to be trusted and respected by them."
+    },
+    {
+      "title": "Health",
+      "description": "To maintain a healthy body and mind."
+    },
+    {
+      "title": "Honesty",
+      "description": "To live honesty, to be sincere."
+    },
+    {
+      "title": "Humility",
+      "description": "To demonstrate modesty in in dress, speech, or conduct."
+    },
+    {
+      "title": "Independence",
+      "description": "To have freedom of thought and action. To be able to act in terms of your own time schedules and priorities."
+    },
+    {
+      "title": "Influence",
+      "description": "To have a power of producing an effect without apparent exertion of force or direct exercise of command. To have a moral force of changing attitudes or beliefs of other people."
+    }, 
+    {
+      "title": "Knowledge",
+      "description": "To be engaged in the pursuit of scholarship, truth and understanding."
+    },
+    {
+      "title": "Leadership",
+      "description": "To have the ability to motivate and inspire other people."
+    },
+    {
+      "title": "Location",
+      "description": "The ability to live where you want to live."
+    },
+    {
+      "title": "Love",
+      "description": "The presence of love in your life. To love your family, your friends, yourself. To open your mind to the concept of love."
+    },
+    {
+      "title": "Luxury",
+      "description": "To enjoy the most expensive things around you."
+    },
+    {
+      "title": "Passion",
+      "description": "To feel a strong enthusiasm or interest in people, purpose and activities."
+    },
+    {
+      "title": "Personal Development",
+      "description": "To learn and to do challenging work, activities that develop talents and potential."
+    },
+    {
+      "title": "Pleasure",
+      "description": "To seek enjoyment, satisfaction, sensual gratification and fun."
+    },
+    {
+      "title": "Pursuit of Excellence",
+      "description": "To perform tasks to the best of your ability."
+    },
+    {
+      "title": "Recognition",
+      "description": "To seek special notice or attention for well done tasks."
+    },
+    {
+      "title": "Relaxation",
+      "description": "To seek relaxing or recreative state, activity, or pastime."
+    },
+    {
+      "title": "Respect",
+      "description": "To recognize others’ achievements and beliefs, to treat them with respect."
+    },
+    {
+      "title": "Responsibility",
+      "description": "To demonstrate the quality of being responsible as moral, legal, or mental accountability. Reliability, trustworthiness."
+    },
+    {
+      "title": "Risk taking",
+      "description": "To aspire to the difficult, challenging and sometimes impossible."
+    },
+    {
+      "title": "Security",
+      "description": "To be free from fear, danger, or risk, to exist in a stable environment."
+    },
+    {
+      "title": "Self-Interest",
+      "description": "To concern for your own advantage and well-being, especially with disregard to others."
+    },
+    {
+      "title": "Service",
+      "description": "To contribute to the welfare of others without personal gain."
+    },
+    {
+      "title": "Simplicity",
+      "description": "To enjoy a simple life."
+    },
+    {
+      "title": "Spirituality",
+      "description": "To be sensitive or attached to religious values, to have a world view that includes a higher purpose and meaning."
+    },
+    {
+      "title": "Status",
+      "description": "To gain the respect of others."
+    },
+    {
+      "title": "Tolerance",
+      "description": "To accept and respect the opinions, way of life, beliefs of others without criticizing them."
+    },
+    {
+      "title": "Wealth",
+      "description": "Abundance of valuable material possessions or resources."
+    },
+    {
+      "title": "Variety",
+      "description": "To have many different experiences and situations. Diversity."
+    }
+]

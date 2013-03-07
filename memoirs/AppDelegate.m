@@ -147,6 +147,8 @@
 
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"header_button_bkd_dark_tap"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    
+    [[UISwitch appearance] setOnTintColor:[UIColor colorWithHex:0xFF033143]];
 
     [WCAlertView setDefaultCustomiaztonBlock:^(WCAlertView *alertView) {
         alertView.labelTextColor = [UIColor colorWithHex:0xFF033143];

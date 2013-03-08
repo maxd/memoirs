@@ -54,7 +54,7 @@
                 @{
                     @"title": NSLocalizedString(@"TOP Life Values", @"Menu item"),
                     @"selector": @"menuImportantValuesHandler:",
-                    @"prefix": @"\U0001F31F"
+                    @"prefix": @"\U0001F3AF"
                 },
             ]
         },

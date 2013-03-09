@@ -76,7 +76,7 @@
 
     if (!title.length) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                                            message:NSLocalizedString(@"Please enter life value name.", @"Alert text")
+                                                            message:NSLocalizedString(@"Please enter the life value name.", @"Alert text")
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];

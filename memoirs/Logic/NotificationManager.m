@@ -62,7 +62,7 @@
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.repeatInterval = NSDayCalendarUnit;
     localNotification.alertAction = NSLocalizedString(@"Create Event", @"Remind title");
-    localNotification.alertBody = NSLocalizedString(@"Create importnat event of yours day in My Memoirs", @"Remind text");
+    localNotification.alertBody = NSLocalizedString(@"Please add the main event of the day to My Memoirs", @"Remind text");
 
     if (self.enableAlertSound) {
         localNotification.soundName = UILocalNotificationDefaultSoundName;
@@ -95,7 +95,7 @@
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.repeatInterval = NSWeekCalendarUnit;
     localNotification.alertAction = NSLocalizedString(@"Select Event", @"Remind title");
-    localNotification.alertBody = NSLocalizedString(@"Select importnat event of yours week in My Memoirs", @"Remind text");
+    localNotification.alertBody = NSLocalizedString(@"Select the main event of the week in My Memoirs", @"Remind text");
 
     if (self.enableAlertSound) {
         localNotification.soundName = UILocalNotificationDefaultSoundName;
@@ -128,7 +128,7 @@
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.repeatInterval = NSMonthCalendarUnit;
     localNotification.alertAction = NSLocalizedString(@"Select Event", @"Remind title");
-    localNotification.alertBody = NSLocalizedString(@"Select importnat event of yours month in My Memoirs", @"Remind text");
+    localNotification.alertBody = NSLocalizedString(@"Select the main event of the month in My Memoirs", @"Remind text");
 
     if (self.enableAlertSound) {
         localNotification.soundName = UILocalNotificationDefaultSoundName;

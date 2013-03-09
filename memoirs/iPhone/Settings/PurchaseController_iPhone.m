@@ -51,7 +51,7 @@
     self.btRestorePurchase.text = NSLocalizedString(@"Restore Purchases", @"Restore Purchases button");
     self.btRestorePurchase.textColor = [UIColor blackColor];
     
-    self.lblPurchasedFullVersion.text = NSLocalizedString(@"Thank you for purchase full version!", @"Purchase - Label text");
+    self.lblPurchasedFullVersion.text = NSLocalizedString(@"Thank you for purchasing the full version!", @"Purchase - Label text");
 
     [[NSNotificationCenter defaultCenter]
             addObserver:self
@@ -105,7 +105,7 @@
         [_inAppPurchaseManager purchaseProduct:PURCHASE_FULL_VERSION_PRODUCT_IDENTIFIER];
     } else {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                                            message:NSLocalizedString(@"Purchases locked on this device.", @"Alert text")
+                                                            message:NSLocalizedString(@"Purchases are locked on this device.", @"Alert text")
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
@@ -119,7 +119,7 @@
         [_inAppPurchaseManager restorePurchases];
     } else {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                                            message:NSLocalizedString(@"Purchases locked on this device.", @"Alert text")
+                                                            message:NSLocalizedString(@"Purchases are locked on this device.", @"Alert text")
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];

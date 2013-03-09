@@ -42,17 +42,17 @@
                     @"prefix": @"\u2B50"
                 },
                 @{
-                    @"title": NSLocalizedString(@"Events of Week", @"Menu item"),
+                    @"title": NSLocalizedString(@"Events of Weeks", @"Menu item"),
                     @"selector": @"menuGroupByMonth:",
                     @"prefix": @"\u2B50"
                 },
                 @{
-                    @"title": NSLocalizedString(@"Events of Month", @"Menu item"),
+                    @"title": NSLocalizedString(@"Events of Months", @"Menu item"),
                     @"selector": @"menuGroupByYear:",
                     @"prefix": @"\u2B50"
                 },
                 @{
-                    @"title": NSLocalizedString(@"TOP Life Values", @"Menu item"),
+                    @"title": NSLocalizedString(@"Main Life Values", @"Menu item"),
                     @"selector": @"menuImportantValuesHandler:",
                     @"prefix": @"\U0001F3AF"
                 },

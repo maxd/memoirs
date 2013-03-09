@@ -51,7 +51,7 @@
 
     if (!isFullVersionPurchased && eventCount >= 14) {
         [WCAlertView showAlertWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                message:NSLocalizedString(@"Purchase full version for enter more events.", @"Alert text")
+                                message:NSLocalizedString(@"Purchase full version to add more events.", @"Alert text")
                      customizationBlock:nil
                         completionBlock:^(NSUInteger buttonIndex, WCAlertView *alertView) {
                             if (buttonIndex == 1) {

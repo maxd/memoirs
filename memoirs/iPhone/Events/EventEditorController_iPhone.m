@@ -104,14 +104,14 @@
 - (IBAction)btSaveHandler:(id)sender {
     if (!_value) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                                            message:NSLocalizedString(@"Please select life value from list.", @"Alert text")
+                                                            message:NSLocalizedString(@"Please select a life value from the list.", @"Alert text")
                                                            delegate:nil cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
         
         [alertView show];
     } else if (!self.txtText.text.length) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                                            message:NSLocalizedString(@"Please describe event of day.", @"Alert text")
+                                                            message:NSLocalizedString(@"Please describe the main event of the day.", @"Alert text")
                                                            delegate:nil cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
 

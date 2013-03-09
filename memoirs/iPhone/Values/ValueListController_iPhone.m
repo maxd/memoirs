@@ -182,7 +182,7 @@
 - (void)deleteValue:(Value *)value {
     if (value.events.count > 0) {
         WCAlertView *alertView = [[WCAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Alert title")
-                                                            message:NSLocalizedString(@"You can't remove already used life value.", @"Alert text")
+                                                            message:NSLocalizedString(@"You can't remove life value in use.", @"Alert text")
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];

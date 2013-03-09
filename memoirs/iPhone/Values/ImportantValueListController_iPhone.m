@@ -39,7 +39,7 @@
 
     self.trackedViewName = @"Important Values";
 
-    self.title = NSLocalizedString(@"TOP Life Values", @"NavBar title");
+    self.title = NSLocalizedString(@"Main Life Values", @"NavBar title");
 
     UIBarButtonItem *btMenu = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(btMenuHandler:)];
     self.navigationItem.leftBarButtonItem = btMenu;

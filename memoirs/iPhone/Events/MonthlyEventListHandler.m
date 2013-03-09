@@ -33,7 +33,7 @@
 }
 
 - (NSString *)navBarTitle {
-    return NSLocalizedString(@"Events of Week", @"NavBar title");
+    return NSLocalizedString(@"Events of Weeks", @"NavBar title");
 }
 
 - (NSString *)sectionTitle:(EventListGroup *)eventListGroup {
@@ -42,8 +42,8 @@
 
 - (void)openEditorForViewController:(UIViewController *)viewController withEventListItem:(EventListItem *)eventListItem {
     EventSelectorController_iPhone *eventSelectorController = [[EventSelectorController_iPhone alloc] init];
-    eventSelectorController.title = NSLocalizedString(@"Select event of week", @"NavBar title");
-    eventSelectorController.emptyMessage = NSLocalizedString(@"To select the important event of the week, first create the events themselves open to \"All Events\" in the menu.", @"Empty list message");
+    eventSelectorController.title = NSLocalizedString(@"Select the main event of the week", @"NavBar title");
+    eventSelectorController.emptyMessage = NSLocalizedString(@"You can't select the main event of the week as you don't have any event of this week added. To add one open \"All Events\" in the menu.", @"Empty list message");
     eventSelectorController.delegate = self;
     eventSelectorController.events = [_appModel eventsBetween:eventListItem.startDate and:eventListItem.endDate];
 

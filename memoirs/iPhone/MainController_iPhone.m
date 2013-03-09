@@ -181,18 +181,19 @@
 }
 #endif
 
-- (void)showTutorial {
+- (void)showTutorial:(BOOL)showCloseButton {
     [self showCenterPanel:YES];
 
     TutorialController *tutorialController = [TutorialController new];
     tutorialController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    tutorialController.showCloseButton = showCloseButton;
     [self presentModalViewController:tutorialController animated:YES];
 }
 
 - (void)showTutorialFirstTime {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if (![userDefaults boolForKey:IS_TUTORIAL_SHOWN_FIRST_TIME_KEY]) {
-        [self showTutorial];
+        [self showTutorial:NO];
         
         [userDefaults setBool:YES forKey:IS_TUTORIAL_SHOWN_FIRST_TIME_KEY];
         [userDefaults synchronize];

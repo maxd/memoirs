@@ -175,7 +175,7 @@
 #endif
 
 - (void)menuTutorialHandler:(UITableView *)tableView {
-    [(MainController_iPhone *) self.sidePanelController showTutorial];
+    [(MainController_iPhone *) self.sidePanelController showTutorial:YES];
 }
 
 @end

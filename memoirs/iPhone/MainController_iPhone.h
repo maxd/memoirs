@@ -29,6 +29,6 @@
 - (void)showPurchase;
 #endif
 
-- (void)showTutorial;
+- (void)showTutorial:(BOOL)showCloseButton;
 
 @end

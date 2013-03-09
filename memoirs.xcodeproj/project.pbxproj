@@ -189,6 +189,16 @@
 		0930B88716DD51F600BCED30 /* PurchaseController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0930B88516DD51F600BCED30 /* PurchaseController_iPhone.xib */; };
 		0930B8A016DD554D00BCED30 /* PurchaseFullVersionProductActivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930B89F16DD554D00BCED30 /* PurchaseFullVersionProductActivator.m */; };
 		0930B8A416DD5E7600BCED30 /* WCAlertViewAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0930B8A316DD5E7500BCED30 /* WCAlertViewAlertHandler.m */; };
+		0935BE2916EBCD8900BF28B3 /* tutorial-page-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE2C16EBCD8900BF28B3 /* tutorial-page-1.png */; };
+		0935BE2A16EBCD8900BF28B3 /* tutorial-page-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE2C16EBCD8900BF28B3 /* tutorial-page-1.png */; };
+		0935BE3A16EBCFA800BF28B3 /* tutorial-page-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE3D16EBCFA800BF28B3 /* tutorial-page-2.png */; };
+		0935BE3B16EBCFA800BF28B3 /* tutorial-page-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE3D16EBCFA800BF28B3 /* tutorial-page-2.png */; };
+		0935BE3F16EBCFB000BF28B3 /* tutorial-page-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE4216EBCFB000BF28B3 /* tutorial-page-3.png */; };
+		0935BE4016EBCFB000BF28B3 /* tutorial-page-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE4216EBCFB000BF28B3 /* tutorial-page-3.png */; };
+		0935BE4416EBCFB800BF28B3 /* tutorial-page-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE4716EBCFB800BF28B3 /* tutorial-page-4.png */; };
+		0935BE4516EBCFB800BF28B3 /* tutorial-page-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE4716EBCFB800BF28B3 /* tutorial-page-4.png */; };
+		0935BE4916EBCFBF00BF28B3 /* tutorial-page-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE4C16EBCFBF00BF28B3 /* tutorial-page-5.png */; };
+		0935BE4A16EBCFBF00BF28B3 /* tutorial-page-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0935BE4C16EBCFBF00BF28B3 /* tutorial-page-5.png */; };
 		0955EFC216DFBF0B007EA40D /* NVUIGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0955EFC116DFBF0B007EA40D /* NVUIGradientButton.m */; };
 		0962D87C16B887E200C6269A /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87A16B887E200C6269A /* menu-icon.png */; };
 		0962D87D16B887E200C6269A /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0962D87B16B887E200C6269A /* menu-icon@2x.png */; };
@@ -416,6 +426,16 @@
 		0930B8A116DD55E000BCED30 /* ProductIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductIdentifiers.h; sourceTree = "<group>"; };
 		0930B8A216DD5E7500BCED30 /* WCAlertViewAlertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAlertViewAlertHandler.h; sourceTree = "<group>"; };
 		0930B8A316DD5E7500BCED30 /* WCAlertViewAlertHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertViewAlertHandler.m; sourceTree = "<group>"; };
+		0935BE2B16EBCD8900BF28B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/tutorial-page-1.png"; sourceTree = "<group>"; };
+		0935BE2D16EBCD8E00BF28B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/tutorial-page-1.png"; sourceTree = "<group>"; };
+		0935BE3C16EBCFA800BF28B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/tutorial-page-2.png"; sourceTree = "<group>"; };
+		0935BE3E16EBCFAB00BF28B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/tutorial-page-2.png"; sourceTree = "<group>"; };
+		0935BE4116EBCFB000BF28B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/tutorial-page-3.png"; sourceTree = "<group>"; };
+		0935BE4316EBCFB300BF28B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/tutorial-page-3.png"; sourceTree = "<group>"; };
+		0935BE4616EBCFB800BF28B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/tutorial-page-4.png"; sourceTree = "<group>"; };
+		0935BE4816EBCFBB00BF28B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/tutorial-page-4.png"; sourceTree = "<group>"; };
+		0935BE4B16EBCFBF00BF28B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/tutorial-page-5.png"; sourceTree = "<group>"; };
+		0935BE4D16EBCFC200BF28B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/tutorial-page-5.png"; sourceTree = "<group>"; };
 		093C1AB716C99D8300E76C0C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0955EFC016DFBF0B007EA40D /* NVUIGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NVUIGradientButton.h; path = vendor/NVUIGradientButton/lib/NVUIGradientButton/NVUIGradientButton.h; sourceTree = "<group>"; };
 		0955EFC116DFBF0B007EA40D /* NVUIGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NVUIGradientButton.m; path = vendor/NVUIGradientButton/lib/NVUIGradientButton/NVUIGradientButton.m; sourceTree = "<group>"; };
@@ -773,6 +793,11 @@
 				09266A0416E32EDE007757F4 /* tutorial_close_bt@2x.png */,
 				091654DD16E552D0008D7F6F /* help-icon-pressed.png */,
 				091654DE16E552D0008D7F6F /* help-icon-pressed@2x.png */,
+				0935BE2C16EBCD8900BF28B3 /* tutorial-page-1.png */,
+				0935BE3D16EBCFA800BF28B3 /* tutorial-page-2.png */,
+				0935BE4216EBCFB000BF28B3 /* tutorial-page-3.png */,
+				0935BE4716EBCFB800BF28B3 /* tutorial-page-4.png */,
+				0935BE4C16EBCFBF00BF28B3 /* tutorial-page-5.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1345,6 +1370,11 @@
 				091654C716E5465E008D7F6F /* values.json in Resources */,
 				091654E016E552D0008D7F6F /* help-icon-pressed.png in Resources */,
 				091654E216E552D0008D7F6F /* help-icon-pressed@2x.png in Resources */,
+				0935BE2A16EBCD8900BF28B3 /* tutorial-page-1.png in Resources */,
+				0935BE3B16EBCFA800BF28B3 /* tutorial-page-2.png in Resources */,
+				0935BE4016EBCFB000BF28B3 /* tutorial-page-3.png in Resources */,
+				0935BE4516EBCFB800BF28B3 /* tutorial-page-4.png in Resources */,
+				0935BE4A16EBCFBF00BF28B3 /* tutorial-page-5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1439,6 +1469,11 @@
 				091654C616E5465E008D7F6F /* values.json in Resources */,
 				091654DF16E552D0008D7F6F /* help-icon-pressed.png in Resources */,
 				091654E116E552D0008D7F6F /* help-icon-pressed@2x.png in Resources */,
+				0935BE2916EBCD8900BF28B3 /* tutorial-page-1.png in Resources */,
+				0935BE3A16EBCFA800BF28B3 /* tutorial-page-2.png in Resources */,
+				0935BE3F16EBCFB000BF28B3 /* tutorial-page-3.png in Resources */,
+				0935BE4416EBCFB800BF28B3 /* tutorial-page-4.png in Resources */,
+				0935BE4916EBCFBF00BF28B3 /* tutorial-page-5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1624,6 +1659,51 @@
 				091654CA16E54665008D7F6F /* ru */,
 			);
 			name = values.json;
+			sourceTree = "<group>";
+		};
+		0935BE2C16EBCD8900BF28B3 /* tutorial-page-1.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0935BE2B16EBCD8900BF28B3 /* en */,
+				0935BE2D16EBCD8E00BF28B3 /* ru */,
+			);
+			name = "tutorial-page-1.png";
+			sourceTree = "<group>";
+		};
+		0935BE3D16EBCFA800BF28B3 /* tutorial-page-2.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0935BE3C16EBCFA800BF28B3 /* en */,
+				0935BE3E16EBCFAB00BF28B3 /* ru */,
+			);
+			name = "tutorial-page-2.png";
+			sourceTree = "<group>";
+		};
+		0935BE4216EBCFB000BF28B3 /* tutorial-page-3.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0935BE4116EBCFB000BF28B3 /* en */,
+				0935BE4316EBCFB300BF28B3 /* ru */,
+			);
+			name = "tutorial-page-3.png";
+			sourceTree = "<group>";
+		};
+		0935BE4716EBCFB800BF28B3 /* tutorial-page-4.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0935BE4616EBCFB800BF28B3 /* en */,
+				0935BE4816EBCFBB00BF28B3 /* ru */,
+			);
+			name = "tutorial-page-4.png";
+			sourceTree = "<group>";
+		};
+		0935BE4C16EBCFBF00BF28B3 /* tutorial-page-5.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0935BE4B16EBCFBF00BF28B3 /* en */,
+				0935BE4D16EBCFC200BF28B3 /* ru */,
+			);
+			name = "tutorial-page-5.png";
 			sourceTree = "<group>";
 		};
 		09B0153516D11EB0008E49A6 /* predefined_events.lst */ = {

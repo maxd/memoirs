@@ -15,7 +15,7 @@
 @interface TutorialController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet PagedScrollView *ctlPagedScrollView;
-@property (weak, nonatomic) IBOutlet NVUIGradientButton *btClose;
+@property (weak, nonatomic) IBOutlet UIButton *btClose;
 
 @end
 
@@ -25,12 +25,13 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"light_bg"]];
+    self.btClose.hidden = !self.showCloseButton;
 
-    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:nil andDescription:NSLocalizedString(@"tutorial-page-1", @"Tutorial text")]];
-    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:nil andDescription:NSLocalizedString(@"tutorial-page-2", @"Tutorial text")]];
-    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:nil andDescription:NSLocalizedString(@"tutorial-page-3", @"Tutorial text")]];
-    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:nil andDescription:NSLocalizedString(@"tutorial-page-4", @"Tutorial text")]];
-    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:nil andDescription:NSLocalizedString(@"tutorial-page-5", @"Tutorial text")]];
+    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:[UIImage imageNamed:@"tutorial-page-1"] andDescription:NSLocalizedString(@"tutorial-page-1", @"Tutorial text")]];
+    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:[UIImage imageNamed:@"tutorial-page-2"] andDescription:NSLocalizedString(@"tutorial-page-2", @"Tutorial text")]];
+    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:[UIImage imageNamed:@"tutorial-page-3"] andDescription:NSLocalizedString(@"tutorial-page-3", @"Tutorial text")]];
+    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:[UIImage imageNamed:@"tutorial-page-4"] andDescription:NSLocalizedString(@"tutorial-page-4", @"Tutorial text")]];
+    [_ctlPagedScrollView addPage:[self createTutorialPageWithImage:[UIImage imageNamed:@"tutorial-page-5"] andDescription:NSLocalizedString(@"tutorial-page-5", @"Tutorial text")]];
 }
 
 - (TutorialView *)createTutorialPageWithImage:(UIImage *)image andDescription:(NSString *)description {

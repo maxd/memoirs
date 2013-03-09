@@ -10,4 +10,6 @@
 
 @interface TutorialController : UIViewController
 
+@property (nonatomic, assign) BOOL showCloseButton;
+
 @end

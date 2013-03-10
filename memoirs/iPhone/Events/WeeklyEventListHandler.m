@@ -49,7 +49,7 @@
     BOOL isFullVersionPurchased = [[[NSUserDefaults standardUserDefaults] objectForKey:PURCHASE_FULL_VERSION_PRODUCT_IDENTIFIER] boolValue];
     NSInteger eventCount = [_appModel eventCount];
 
-    if (!isFullVersionPurchased && eventCount >= 14) {
+    if (!isFullVersionPurchased && eventCount >= 14 && eventListItem.event == nil) {
         [WCAlertView showAlertWithTitle:NSLocalizedString(@"Warning", @"Alert title")
                                 message:NSLocalizedString(@"Purchase full version to add more events.", @"Alert text")
                      customizationBlock:nil
